@@ -1,0 +1,6 @@
+function perf = checkPerformanceOnData(net,data,label,opts,num_split)
+
+%
+if nargin < 5
+    num_split = 1;
+end

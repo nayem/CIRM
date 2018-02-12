@@ -1,0 +1,10 @@
+function output = getOutputFromNetSplit(net,data,num_split,opts)
+
+num_samples = size(data,1);
+
+num_chuncks = ceil(num_samples/num_split);
+
+output = zeros(
+for i = 1:num_chuncks
+    
+end

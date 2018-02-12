@@ -1,0 +1,82 @@
+function model = funcDeepNetTrain(train_data,train_label,cv_data,cv_label,opts)
+%% network initialization
+net_struct = opts.net_struct;
+isGPU = opts.isGPU;
+
+if opts.isPretrain
+    disp('start RBM pretraining...')
+    disp('RBM pretraining done.')
+else
+    disp('use sparse weight initialization.')
+    isSparse = 1; isNorm = 1; % isSparse=1 seems important when using relu
+    pre_net = randInitNet(net_struct,isSparse,isNorm,isGPU);
+end
+
+net_weights = netUnRolling(pre_net);
+if isGPU; net_weights = gpuArray(net_weights); end;
+%% stochastic gradient descent
+% funcCrossVad = opts.funcCrossVad;
+
+num_samples = size(train_data,1);
+batch_id = genBatchID(num_samples,opts.sgdBatchSize);
+num_batch = size(batch_id,2);
+
+fprintf('\nNum of Training Samples:%d\n',num_samples);
+
+weights_inc = 0; w_ssqr = 0; cv_rec = repmat(struct,opts.sgdMaxEpoch,1);
+for epoch = 1:opts.sgdMaxEpoch
+    seq = randperm(num_samples); % randperm dataset every epoch
+    cost_sum = 0;
+    for bid = 1: num_batch-1        
+        perm_idx = seq(batch_id(1,bid):batch_id(2,bid));
+                
+        batch_data = train_data(perm_idx,:);
+        batch_label = train_label(perm_idx,:);
+        
+        if isGPU 
+            batch_data = gpuArray(batch_data);
+            batch_label = gpuArray(batch_label);
+        end
+        
+        if epoch>opts.change_momentum_point; 
+            momentum=opts.final_momentum; 
+        else
+            momentum=opts.initial_momentum; 
+        end
+        
+        %backprop
+        [cost,grad] = computeNetGradient(net_weights,batch_data,batch_label,opts);
+%         [cost,grad] = computeNetGradient(net_weights-momentum*weights_inc,batch_data,batch_label,opts);
+        
+        switch opts.learner
+            case 'sgd'
+                weights_inc = momentum*weights_inc + opts.sgd_learn_rate(epoch)*grad;
+            case 'ada_sgd'
+                w_ssqr = w_ssqr + grad.^2;
+                eta = opts.ada_sgd_scale./sqrt(w_ssqr);
+%                 eta(isnan(eta))=0; eta(isinf(eta))=0;% this may slow down gpu
+                idx = (grad == 0); eta(idx) = 0;
+                eta(isnan(eta))=0; eta(isinf(eta))=0;
+                weights_inc = momentum*weights_inc + eta.*grad;
+        end
+        
+        net_weights = net_weights - weights_inc;
+        cost_sum = cost_sum + cost;
+    end    
+    fprintf('Objective cost at epoch %d: %2.2f \n', epoch, cost_sum);
+    
+    % check perf. on cv data
+    if ~mod(epoch,opts.cv_interval)        
+        tmp_net = netRolling(net_weights,net_struct);
+        [perf,perf_str] = checkPerformanceOnData(tmp_net,cv_data,cv_label,opts);
+        fprintf('Metric %s on dev_set at epoch %d: %2.2f \n', perf_str, epoch, perf);
+        
+        cv_rec(epoch*opts.cv_interval).perf = perf;
+        cv_rec(epoch*opts.cv_interval).weights = net_weights;
+    end
+end
+
+%% use the best model on dev_set
+[m_v,m_i] = max([cv_rec.perf]);
+fprintf('Best model at epoch %d with perf %2.2f\n',m_i,m_v);
+model = netRolling(cv_rec(m_i*opts.cv_interval).weights, net_struct);

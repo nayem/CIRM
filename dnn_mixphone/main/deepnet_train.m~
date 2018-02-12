@@ -1,0 +1,91 @@
+clear all;
+%% --default training options--
+%TODO: group opts that need user decisions first
+tr_para.isNormalize = 1; % need to normalize data?
+tr_para.ARMA_order = 2; % need to do ARMA smoothing and what's the filter order?
+tr_para.cv_interval = 1; % check cv perf. every this many epochs
+
+tr_para.isPretrain = 0; % pre-training using RBM?
+tr_para.rbm_max_epoch = 50; 
+tr_para.rbm_batch_size = 1024; % batch size for pretraining
+tr_para.learn_rate_binary = 0.01;
+tr_para.learn_rate_real = 0.001;
+
+tr_para.learner = 'ada_sgd'; % 'ada_sgd' or 'sgd'
+% tr_para.learner = 'sgd';
+tr_para.sgd_max_epoch = 60;
+tr_para.sgd_batch_size = 1024; % batch size for SGD
+tr_para.ada_sgd_scale = 0.0015; % scaling factor for ada_grad
+tr_para.sgd_learn_rate = linspace(1,0.001,tr_para.sgd_max_epoch); % linearly decreasing lrate for plain sgd
+tr_para.initial_momentum = 0.5;
+tr_para.final_momentum = 0.9;
+tr_para.change_momentum_point = 5;
+
+tr_para.cost_function = 'mse'; %'mse','xentropy','softmax_xentropy';
+% tr_para.cost_function = 'xentropy'; 
+tr_para.hid_struct = [650 650]; % num of hid layers and units
+tr_para.unit_type_output = 'sigm';
+tr_para.unit_type_hidden = 'relu';
+% tr_para.unit_type_hidden = 'sigm';
+if strcmp(tr_para.unit_type_output,'softmax'); tr_para.cost_function = 'softmax_xentropy'; end;
+
+tr_para.isDropout = 1; % need dropout regularization?
+tr_para.isDropoutInput = 0; % dropout inputs? do not dropout if raw features are louzy
+tr_para.drop_ratio = 0.15; % ratio of units to drop
+
+tr_para.isGPU = 0; % use GPU?
+%% --load data--
+% train = load('~/work/deepnet/data/train_ams.mat');
+% train = load('~/work/deepnet/data/train.consonant.mat');
+train = load('~/work/deepnet/data/train.maskcomp.ch7.mat');
+train_data = train.features; 
+train_lable = train.label;
+% test = load('~/work/deepnet/data/test_ams.mat');
+% test = load('~/work/deepnet/data/test.consonant.mat');
+test = load('~/work/deepnet/data/test.maskcomp.ch7.mat');
+test_data = test.features; 
+test_lable = test.label;
+test_lable = single(test_lable>-10);
+
+train_data = train_data(1:200000,:); train_lable = train_lable(1:200000,:);
+train_data = [train_data deltas(train_data')']; test_data = [test_data deltas(test_data')'];
+
+
+clear train test
+
+% double2single for better gpu speed
+train_data = single(train_data); train_lable = single(train_lable);
+test_data = single(test_data); test_lable = single(test_lable);
+
+% train_data = double(train_data); train_lable = double(train_lable);
+% test_data = double(test_data); test_lable = double(test_lable);
+
+[num_samples,dim_input] = size(train_data);
+dim_output = size(train_lable,2);
+tr_para.net_struct = [dim_input, tr_para.hid_struct, dim_output];
+%% --normalization--
+if tr_para.isNormalize
+    disp('normalizing data...');
+    if tr_para.ARMA_order
+        [train_data,tr_para.tr_mu,tr_para.tr_std] = meanVarArmaNormalize(train_data,tr_para.ARMA_order);
+        test_data = meanVarArmaNormalize_Test(test_data,tr_para.ARMA_order,tr_para.tr_mu,tr_para.tr_std);
+    else
+        [train_data,tr_para.tr_mu,tr_para.tr_std] = meanVarNormalize(train_data);
+        test_data = meanVarNormalize_Test(test_data,tr_para.tr_mu,tr_para.tr_std);        
+    end
+    disp('normalization done.');
+else
+    disp('skipped data normalization.');
+end
+%% --network training--
+% display train options
+tr_para
+
+% main training function
+profile on
+tic
+[model, pre_net] = funcDeepNetTrain(train_data,train_lable,test_data,test_lable,tr_para);
+train_time = toc;
+fprintf('\nTraining done. Elapsed time: %2.2f sec\n',train_time);
+profile off
+profile report

@@ -1,0 +1,63 @@
+function forward_path = forwadPass(net,data,opts)
+
+nLayer = length(net);
+forward_path = struct;
+
+if opts.isDropout
+    drop_ratio = opts.drop_ratio;
+    drop_scale = 1/(1-drop_ratio);
+else
+    drop_scale = 1;
+end
+
+% mid = data';
+for ii = 1:nLayer+1
+    if ii == 1
+        net_activation = data';
+    else
+        net_potential = bsxfun(@plus, drop_scale*net(ii-1).W*net_activation, net(ii-1).b);       
+        
+        switch opts.unit_types(ii)
+            case 'sigm'
+                net_activation = sigmoid(net_potential);
+            case 'lin'
+                net_activation = net_potential;
+            case 'relu'
+                net_activation = relu(
+            case 'tanh'
+            case 'softmax'
+            otherwise
+                error(['unknown activation function:' opts.unit_types(ii)])
+        end
+        
+    end
+end
+
+
+
+
+
+%%
+if opts.isDropout
+    drop_ratio = opts.drop_ratio;
+    drop_scale = 1/(1-drop_ratio);
+    if opts.isGPU
+        hidMask = gpuArray.rand(size(mid))<(1-drop_ratio);
+    else
+        hidMask = rand(size(mid))<(1-drop_ratio);
+    end
+    mid = mid.*hidMask;
+end
+forward_path(1).activation = mid;
+
+for ii = 2: nLayer+1
+    Z = bsxfun(@plus, drop_scale*net(ii-1).W*mid, net(ii-1).b);
+    if ii == nLayer + 1
+        mid = sigmoid(Z); % do not distort the outputs....
+    else
+        mid = reluAct(Z);
+        hidMask = gpuArray.rand(size(mid))<(1-drop_ratio);
+        mid = mid.*hidMask; % drop hid units, for *each* data
+    end 
+    forward_path(ii).activation = mid;
+end
