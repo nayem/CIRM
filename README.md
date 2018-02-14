@@ -19,7 +19,7 @@ Complex Ideal Ratio Mask
 
 ```cd /N/dc2/scratch/knayem```
 
-### Matlab Commands cIRM
+### Matlab Commands to run cIRM codes
 ```
 qsub -I -l walltime=01:00:00 -l nodes=1:ppn=4 -l gres=ccm -q gpu
 module add ccm
@@ -27,6 +27,8 @@ ccmlogin
 cd /gpfs/home/k/n/knayem/BigRed2/Eagles_Backup/Code/cIRM/cIRM
 module add matlab
 matlab
+
+>> scriptTrainDNN_cIRM_denoise_mat('SSN')
 ```
 
 
