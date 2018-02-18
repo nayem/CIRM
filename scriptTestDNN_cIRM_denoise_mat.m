@@ -37,7 +37,7 @@ Fs       = 16e3;
 ENHANCED_PHRASE = 'crmenh';
 
 
-mix_wavs_data_path = '/gpfs/home/k/n/knayem/BigRed2/Eagles_Backup/Data/denoise_complex_domain_wavs_BR2/';
+mix_wavs_data_path = '/gpfs/home/k/n/knayem/BigRed2/Eagles_Backup/Data/denoise_complex_domain_mats_BR2/';
 
 % mix_wavs_data_path = '/data/knayem/denoise_complex_domain_wavs_tf/';
 % Nayem edit, Sep 10
@@ -167,11 +167,18 @@ for noise_ind = 1:length(noise_types)
 
         % ----------------------- Compute Scores ----------------------------%
         % f = string(strsplit(filename,'.'));
-        f = char(strsplit(filename,'.'));
-        filename    = sprintf('%s%s_%s.%s',mix_wavs_data_path,f(1),ENHANCED_PHRASE,f(2));
+        f = strsplit(filename,'.');
+
+        % filename    = sprintf('%s%s_%s.%s',mix_wavs_data_path,f(1),ENHANCED_PHRASE,f(2));
+        filename    = sprintf('%s%s_%s.%s',mix_wavs_data_path,char(f(1)),ENHANCED_PHRASE,'mat');
+
 %         Nayem edit, Sep 12
 %         filename    = sprintf('%s%d.cIRM_denoised.noise%s.snrNum%s.wav',mix_wavs_data_path,fileNum,noise_types{noise_ind},snrNum);%cs_count,rem);
-        audiowrite(filename,denoise_sig/max(abs(denoise_sig)),Fs)
+
+        y = denoise_sig/max(abs(denoise_sig));
+        % audiowrite(filename,denoise_sig/max(abs(denoise_sig)),Fs)
+        save( char(filename) ,'y');
+
         scores_denoise_fcIRM{fileNum} = comp_dereverb_metrics(clean_sig,mix_sig,denoise_sig,Fs,MIX_FILENAME,filename);
         tot_scores_denoise_fcIRM{total_file_count} = scores_denoise_fcIRM{fileNum};
 
@@ -183,7 +190,7 @@ for noise_ind = 1:length(noise_types)
 
     fprintf('\n')
 
-    save(sprintf('./scores/cIRMscores_denoising.noise%smat',noise_types{noise_ind}), 'scores_*');
+    save(sprintf('./scores/BR2_cIRMscores_denoising.noise%smat',noise_types{noise_ind}), 'scores_*');
 %     save(sprintf('./scores/cIRMscores_denoising_tf.noise%smat',noise_types{noise_ind}), 'scores_*');
 end
 
