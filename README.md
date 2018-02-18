@@ -29,6 +29,8 @@ module add matlab/2016a
 matlab
 
 >> scriptTrainDNN_cIRM_denoise_mat('SSN')
+
+>> scriptTestDNN_cIRM_denoise_mat()
 ```
 
 ### Jupyter at BigRed2
