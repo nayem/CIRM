@@ -39,6 +39,7 @@ matlab
 
 >> scriptTestDNN_cIRM_denoise_mat()
 
+>> cd PESQ
 >> calculatePESQ_mat()
 ```
 
