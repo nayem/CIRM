@@ -49,14 +49,14 @@ fprintf('Extracting Features/Labels from Development Data...\n');
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Training
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% trData = zeros(195192,1230);
-% trLabel_r = zeros(195192,963);
-% trLabel_i = zeros(195192,963);
-% cvData = zeros(44961,1230);
-% cvLabel_r = zeros(44961,963);
-% cvLabel_i = zeros(44961,963);
-% opts.nayem = 0;
-% opts.noise = 'SSN';
+%trData = zeros(195192,1230);
+%trLabel_r = zeros(195192,963);
+%trLabel_i = zeros(195192,963);
+%cvData = zeros(44961,1230);
+%cvLabel_r = zeros(44961,963);
+%cvLabel_i = zeros(44961,963);
+%opts.nayem = 0;
+%opts.noise = 'SSN';
 
 fprintf('Initializing DNN parameters...\n');
 opts = InitiatlizeNN_cIRM(opts,trData,trLabel_r);

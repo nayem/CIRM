@@ -190,8 +190,8 @@ for noise_ind = 1:length(noise_types)
 
     fprintf('\n')
 
-    save(sprintf('./scores/BR2_cIRMscores_denoising.noise%smat',noise_types{noise_ind}), 'scores_*');
-%     save(sprintf('./scores/cIRMscores_denoising_tf.noise%smat',noise_types{noise_ind}), 'scores_*');
+    save(sprintf('./scores/BR2_cIRMscores_denoising.noise%s.mat',noise_types{noise_ind}), 'scores_*');
+%     save(sprintf('./scores/cIRMscores_denoising_tf.noise%s.mat',noise_types{noise_ind}), 'scores_*');
 end
 
 save(sprintf('./scores/BR2_cIRMscores_denoising.noisesALL.mat'))
