@@ -43,16 +43,17 @@ matlab
 ```
 
 ### Jupyter at BigRed2
-Check at your pc if ```tcp:8895``` is free or not. If not free (```PID <XXXX>``` is running), then kill it.
+Check at your pc if ```tcp:8895``` is free or not. If not free (e.g. process ```<PID1>``` is running), then kill it.
 ```shell
 lsof -i tcp:8895
-kill -9 <XXXX>
+kill -9 <PID1>
 ssh -N -f -L localhost:8895:localhost:8895 knayem@bigred2.uits.iu.edu
 ssh knayem@bigred2.uits.iu.edu
 ```
 Run at the server,
 ```
 lsof -i tcp:8895
+kill -9 <PID2>
 jupyter notebook --no-browser --port=8895
 ```
 
