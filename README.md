@@ -119,14 +119,28 @@ Generated Speech (SSN Noise), after Testing
 **Model files**
 ```shell
 /gpfs/home/k/n/knayem/BigRed2/Eagles_Backup/Code/cIRM/cIRM/dnn_models
-      |---> dnncirm.noiseSSN.mat (matlab->write, Trained matlab Model-train, scriptTrainDNN_cIRM_denoise_mat('SSN') )
+      |---> dnncirm.noiseSSN.mat (Trained matlab Model)
+            (MATLAB: scriptTrainDNN_cIRM_denoise('SSN')-> write )
       |---> dnncirm.noiseSSN_02.mat 
       |
-      |---> DNN_datas.mat (matlab->write, python->read, scriptTrainDNN_cIRM_denoise_mat('SSN') )
-      |---> DNN_params.mat (matlab->write, python->read, scriptTrainDNN_cIRM_denoise_mat('SSN') )
+      |---> DNN_datas.mat 
+            (MATLAB: scriptTrainDNN_cIRM_denoise_mat('SSN')-> write)
+            (PYTHON: DNN_01.py -> read)
+            (MATLAB: cIRM_Net_Change()-> read)
+      |---> DNN_params.mat
+            (MATLAB: scriptTrainDNN_cIRM_denoise_mat('SSN')-> write)
+            (PYTHON: DNN_01.py -> read)
+            (MATLAB: cIRM_Net_Change()-> read)
       |
-      |---> DNN_net_02.mat (python->write, matlab->read, Trained python Model [intermediate]-train)
-      |---> DNN_CIRM_net_02.mat (matlab->write, Trained Model [final]-train)
+      |---> DNN_net.mat (Trained python Model [intermediate])
+            (PYTHON: DNN_01.py -> write)
+            (MATLAB: cIRM_Net_Change()-> read)
+      |---> DNN_net_02.mat
+      |
+      |---> DNN_CIRM_net.mat (Trained python Model [final])
+            (MATLAB: cIRM_Net_Change()-> write)
+            (MATLAB: scriptTestDNN_cIRM_denoise()-> read)
+      |---> DNN_CIRM_net_02.mat
       
 ```
 
