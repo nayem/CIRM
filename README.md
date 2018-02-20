@@ -21,6 +21,7 @@ Complex Ideal Ratio Mask
 ```
 
 ### Matlab Commands to run cIRM codes
+_change files' path of `scriptTestDNN_cIRM_denoise_02()` and `calculatePESQ_02()` accordingly (matlab/python)_
 ```shell
 qsub -I -l walltime=10:00:00 -l nodes=1:ppn=4 -l gres=ccm -q gpu
 module add ccm
@@ -38,6 +39,7 @@ matlab
 ```
 
 ### Python Commands to run cIRM codes
+_change files' path of `scriptTestDNN_cIRM_denoise_02()` and `calculatePESQ_02()` accordingly (matlab/python)_
 ```shell
 qsub -I -l walltime=10:00:00 -l nodes=1:ppn=4 -l gres=ccm -q gpu
 module add ccm
