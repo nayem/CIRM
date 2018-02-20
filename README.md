@@ -20,6 +20,47 @@ Complex Ideal Ratio Mask
 /gpfs/home/k/n/knayem/BigRed2/Eagles_Backup/Data
 ```
 
+### Matlab Commands to run cIRM codes
+```shell
+qsub -I -l walltime=10:00:00 -l nodes=1:ppn=4 -l gres=ccm -q gpu
+module add ccm
+ccmlogin
+cd /gpfs/home/k/n/knayem/BigRed2/Eagles_Backup/Code/cIRM/cIRM
+module add matlab/2016a
+matlab
+
+>> scriptTrainDNN_cIRM_denoise_02('SSN')
+
+>> scriptTestDNN_cIRM_denoise_02()
+
+>> cd PESQ
+>> calculatePESQ_02()
+```
+
+### Python Commands to run cIRM codes
+```shell
+qsub -I -l walltime=10:00:00 -l nodes=1:ppn=4 -l gres=ccm -q gpu
+module add ccm
+ccmlogin
+cd /gpfs/home/k/n/knayem/BigRed2/Eagles_Backup/Code/cIRM/cIRM
+module add tensorflow
+module add anaconda2
+
+python DNN_01.py
+
+module add matlab/2016a
+matlab
+
+>> cd dnn_models
+>> cIRM_Net_Change()
+
+>> cd ..
+>> scriptTestDNN_cIRM_denoise_02()
+
+>> cd PESQ
+>> calculatePESQ_02()
+```
+
 ### File Annotation
 Clean Speech (SSN Noise), for Train
 ```shell
@@ -78,13 +119,14 @@ Generated Speech (SSN Noise), after Testing
 **Model files**
 ```shell
 /gpfs/home/k/n/knayem/BigRed2/Eagles_Backup/Code/cIRM/cIRM/dnn_models
-      |---> DNN_datas.mat (matlab->write, python->read)
-      |---> DNN_params.mat (matlab->write, python->read)
+      |---> dnncirm.noiseSSN.mat (matlab->write, Trained matlab Model-train, scriptTrainDNN_cIRM_denoise_mat('SSN') )
+      |---> dnncirm.noiseSSN_02.mat 
       |
-      |---> dnncirm.noiseSSN.mat (matlab->write, Trained matlab Model-train)
+      |---> DNN_datas.mat (matlab->write, python->read, scriptTrainDNN_cIRM_denoise_mat('SSN') )
+      |---> DNN_params.mat (matlab->write, python->read, scriptTrainDNN_cIRM_denoise_mat('SSN') )
       |
-      |---> DNN_net.mat (python->write, matlab->read, Trained python Model [intermediate]-train)
-      |---> DNN_CIRM_net.mat (matlab->write, Trained Model [final]-train)
+      |---> DNN_net_02.mat (python->write, matlab->read, Trained python Model [intermediate]-train)
+      |---> DNN_CIRM_net_02.mat (matlab->write, Trained Model [final]-train)
       
 ```
 
@@ -96,22 +138,6 @@ Generated Speech (SSN Noise), after Testing
 
 ```cd /N/dc2/scratch/knayem```
 
-### Matlab Commands to run cIRM codes
-```shell
-qsub -I -l walltime=01:00:00 -l nodes=1:ppn=4 -l gres=ccm -q gpu
-module add ccm
-ccmlogin
-cd /gpfs/home/k/n/knayem/BigRed2/Eagles_Backup/Code/cIRM/cIRM
-module add matlab/2016a
-matlab
-
->> scriptTrainDNN_cIRM_denoise_mat('SSN')
-
->> scriptTestDNN_cIRM_denoise_mat()
-
->> cd PESQ
->> calculatePESQ_mat()
-```
 
 ### Jupyter at BigRed2
 Check at your pc if ```tcp:8895``` is free or not. If not free (e.g. process ```<PID1>``` is running), then kill it.
@@ -131,3 +157,5 @@ jupyter notebook --no-browser --port=8895
 
 ## Module Commands
 http://modules.sourceforge.net/man/module.html
+
+**Tip:** GitHub README Basic writing and formatting syntax, https://help.github.com/articles/basic-writing-and-formatting-syntax/
