@@ -26,12 +26,15 @@ Clean Speech (SSN Noise), for Train
 /gpfs/home/k/n/knayem/BigRed2/Eagles_Backup/Data/denoising_clean_wavs_SSN_10noisespercs
       |---> training_16k
             |---> S_01_01_16k.wav
+            |
             |---> ... (total 500 files)
       |---> development_16k
             |---> S_51_01_16k.wav
+            |
             |---> ... (total 110 files)
       |---> testing_16k
             |---> S_62_02_16k.wav
+            |
             |---> ... (total 109 files)
 ```
 
@@ -42,11 +45,13 @@ Noisy Speech (SSN Noise), for Train
             |---> S_01_01_16k_-3dB_noisyspeech.wav
             |---> S_01_01_16k_0dB_noisyspeech.wav
             |---> S_01_01_16k_3dB_noisyspeech.wav
+            |
             |---> ... (total 500x3=1500 files, [-3dB,0dB,3dB] noise level)
       |---> development_16k
             |---> S_51_01_16k_-3dB_noisyspeech.wav
             |---> S_51_01_16k_0dB_noisyspeech.wav
             |---> S_51_01_16k_3dB_noisyspeech.wav
+            |
             |---> ... (total 110x3=330 files, [-3dB,0dB,3dB] noise level)
       |---> testing_matched
             |---> S_62_02_16k_-3dB_noisyspeech.wav
@@ -54,6 +59,7 @@ Noisy Speech (SSN Noise), for Train
             |---> S_62_02_16k_0dB_noisyspeech.wav
             |---> S_62_02_16k_3dB_noisyspeech.wav
             |---> S_62_02_16k_6dB_noisyspeech.wav
+            |
             |---> ... (total 109x3= 545 files, [-6dB,-3dB,0dB,3dB,6dB] noise level)
 ```
 
@@ -65,6 +71,7 @@ Generated Speech (SSN Noise), after Testing
       |---> S_62_02_16k_0dB_noisyspeech_crmenh.wav
       |---> S_62_02_16k_3dB_noisyspeech_crmenh.wav
       |---> S_62_02_16k_6dB_noisyspeech_crmenh.wav
+      |
       |---> ... (total 109x5= 545 files, [-6dB,-3dB,0dB,3dB,6dB] noise level)
 ```
 
@@ -73,9 +80,11 @@ Generated Speech (SSN Noise), after Testing
 /gpfs/home/k/n/knayem/BigRed2/Eagles_Backup/Code/cIRM/cIRM/dnn_models
       |---> DNN_datas.mat (matlab->write, python->read)
       |---> DNN_params.mat (matlab->write, python->read)
+      |
       |---> dnncirm.noiseSSN.mat (matlab->write, Trained matlab Model-train)
-      |---> DNN_net.mat (python->write, matlab->read, Trained python Model (intermediate)-train)
-      |---> DNN_CIRM_net.mat (matlab->write, Trained Model (final)-train)
+      |
+      |---> DNN_net.mat (python->write, matlab->read, Trained python Model [intermediate]-train)
+      |---> DNN_CIRM_net.mat (matlab->write, Trained Model [final]-train)
       
 ```
 
