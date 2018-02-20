@@ -62,7 +62,7 @@ matlab
 ```
 
 ### File Annotation
-Clean Speech (SSN Noise), for Train
+Clean Speech (SSN Noise), for Train+Development+Test
 ```shell
 /gpfs/home/k/n/knayem/BigRed2/Eagles_Backup/Data/denoising_clean_wavs_SSN_10noisespercs
       |---> training_16k
@@ -79,7 +79,7 @@ Clean Speech (SSN Noise), for Train
             |---> ... (total 109 files)
 ```
 
-Noisy Speech (SSN Noise), for Train
+Mix/Noisy Speech (SSN Noise), for Train+Development+Test
 ```shell
 /gpfs/home/k/n/knayem/BigRed2/Eagles_Backup/Data/denoising_mix_wavs_SSN_10noisespercs
       |---> training_16k
@@ -104,7 +104,7 @@ Noisy Speech (SSN Noise), for Train
             |---> ... (total 109x3= 545 files, [-6dB,-3dB,0dB,3dB,6dB] noise level)
 ```
 
-Generated Speech (SSN Noise), after Testing
+Generated Speech (SSN Noise), from Testing
 ```shell
 /gpfs/home/k/n/knayem/BigRed2/Eagles_Backup/Data/denoise_complex_domain_wavs
       |---> S_62_02_16k_-3dB_noisyspeech_crmenh.wav
