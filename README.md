@@ -104,7 +104,7 @@ Mix/Noisy Speech (SSN Noise), for Train+Development+Test
             |---> ... (total 109x3= 545 files, [-6dB,-3dB,0dB,3dB,6dB] noise level)
 ```
 
-Generated Speech (SSN Noise), from Testing
+Enhanced/Generated Speech (SSN Noise), from Testing
 ```shell
 /gpfs/home/k/n/knayem/BigRed2/Eagles_Backup/Data/denoise_complex_domain_wavs
       |---> S_62_02_16k_-3dB_noisyspeech_crmenh.wav
