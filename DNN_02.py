@@ -11,6 +11,8 @@ import scipy.io as sio
 import numpy as np
 import h5py
 
+tf.logging.set_verbosity(tf.logging.INFO)
+
 '''
 Read parameters from .mat files
 save in Opt object
@@ -22,15 +24,39 @@ DNN_NET_FILE = "./dnn_models/DNN_net.mat"
 
 
 class Opts:
-
     opts_dict = dict()
 
     def __init__(self, FILE, FILE_DATA):
+
+        # Parameters
+        self.LEARNING_RATE = 0.00001
+        self.Momentum_R = 0.5  # momentum = 0.5 (for 1-5 epochs), 0.9 (for rest)
+        self.TOTAL_EPOCHS = 80
+        self.BATCH_SIZE = 512
+        self.DISPLAY_STEP = 1
+
+        # Network Parameters
+        self.n_input = 1230  # MNIST data input (img shape: 28*28)
+        self.n_hidden_1 = 1024  # 1st layer number of neurons
+        self.n_hidden_2 = 1024  # 2nd layer number of neurons
+        self.n_hidden_3 = 1024  # 3rd layer number of neurons
+        self.n_classes = (963 + 963)  # total classes (real+imaginary)
+
+        self.validation_error = np.full((1), np.inf)
+        self.min_validation_error = np.full((1), np.inf)
+        self.PREVIOUS_10 = 10
+        self.DIFF_THRESHOLD = 0.000001
+
+
+        # Store layers weight & bias
+        self.best_weights = dict()
+        self.best_biases = dict()
+
         with h5py.File(FILE, 'r') as f:
             key_list = list(f.keys())
-            print (key_list)
+            print(key_list)
 
-            for k,v in f.items():
+            for k, v in f.items():
 
                 if k == 'ARMA_order':
                     self.ARMA_order = int(np.array(v)[0][0])
@@ -100,7 +126,7 @@ class Opts:
                 elif k == 'net_struct':
                     self.net_struct = np.array(v)
                     for n_s in np.array(v):
-                        print (n_s[0])
+                        print(n_s[0])
 
                     self.opts_dict[k] = self.net_struct
                 elif k == 'rbm_batch_size':
@@ -138,67 +164,66 @@ class Opts:
                     for c in np.array(v):
                         self.unit_type_hidden += chr(c[0])
 
-                    # self.opts_dict[k] = self.unit_type_hidden
+                        # self.opts_dict[k] = self.unit_type_hidden
 
                 elif k == 'unit_type_output':
                     self.unit_type_output = ""
                     for c in np.array(v):
                         self.unit_type_output += chr(c[0])
 
-                    # self.opts_dict[k] = self.unit_type_output
+                        # self.opts_dict[k] = self.unit_type_output
 
-                # elif k == 'trData':
-                #     self.trData = np.transpose( np.array(v) )
-                #     # self.opts_dict[k] = self.trData
-                # elif k == 'trLabel_i':
-                #     self.trLabel_i = np.transpose( np.array(v) )
-                #     # self.opts_dict[k] = self.trLabel_i
-                # elif k == 'trLabel_r':
-                #     self.trLabel_r = np.transpose( np.array(v) )
-                #     # self.opts_dict[k] = self.trLabel_r
-                # elif k == 'cvData':
-                #     self.cvData = np.transpose( np.array(v) )
-                #     # self.opts_dict[k] = self.cvData
-                # elif k == 'cvLabel_i':
-                #     self.cvLabel_i = np.transpose( np.array(v) )
-                #     # self.opts_dict[k] = self.cvLabel_i
-                # elif k == 'cvLabel_r':
-                #     self.cvLabel_r = np.transpose( np.array(v) )
-                #     # self.opts_dict[k] = self.cvLabel_r
+                        # elif k == 'trData':
+                        #     self.trData = np.transpose( np.array(v) )
+                        #     # self.opts_dict[k] = self.trData
+                        # elif k == 'trLabel_i':
+                        #     self.trLabel_i = np.transpose( np.array(v) )
+                        #     # self.opts_dict[k] = self.trLabel_i
+                        # elif k == 'trLabel_r':
+                        #     self.trLabel_r = np.transpose( np.array(v) )
+                        #     # self.opts_dict[k] = self.trLabel_r
+                        # elif k == 'cvData':
+                        #     self.cvData = np.transpose( np.array(v) )
+                        #     # self.opts_dict[k] = self.cvData
+                        # elif k == 'cvLabel_i':
+                        #     self.cvLabel_i = np.transpose( np.array(v) )
+                        #     # self.opts_dict[k] = self.cvLabel_i
+                        # elif k == 'cvLabel_r':
+                        #     self.cvLabel_r = np.transpose( np.array(v) )
+                        #     # self.opts_dict[k] = self.cvLabel_r
 
         with h5py.File(FILE_DATA, 'r') as f:
-            print ( list(f.keys()) )
+            print(list(f.keys()))
             for k, v in f.items():
                 if k == 'trData':
                     self.trData = np.transpose(np.array(v))
-                    print ('trData: ',self.trData[0,0], self.trData[0,1], self.trData[1,4])
+                    # print('trData: ', self.trData[0, 0], self.trData[0, 1], self.trData[1, 4])
                     # self.opts_dict[k] = self.trData
                 elif k == 'trLabel_i':
                     self.trLabel_i = np.transpose(np.array(v))
-                    print('trLabel_i: ',self.trLabel_i[0, 0], self.trLabel_i[0, 1], self.trLabel_i[1,4])
+                    # print('trLabel_i: ', self.trLabel_i[0, 0], self.trLabel_i[0, 1], self.trLabel_i[1, 4])
                     # self.opts_dict[k] = self.trLabel_i
                 elif k == 'trLabel_r':
                     self.trLabel_r = np.transpose(np.array(v))
-                    print('trLabel_r: ',self.trLabel_r[0, 0], self.trLabel_r[0, 1], self.trLabel_r[1,6])
+                    # print('trLabel_r: ', self.trLabel_r[0, 0], self.trLabel_r[0, 1], self.trLabel_r[1, 6])
                     # self.opts_dict[k] = self.trLabel_r
                 elif k == 'cvData':
                     self.cvData = np.transpose(np.array(v))
-                    print('cvData: ',self.cvData[0, 0], self.cvData[0, 1], self.cvData[1,5])
+                    # print('cvData: ', self.cvData[0, 0], self.cvData[0, 1], self.cvData[1, 5])
                     # self.opts_dict[k] = self.cvData
                 elif k == 'cvLabel_i':
                     self.cvLabel_i = np.transpose(np.array(v))
-                    print('cvLabel_i: ',self.cvLabel_i[0, 0], self.cvLabel_i[0, 1], self.cvLabel_i[1,8])
+                    # print('cvLabel_i: ', self.cvLabel_i[0, 0], self.cvLabel_i[0, 1], self.cvLabel_i[1, 8])
                     # self.opts_dict[k] = self.cvLabel_i
                 elif k == 'cvLabel_r':
                     self.cvLabel_r = np.transpose(np.array(v))
-                    print('cvLabel_r: ',self.cvLabel_r[0, 0], self.cvLabel_r[0, 1], self.cvLabel_r[1,6])
+                    # print('cvLabel_r: ', self.cvLabel_r[0, 0], self.cvLabel_r[0, 1], self.cvLabel_r[1, 6])
 
-
-    def next_batch(self, batch_size, isTrainCycle = True):
+    def next_batch(self, batch_size, isTrainCycle=True):
         if isTrainCycle:
-            selected_indics = np.random.randint(195192, size= batch_size)
+            selected_indics = np.random.randint(195192, size=batch_size)
         else:
-            selected_indics = np.random.randint(44961, size= batch_size)
+            selected_indics = np.random.randint(44961, size=batch_size)
 
         isFirst = True
         # print (np.shape(opts.trData) )
@@ -214,7 +239,7 @@ class Opts:
             if isFirst:
                 if isTrainCycle:
                     x = np.array([opts.trData[indx]])
-                    y = np.array([ np.concatenate( (opts.trLabel_r[indx], opts.trLabel_i[indx]), axis=0 ) ])
+                    y = np.array([np.concatenate((opts.trLabel_r[indx], opts.trLabel_i[indx]), axis=0)])
                     isFirst = False
                 else:
                     x = np.array([opts.cvData[indx]])
@@ -224,7 +249,7 @@ class Opts:
             else:
                 if isTrainCycle:
                     np.append(x, [opts.trData[indx]], axis=0)
-                    np.append(y, [ np.concatenate( (opts.trLabel_r[indx], opts.trLabel_i[indx]), axis=0 ) ], axis=0)
+                    np.append(y, [np.concatenate((opts.trLabel_r[indx], opts.trLabel_i[indx]), axis=0)], axis=0)
                     isFirst = False
                 else:
                     np.append(x, [opts.cvData[indx]], axis=0)
@@ -233,93 +258,6 @@ class Opts:
 
         return [x, y]
 
-opts = Opts(DNN_MODEL_FILE, DNN_DATA_FILE)
-# print (opts.net_struct, opts.change_momentum_point)
-
-[x,y] = opts.next_batch(5)
-
-# print ('x:',x)
-# print ('y:',y)
-# print ('x[0]:',x[0])
-# print ('y[0]:',y[0])
-
-################################################################
-
-'''
-DNN 3 layer
-'''
-def cIRM_model_fn(features, labels, mode):
-  """Model function for cIRM."""
-
-  # Input Layer
-  input_layer = tf.reshape(features["x"], [-1, 28, 28, 1])
-
-  # Dense Layer
-  dense1 = tf.layers.dense(inputs=features, units=n_hidden_1, activation=tf.nn.relu, name='layer_1')
-  dense2 = tf.layers.dense(inputs=dense1, units=n_hidden_2, activation=tf.nn.relu, name='layer_2')
-  dense3 = tf.layers.dense(inputs=dense2, units=n_hidden_3, activation=tf.nn.relu, name='layer_3')
-
-  # Output Layer
-  predictions = tf.layers.dense(inputs=dense3, units=n_classes, name='output_layer' )
-
-  if mode == tf.estimator.ModeKeys.PREDICT:
-    return tf.estimator.EstimatorSpec(mode=mode, predictions=predictions)
-
-
-  # Calculate Loss (for both TRAIN and EVAL modes)
-  loss = tf.losses.mean_squared_error(labels=labels, predictions=predictions)
-
-  # Configure the Training Op (for TRAIN mode)
-  if mode == tf.estimator.ModeKeys.TRAIN:
-    optimizer = tf.train.AdagradOptimizer(learning_rate=0.001)
-    train_op = optimizer.minimize(
-        loss=loss,
-        global_step=tf.train.get_global_step())
-    return tf.estimator.EstimatorSpec(mode=mode, loss=loss, train_op=train_op)
-
-  # Add evaluation metrics (for EVAL mode)
-  eval_metric_ops = {
-      "accuracy": tf.metrics.accuracy(
-          labels=labels, predictions=predictions["classes"])}
-  return tf.estimator.EstimatorSpec(
-      mode=mode, loss=loss, eval_metric_ops=eval_metric_ops)
-
-
-
-
-def weight_variable (shape):
-    initial = tf.truncated_normal(shape, stddev = 0.1)
-    return tf.Variable(initial)
-
-
-def bias_variable (shape):
-    initial = tf.constant(0.1, shape=shape)
-    return tf.Variable(initial)
-
-
-# Create model
-def multilayer_NN(x):
-
-    layer_1 = tf.matmul(x, weights['h1']) + biases['b1']
-
-    layer_2 = tf.matmul(layer_1, weights['h2']) + biases['b2']
-
-    layer_3 = tf.matmul(layer_2, weights['h3']) + biases['b3']
-
-    out_layer = tf.matmul(layer_3, weights['out']) + biases['out']
-
-    return out_layer
-
-
-def calc(x, y):
-    # Returns predictions and error
-    predictions = multilayer_NN(X)
-
-    # Define loss and optimizer
-    loss = tf.reduce_mean(tf.square(y - predictions))
-    # loss = tf.reduce_mean(tf.abs(y - predictions))
-
-    return [predictions, loss]
 
 def write_file(best_weights, best_biases, DNN_NET_FILE):
     W_1, W_2, W_3 = [best_weights['h1'], best_weights['h2'], best_weights['h3']]
@@ -362,213 +300,88 @@ def write_file(best_weights, best_biases, DNN_NET_FILE):
 
     master_dict = {'struct_net': [Param_Dict]}
     sio.savemat(DNN_NET_FILE, master_dict, format='5', long_field_names=True)
-#################
-# x = tf.placeholder( tf.float32, shape=[None, 1230])
-# y = tf.placeholder( tf.float32, shape=[None, 963+963])
-
-# Hidden Layer1
-# W_1 = weight_variable([1230, 1024])
-# b_1 = bias_variable([1024])
-
-# # Hidden Layer2
-# W_2 = weight_variable([1024, 1024])
-# b_2 = bias_variable([1024])
-#
-# # Hidden Layer3
-# W_3 = weight_variable([1024, 1024])
-# b_3 = bias_variable([1024])
-#
-# Hidden Layer4
-# W_4 = weight_variable([1024, 963+963])
-# b_4 = bias_variable([963+963])
 
 
-# Parameters
-## HAVE to use OPS PARAMS ***********
-learning_rate = 0.00001
-training_epochs = 80
-# training_epochs = 0
-batch_size = 512
-display_step = 1
+################################################################
 
-# Network Parameters
-## HAVE to use NET_STRUCTURE ***********
-n_input = 1230 # MNIST data input (img shape: 28*28)
-n_hidden_1 = 1024 # 1st layer number of neurons
-n_hidden_2 = 1024 # 2nd layer number of neurons
-n_hidden_3 = 1024 # 3rd layer number of neurons
-n_classes = (963+963) #  total classes (real+imaginary)
+'''
+DNN 3 layer
+'''
 
-validation_error = np.full((1), np.inf)
-min_validation_error = np.full((1), np.inf)
-PREVIOUS_10 = 10
-DIFF_THRESHOLD = 0.000001
+def cIRM_model_fn(opts, features, labels, mode):
+    """Model function for cIRM."""
 
-# with tf.device('/gpu:2'):
-# tf Graph input
-X = tf.placeholder( tf.float32, shape=[None, n_input])
-Y = tf.placeholder( tf.float32, shape=[None, n_classes])
+    # Dense Layer
+    dense1 = tf.layers.dense(inputs=features, units=opts.n_hidden_1, activation=tf.nn.relu, name='layer_1')
+    dense2 = tf.layers.dense(inputs=dense1, units=opts.n_hidden_2, activation=tf.nn.relu, name='layer_2')
+    dense3 = tf.layers.dense(inputs=dense2, units=opts.n_hidden_3, activation=tf.nn.relu, name='layer_3')
 
-# Store layers weight & bias
-weights = {
-    'h1': weight_variable([n_input, n_hidden_1]),
-    'h2': weight_variable([n_hidden_1, n_hidden_2]),
-    'h3': weight_variable([n_hidden_2, n_hidden_3]),
-    'out': weight_variable([n_hidden_3, n_classes])
-}
-biases = {
-    'b1': bias_variable([n_hidden_1]),
-    'b2': bias_variable([n_hidden_2]),
-    'b3': bias_variable([n_hidden_3]),
-    'out': bias_variable([n_classes])
-}
+    # Output Layer
+    predictions = tf.layers.dense(inputs=dense3, units=opts.n_classes, name='output_layer')
 
-best_weights = dict()
-best_biases = dict()
-# best_weights = {
-#     'h1': weight_variable([n_input, n_hidden_1]),
-#     'h2': weight_variable([n_hidden_1, n_hidden_2]),
-#     'h3': weight_variable([n_hidden_2, n_hidden_3]),
-#     'out': weight_variable([n_hidden_3, n_classes])
-# }
-# best_biases = {
-#     'b1': bias_variable([n_hidden_1]),
-#     'b2': bias_variable([n_hidden_2]),
-#     'b3': bias_variable([n_hidden_3]),
-#     'out': bias_variable([n_classes])
-# }
-
-y_p, loss_op = calc(X, Y)
-train_op = tf.train.GradientDescentOptimizer(learning_rate).minimize(loss_op)
-# train_op = tf.train.AdamOptimizer(learning_rate).minimize(cost)
-
-# Initializing the variables
-init = tf.global_variables_initializer()
+    if mode == tf.estimator.ModeKeys.PREDICT:
+        return tf.estimator.EstimatorSpec(mode=mode, predictions=predictions)
 
 
-with tf.Session() as sess:
-    sess.run(init)
+    # Calculate Loss (for both TRAIN and EVAL modes)
+    loss = tf.losses.mean_squared_error(labels=labels,
+                                        predictions=predictions)  # Configure the Training Op (for TRAIN mode)
 
-    # Training cycle
-    epoch = 0
-    while True:
+    if mode == tf.estimator.ModeKeys.TRAIN:
+        # optimizer = tf.train.AdagradOptimizer(learning_rate=LEARNING_RATE, initial_accumulator_value=Momentum_R)
+        optimizer = tf.train.AdagradOptimizer(learning_rate=LEARNING_RATE, initial_accumulator_value=Momentum_R)
+        train_op = optimizer.minimize(
+            loss=loss,
+            global_step=tf.train.get_global_step())
+        return tf.estimator.EstimatorSpec(mode=mode, loss=loss, train_op=train_op)
 
-        ##### Create Train Batch, evaluate COST, Weight, Bias #####
-        ###########################################################
-
-        avg_cost = 0.0
-        total_batch = math.ceil(195192.0/batch_size)
-
-        # Loop over all batches
-        for i in range(total_batch):
-            batch_x, batch_y = opts.next_batch(batch_size)
-
-            # Run optimization op (backprop) and cost op (to get loss value)
-            _, c, epoch_w, epoch_b = sess.run([train_op, loss_op, weights, biases], feed_dict={X: batch_x, Y: batch_y})
-
-            # Compute average loss
-            avg_cost += (c / total_batch)
-            # print('Epoch: ', epoch, 'iteration: ', i,  'cost: ', c, '(c / total_batch): ', (c / total_batch), 'total_batch: ', total_batch, 'avg_cost: ', avg_cost)
-
-        # Display logs per epoch step
-        if epoch % display_step == 0:
-            print("Epoch:", '%04d' % (epoch + 1), "cost={:.9f}".format(avg_cost))
+    # Add evaluation metrics (for EVAL mode)
+    return tf.estimator.EstimatorSpec(mode=mode, loss=loss)
 
 
-        ##### Validation in whole batch #####
-        #####################################
+def main(unused_argv):
+    opts = Opts(DNN_MODEL_FILE, DNN_DATA_FILE)
 
-        val_batch_x, val_batch_y = opts.next_batch(44961, False)
-        valid_cost = calc(val_batch_x, val_batch_y)[1]
+    print(opts.trData.shape, "opts.trData:\n",opts.trData)
+    print(opts.trLabel_r.shape, "opts.trLabel_r:\n", opts.trLabel_r)
+    print(opts.trLabel_i.shape, "opts.trLabel_i:\n", opts.trLabel_i)
 
-        validation_cost_epoch = sess.run(valid_cost, feed_dict={X: val_batch_x, Y: val_batch_y})
-        print(epoch, 'Validation error =', validation_cost_epoch)
+    print(opts.cvData.shape, "opts.cvData:\n", opts.cvData)
+    print(opts.cvLabel_r.shape, "opts.cvData:\n", opts.cvLabel_r)
+    print(opts.cvLabel_i.shape, "opts.cvData:\n", opts.cvLabel_i)
 
+    # Create the Estimator
+    cIRM_classifier = tf.estimator.Estimator(
+        model_fn=cIRM_model_fn, model_dir="/tmp/cIRM_dense_model_02")
 
-        ##### Min validation error, update weights, bias #####
-        if np.isnan(validation_cost_epoch):
-            validation_cost_epoch = np.inf
+    # tensors_to_log = {"probabilities": "softmax_tensor"}
+    # logging_hook = tf.train.LoggingTensorHook(
+    #     tensors=tensors_to_log, every_n_iter=1)
 
-        if epoch>0:
-            validation_error = np.append(validation_error,validation_cost_epoch)
-            min_validation_error = np.append(min_validation_error, min(validation_error))
-        else:
-            validation_error[epoch] = validation_cost_epoch
-            min_validation_error[epoch] = min(validation_error)
+    # Train the model
+    batch_x, batch_y = opts.next_batch(195192)
+    train_input_fn = tf.estimator.inputs.numpy_input_fn(
+        x={"x":batch_x},
+        y=batch_y,
+        batch_size=512,
+        num_epochs=5,
+        shuffle=True)
 
-        # print('Validation error =', sess.run(valid_cost, feed_dict={X: val_batch_x, Y: val_batch_y}))
-        print('Best Validation error =',  min_validation_error[-1])
-        if epoch >= 1 and min_validation_error[-2] > min_validation_error[-1]:
-            best_weights=epoch_w.copy()
-            best_biases=epoch_b.copy()
+    cIRM_classifier.train(
+        input_fn=train_input_fn,
+        steps=2,
+        hooks=[logging_hook])
 
-            print("Inside: ", end='')
-            print(epoch_w.keys())
-            write_file(epoch_w, epoch_b, DNN_NET_FILE)
-            print(" File Write complete")
-
-        # Stopping Training for stable min error
-        if epoch >= training_epochs:
-            # print("Last 10: ", end='')
-            # print(min_validation_error[-PREVIOUS_10:])
-            # print(validation_error[-PREVIOUS_10:])
-            # # print(np.ediff1d(validation_error[-10:]))
-            # print("Abs Diff: ", end='')
-            # print(np.absolute(np.ediff1d(min_validation_error[-PREVIOUS_10:])))
-            # print("Sum Abs Diff: ", end='')
-            # print( sum(np.absolute(np.ediff1d(min_validation_error[-PREVIOUS_10:]))) )
-            # print("Decision: ", end='')
-            # print(sum(np.absolute(np.ediff1d(min_validation_error[-PREVIOUS_10:]))) < DIFF_THRESHOLD)
-
-            if sum(np.absolute(np.ediff1d(min_validation_error[-PREVIOUS_10:]))) < DIFF_THRESHOLD:
-                break
+    # Evaluate the model and print results
+    val_batch_x, val_batch_y = opts.next_batch(44961, False)
+    eval_input_fn = tf.estimator.inputs.numpy_input_fn(
+        x={"x": val_batch_x},
+        y=val_batch_y,
+        num_epochs=1,
+        shuffle=True)
+    eval_results = cIRM_classifier.evaluate(input_fn=eval_input_fn)
+    print(eval_results)
 
 
-        epoch += 1
-
-    print("Optimization Finished!")
-
-    # val_batch_x, val_batch_y = opts.next_batch(44961, False)
-    # valid_cost = calc( val_batch_x, val_batch_y )[1]
-    #
-    # print('Validation error =', sess.run(valid_cost, feed_dict={X: val_batch_x, Y: val_batch_y}) )
-
-    #############################
-    print("Outside: ", end='')
-    print(best_weights.keys())
-    W_1, W_2, W_3 = [best_weights['h1'], best_weights['h2'], best_weights['h3']]
-    # W_1,W_2, W_3 = sess.run([best_weights['h1'], best_weights['h2'], best_weights['h3']] )
-    # W_1, W_2, W_3 = sess.run([weights['h1'], weights['h2'], weights['h3']])
-    W_1, W_2, W_3, W_4 = [ np.transpose(W_1), np.transpose(W_2), np.transpose(W_3), np.array([]) ]
-    print('W_1: ', W_1.shape, 'W_2: ',W_2.shape, 'W_3: ',W_3.shape, 'W_4: ',W_4.shape)
-
-    b_1, b_2, b_3 = [best_biases['b1'], best_biases['b2'], best_biases['b3']]
-    # b_1, b_2, b_3 = sess.run([best_biases['b1'], best_biases['b2'], best_biases['b3']])
-    # b_1, b_2, b_3 = sess.run([biases['b1'], biases['b2'], biases['b3']])
-    b_1, b_2, b_3, b_4 = [ np.reshape(b_1,(1024,1) ) , np.reshape(b_2,(1024,1)), np.reshape(b_3,(1024,1)), np.array([]) ]
-    print('b_1: ',b_1.shape,'b_2: ', b_2.shape, 'b_3: ', b_3.shape, 'b_4: ', b_4.shape)
-
-    Wo, bo = [best_weights['out'], best_biases['out']]
-    # Wo, bo = sess.run([best_weights['out'], best_biases['out']])
-    # Wo, bo = sess.run([weights['out'], biases['out']])
-    Wo, bo = [ np.transpose(Wo), np.transpose(bo) ]
-
-    Wo1_1, Wo1_2, Wo1_3, Wo1_4 = [ np.array([]), np.array([]), np.array([]), Wo[:963] ]
-    bo1_1, bo1_2, bo1_3, bo1_4 = [ np.array([]), np.array([]), np.array([]), np.reshape(np.transpose(bo[:963]), (963,1)) ]
-
-    Wo2_1, Wo2_2, Wo2_3, Wo2_4 = [ np.array([]), np.array([]), np.array([]), Wo[963:] ]
-    bo2_1, bo2_2, bo2_3, bo2_4 = [ np.array([]), np.array([]), np.array([]), np.reshape(np.transpose(bo[963:]),(963,1)) ]
-
-    print('Wo1_1: ', Wo1_1.shape, 'Wo1_2: ', Wo1_2.shape, 'Wo1_3: ', Wo1_3.shape, 'Wo1_4: ', Wo1_4.shape)
-    print('bo1_1: ', bo1_1.shape, 'bo1_2: ', bo1_2.shape, 'bo1_3: ', bo1_3.shape, 'bo1_4: ', bo1_4.shape)
-
-    print('Wo2_1: ', Wo2_1.shape, 'Wo2_2: ', Wo2_2.shape, 'Wo2_3: ', Wo2_3.shape, 'Wo2_4: ', Wo2_4.shape)
-    print('bo2_1: ', bo2_1.shape, 'bo2_2: ', bo2_2.shape, 'bo2_3: ', bo2_3.shape, 'bo2_4: ', bo2_4.shape)
-
-    # Param_Dict = {'W': np.transpose([W_1,W_2, W_3]), 'b':np.transpose([b_1,b_2, b_3]) }
-    # Param_Dict = {'W': { (W_1, W_2, (W_3)}, 'b': {(b_1), (b_2), (b_3)}}
-    Param_Dict = np.core.records.fromarrays([ [W_1,W_2, W_3, W_4], [b_1,b_2, b_3, b_4], [Wo1_1,Wo1_2, Wo1_3, Wo1_4],[bo1_1, bo1_2, bo1_3, bo1_4], [Wo2_1, Wo2_2, Wo2_3, Wo2_4],[bo2_1, bo2_2, bo2_3, bo2_4] ], names='W,b,Wo1,bo1,Wo2,bo2')
-
-    master_dict = {'struct_net': [Param_Dict] }
-    sio.savemat(DNN_NET_FILE, master_dict, format='5', long_field_names=True)
-
+if __name__ == "__main__":
+    tf.app.run()

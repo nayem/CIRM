@@ -17,8 +17,13 @@ save in Opt object
 '''
 ################################################################
 DNN_DATA_FILE = "./dnn_models/DNN_datas.mat"
+# DNN_DATA_FILE = "./dnn_models/BR2_DNN_datas.mat"
+
 DNN_MODEL_FILE = "./dnn_models/DNN_params.mat"
-DNN_NET_FILE = "./dnn_models/DNN_net.mat"
+# DNN_MODEL_FILE = "./dnn_models/BR2_DNN_params.mat"
+
+DNN_NET_FILE = "./dnn_models/DNN_net_02.mat"
+# DNN_NET_FILE = "./dnn_models/BR2_DNN_net.mat"
 
 
 class Opts:
@@ -263,11 +268,14 @@ def bias_variable (shape):
 # Create model
 def multilayer_NN(x):
 
-    layer_1 = tf.matmul(x, weights['h1']) + biases['b1']
+    # layer_1 = tf.matmul(x, weights['h1']) + biases['b1']
+    layer_1 = tf.nn.relu( tf.matmul(x, weights['h1']) + biases['b1'] )
 
-    layer_2 = tf.matmul(layer_1, weights['h2']) + biases['b2']
+    # layer_2 = tf.matmul(layer_1, weights['h2']) + biases['b2']
+    layer_2 = tf.nn.relu( tf.matmul(layer_1, weights['h2']) + biases['b2'] )
 
-    layer_3 = tf.matmul(layer_2, weights['h3']) + biases['b3']
+    # layer_3 = tf.matmul(layer_2, weights['h3']) + biases['b3']
+    layer_3 = tf.nn.relu( tf.matmul(layer_2, weights['h3']) + biases['b3'] )
 
     out_layer = tf.matmul(layer_3, weights['out']) + biases['out']
 
@@ -279,7 +287,8 @@ def calc(x, y):
     predictions = multilayer_NN(X)
 
     # Define loss and optimizer
-    loss = tf.reduce_mean(tf.square(y - predictions))
+    # loss = tf.reduce_mean(tf.square(y - predictions))
+    loss = tf.losses.mean_squared_error(labels=y, predictions=predictions)
     # loss = tf.reduce_mean(tf.abs(y - predictions))
 
     return [predictions, loss]
@@ -349,10 +358,11 @@ def write_file(best_weights, best_biases, DNN_NET_FILE):
 # Parameters
 ## HAVE to use OPS PARAMS ***********
 learning_rate = 0.00001
-training_epochs = 80
+training_epochs = 3000
 # training_epochs = 0
 batch_size = 512
 display_step = 1
+
 
 # Network Parameters
 ## HAVE to use NET_STRUCTURE ***********
@@ -402,7 +412,13 @@ best_biases = dict()
 # }
 
 y_p, loss_op = calc(X, Y)
-train_op = tf.train.GradientDescentOptimizer(learning_rate).minimize(loss_op)
+# train_op = tf.train.GradientDescentOptimizer(learning_rate).minimize(loss_op)
+
+# momentum= 0.5 for 0-5 epochs, 0.9 for rest
+momentum = tf.placeholder(tf.float32, shape=[])
+train_op_05 = tf.train.AdagradOptimizer(learning_rate, initial_accumulator_value = 0.5 ).minimize(loss=loss_op)
+train_op_09 = tf.train.AdagradOptimizer(learning_rate, initial_accumulator_value = 0.9 ).minimize(loss=loss_op)
+
 # train_op = tf.train.AdamOptimizer(learning_rate).minimize(cost)
 
 # Initializing the variables
@@ -414,25 +430,33 @@ with tf.Session() as sess:
 
     # Training cycle
     epoch = 0
+    # validation_error = [-1]
+    # min_validation_error = [-1]
     while True:
 
         ##### Create Train Batch, evaluate COST, Weight, Bias #####
         ###########################################################
 
         avg_cost = 0.0
-        total_batch = math.ceil(195192.0/batch_size)
+        total_batch = int(math.ceil(195192.0/batch_size))
 
         # Loop over all batches
-        for i in range(total_batch):
+        for i in range( total_batch):
             batch_x, batch_y = opts.next_batch(batch_size)
 
-            # Run optimization op (backprop) and cost op (to get loss value)
-            _, c, epoch_w, epoch_b = sess.run([train_op, loss_op, weights, biases], feed_dict={X: batch_x, Y: batch_y})
+            if epoch <=5:
+                # Run optimization op (backprop) and cost op (to get loss value)
+                _, c, epoch_w, epoch_b = sess.run([train_op_05, loss_op, weights, biases], feed_dict={X: batch_x, Y: batch_y, momentum: 0.5 })
+            else:
+                _, c, epoch_w, epoch_b = sess.run([train_op_09, loss_op, weights, biases],
+                                                  feed_dict={X: batch_x, Y: batch_y, momentum: 0.9})
 
             # Compute average loss
-            avg_cost += (c / total_batch)
+            # avg_cost += (c / total_batch)
+            avg_cost += c
             # print('Epoch: ', epoch, 'iteration: ', i,  'cost: ', c, '(c / total_batch): ', (c / total_batch), 'total_batch: ', total_batch, 'avg_cost: ', avg_cost)
 
+        avg_cost /= total_batch
         # Display logs per epoch step
         if epoch % display_step == 0:
             print("Epoch:", '%04d' % (epoch + 1), "cost={:.9f}".format(avg_cost))
@@ -454,7 +478,7 @@ with tf.Session() as sess:
 
         if epoch>0:
             validation_error = np.append(validation_error,validation_cost_epoch)
-            min_validation_error = np.append(min_validation_error, min(validation_error))
+            min_validation_error = np.append(min_validation_error, min(validation_error[-1],min_validation_error[-1] ))
         else:
             validation_error[epoch] = validation_cost_epoch
             min_validation_error[epoch] = min(validation_error)
@@ -489,7 +513,11 @@ with tf.Session() as sess:
 
         epoch += 1
 
-    print("Optimization Finished!")
+    print ("Optimization Finished!")
+    print (len(validation_error), "Validation Cost:")
+    print ( validation_error )
+    print (len(min_validation_error), "min_validation_error Cost:")
+    print (min_validation_error)
 
     # val_batch_x, val_batch_y = opts.next_batch(44961, False)
     # valid_cost = calc( val_batch_x, val_batch_y )[1]

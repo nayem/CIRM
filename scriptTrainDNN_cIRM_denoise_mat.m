@@ -31,20 +31,29 @@ test_noise    = globalpara.noise;
 
 
 if strcmp(test_noise,'SSN') == 1
-    cs_training_data_path      = '/gpfs/home/k/n/knayem/BigRed2/Eagles_Backup/Data/denoising_clean_mats_SSN_10noisespercs/training_16k/';
-    training_mix_mat_save_path = '/gpfs/home/k/n/knayem/BigRed2/Eagles_Backup/Data/denoising_mix_mats_SSN_10noisespercs/training_16k/';
+    % cs_training_data_path      = '/gpfs/home/k/n/knayem/BigRed2/Eagles_Backup/Data/denoising_clean_mats_SSN_10noisespercs/training_16k/';
+    % training_mix_mat_save_path = '/gpfs/home/k/n/knayem/BigRed2/Eagles_Backup/Data/denoising_mix_mats_SSN_10noisespercs/training_16k/';
+
+    cs_training_data_path      = '/gpfs/home/k/n/knayem/BigRed2/Eagles_Backup/Data/denoising_clean_wavs_SSN_10noisespercs/training_16k/';
+    training_mix_mat_save_path = '/gpfs/home/k/n/knayem/BigRed2/Eagles_Backup/Data/denoising_mix_wavs_SSN_10noisespercs/training_16k/';
 end
 
 fprintf('Extracting Features/Labels from Training Data...\n');
-[trData, trLabel_r, trLabel_i, opts] = prepareTrainingData_cIRM_denoise_mat(globalpara,cs_training_data_path,training_mix_mat_save_path);
+% [trData, trLabel_r, trLabel_i, opts] = prepareTrainingData_cIRM_denoise_mat(globalpara,cs_training_data_path,training_mix_mat_save_path);
+[trData, trLabel_r, trLabel_i, opts] = prepareTrainingData_cIRM_denoise(globalpara,cs_training_data_path,training_mix_mat_save_path);
+
 
 if strcmp(test_noise,'SSN') == 1
-    cs_dev_data_path      = '/gpfs/home/k/n/knayem/BigRed2/Eagles_Backup/Data/denoising_clean_mats_SSN_10noisespercs/development_16k/';
-    noisy_dev_data_path   = '/gpfs/home/k/n/knayem/BigRed2/Eagles_Backup/Data/denoising_mix_mats_SSN_10noisespercs/development_16k/';
+    % cs_dev_data_path      = '/gpfs/home/k/n/knayem/BigRed2/Eagles_Backup/Data/denoising_clean_mats_SSN_10noisespercs/development_16k/';
+    % noisy_dev_data_path   = '/gpfs/home/k/n/knayem/BigRed2/Eagles_Backup/Data/denoising_mix_mats_SSN_10noisespercs/development_16k/';
+
+    cs_dev_data_path      = '/gpfs/home/k/n/knayem/BigRed2/Eagles_Backup/Data/denoising_clean_wavs_SSN_10noisespercs/development_16k/';
+    noisy_dev_data_path   = '/gpfs/home/k/n/knayem/BigRed2/Eagles_Backup/Data/denoising_mix_wavs_SSN_10noisespercs/development_16k/';
 end
 
 fprintf('Extracting Features/Labels from Development Data...\n');
-[cvData, cvLabel_r, cvLabel_i]  = prepareDevData_cIRM_denoise_mat(globalpara,cs_dev_data_path,noisy_dev_data_path);
+% [cvData, cvLabel_r, cvLabel_i]  = prepareDevData_cIRM_denoise_mat(globalpara,cs_dev_data_path,noisy_dev_data_path);
+[cvData, cvLabel_r, cvLabel_i]  = prepareDevData_cIRM_denoise(globalpara,cs_dev_data_path,noisy_dev_data_path);
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Training

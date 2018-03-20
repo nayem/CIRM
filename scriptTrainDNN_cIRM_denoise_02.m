@@ -71,12 +71,23 @@ fprintf('Extracting Features/Labels from Development Data...\n')
 %% Training
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % trData = zeros(195192,1230);
+%trData = [[1:5];[2:6];[3:7];[4:8];[5:9];[6:10];[7:11];[8:12];[9:13];[10:14]];
+
 % trLabel_r = zeros(195192,963);
+%trLabel_r = [[20:22];[30:32];[40:42];[50:52];[60:62];[70:72];[80:82];[90:92];[0:2];[10:12]];
+
 % trLabel_i = zeros(195192,963);
+%trLabel_i = [[66:68];[77:79];[88:90];[99:101];[0:2];[11:13];[22:24];[33:35];[44:46];[55:57]];
+
 % cvData = zeros(44961,1230);
+%cvData = [[101:105];[102:106];[103:107];[104:108];[105:109];[106:110];[107:111]];
+
 % cvLabel_r = zeros(44961,963);
+%cvLabel_r = [[510:512];[520:522];[530:532];[540:542];[550:552];[560:562];[570:572]];
+
 % cvLabel_i = zeros(44961,963);
-% opts.nayem = 0;
+%cvLabel_i = [[770:772];[880:882];[990:992];[110:112];[220:222];[330:332];[440:442] ];
+
 % opts.noise = 'SSN';
 
 fprintf('Initializing DNN parameters...\n')
@@ -94,9 +105,17 @@ opts.net_struct{4} = 1024;
 opts.net_struct{5} = {label_dims,label_dims};
 opts %#ok<NOPTS>
 
+%label_dims         = size(trLabel_r,2);
+%opts.net_struct    = {size(trData,2)};
+%opts.net_struct{2} = 4;
+%opts.net_struct{3} = 4;
+%opts.net_struct{4} = 4;
+%opts.net_struct{5} = {label_dims,label_dims};
+%opts
+
 %% Python support files
-DATA_SAVE_FILE = './dnn_models/DNN_datas.mat';
-PARAM_SAVE_FILE = './dnn_models/DNN_params.mat';
+DATA_SAVE_FILE = './dnn_models/DNN_datas2.mat';
+PARAM_SAVE_FILE = './dnn_models/DNN_params2.mat';
 
 % train_feats = trData
 % train_label_real = trLabel_r

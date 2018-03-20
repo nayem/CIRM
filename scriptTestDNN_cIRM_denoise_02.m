@@ -34,22 +34,16 @@ noise           = globalpara.noise;
 
 Fs       = 16e3;
 
-ENHANCED_PHRASE = 'crmenh';
+ENHANCED_PHRASE = 'crmenh_3';
 
 %%%%%%%%%%%%%%%%%% MATLAB / PYTHON %%%%%%%%%%%%%%%%%%%%%%%%%
 % Matlab testing
-mix_wavs_data_path = '/gpfs/home/k/n/knayem/BigRed2/Eagles_Backup/Data/denoise_complex_domain_wavs/';
+% mix_wavs_data_path = '/gpfs/home/k/n/knayem/BigRed2/Eagles_Backup/Data/denoise_complex_domain_wavs/';
 
 % Python testing
-% mix_wavs_data_path = '/gpfs/home/k/n/knayem/BigRed2/Eagles_Backup/Data/denoise_complex_domain_wavs_02/';
+mix_wavs_data_path = '/gpfs/home/k/n/knayem/BigRed2/Eagles_Backup/Data/denoise_complex_domain_wavs_03/';
 %%---------------- MATLAB / PYTHON ------------------------%%
 
-
-%% %%
-% mix_wavs_data_path = '/data/knayem/denoise_complex_domain_wavs_tf/';
-% Nayem edit, Sep 10
-% mix_wavs_data_path = './denoise_complex_domain_wavs/';
-%% %%
 
 if strcmp(noise,'ALL') == 1
     noise_types = {'SSN','Cafe','Babble','Factory'};
@@ -63,10 +57,10 @@ for noise_ind = 1:length(noise_types)
 
     %%%%%%%%%%%%%%%%%% MATLAB / PYTHON %%%%%%%%%%%%%%%%%%%%%%%%%
     % Matlab testing
-    net_file = sprintf('./dnn_models/dnncirm.noise%s_02.mat',noise_types{noise_ind});
+    % net_file = sprintf('./dnn_models/dnncirm.noise%s_02.mat',noise_types{noise_ind});
 
     % Python testing
-    % net_file = sprintf('./dnn_models/DNN_CIRM_net_02.mat');
+    net_file = sprintf('./dnn_models/DNN_CIRM_net_03.mat');
     %%---------------- MATLAB / PYTHON ------------------------%%
 
 
@@ -114,7 +108,7 @@ for noise_ind = 1:length(noise_types)
         for i=1:length(clean_files)
             if( strncmpi(clean_files(i).name,filename, 11)==true )
                 CLEAN_FILENAME = sprintf('%s%s',testing_clean_wav_save_path,clean_files(i).name);
-                fprintf('%s -> %s\n',filename,clean_files(i).name)
+                %fprintf('%s -> %s\n',filename,clean_files(i).name)
                 break;
             end
         end
@@ -190,10 +184,10 @@ for noise_ind = 1:length(noise_types)
 
     %%%%%%%%%%%%%%%%%% MATLAB / PYTHON %%%%%%%%%%%%%%%%%%%%%%%%%
     % Matlab testing
-    save(sprintf('./scores/cIRMscores_denoising.noise%s.mat',noise_types{noise_ind}), 'scores_*');
+    % save(sprintf('./scores/cIRMscores_denoising.noise%s.mat',noise_types{noise_ind}), 'scores_*');
 
     % Python testing
-    % save(sprintf('./scores/cIRMscores_denoising.noise%s_02.mat',noise_types{noise_ind}), 'scores_*');
+    save(sprintf('./scores/cIRMscores_denoising.noise%s_03.mat',noise_types{noise_ind}), 'scores_*');
     %%---------------- MATLAB / PYTHON ------------------------%%
 
 
@@ -205,10 +199,10 @@ end
 
 %%%%%%%%%%%%%%%%%% MATLAB / PYTHON %%%%%%%%%%%%%%%%%%%%%%%%%
 % Matlab testing
-save(sprintf('./scores/cIRMscores_denoising.noisesALL.mat'))
+% save(sprintf('./scores/cIRMscores_denoising.noisesALL.mat'))
 
 % Python testing
-% save(sprintf('./scores/cIRMscores_denoising.noisesALL_02.mat'))
+save(sprintf('./scores/cIRMscores_denoising.noisesALL_03.mat'))
 %%---------------- MATLAB / PYTHON ------------------------%%
 
 % save(sprintf('./scores/cIRMscores_denoising_tf.noisesALL.mat'))
