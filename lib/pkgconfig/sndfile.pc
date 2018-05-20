@@ -1,0 +1,12 @@
+prefix=/gpfs/home/k/n/knayem/BigRed2/Eagles_Backup/Code/cIRM/cIRM
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: sndfile
+Description: A library for reading and writing audio files
+Requires: 
+Version: 1.0.28
+Libs: -L${libdir} -lsndfile
+Libs.private: 
+Cflags: -I${includedir} 
