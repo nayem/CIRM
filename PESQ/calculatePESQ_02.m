@@ -5,6 +5,8 @@ function calculatePESQ_02( )
 %   calculate PESQ score, how [bad,good] the speech is [-0.5,4.5]
 %
 
+    VERSION = '_v2_8';
+
     cleanPath = '/gpfs/home/k/n/knayem/BigRed2/Eagles_Backup/Data/denoising_clean_wavs_SSN_10noisespercs/testing_16k/';
     cleanFiles     = dir(fullfile(cleanPath,'*.wav'));
 
@@ -12,7 +14,7 @@ function calculatePESQ_02( )
     % Matlab
     % enhancedPath = '/gpfs/home/k/n/knayem/BigRed2/Eagles_Backup/Data/denoise_complex_domain_wavs/';
     % Python
-    enhancedPath = '/gpfs/home/k/n/knayem/BigRed2/Eagles_Backup/Data/denoise_complex_domain_wavs_03/';
+    enhancedPath = sprintf('/gpfs/home/k/n/knayem/BigRed2/Eagles_Backup/Data/denoise_complex_domain_wavs%s/',VERSION);
     %%------------------------------------------------------------%%
 
 %     enhancedPath = '/data/knayem/denoising_mix_wavs_SSN_10noisespercs/testing_matched/';
@@ -71,6 +73,7 @@ function calculatePESQ_02( )
     fprintf('\nAverage PESQ:%f', mean(pesq_scores))
     fprintf('\nAverage 0dB-PESQ:%f, 3dB-PESQ:%f, -3dB-PESQ:%f, 6dB-PESQ:%f, -6dB-PESQ:%f \n', ...
         mean(pesq_scores_0dB),mean(pesq_scores_3dB),mean(pesq_scores_n3dB),mean(pesq_scores_6dB),mean(pesq_scores_n6dB))
+
     fprintf('Total Average PESQ:%f', (mean(pesq_scores_0dB)+mean(pesq_scores_3dB)+ ...
         mean(pesq_scores_n3dB)+mean(pesq_scores_6dB)+mean(pesq_scores_n6dB))/5.0, '\n')
 

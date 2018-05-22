@@ -34,14 +34,15 @@ noise           = globalpara.noise;
 
 Fs       = 16e3;
 
-ENHANCED_PHRASE = 'crmenh_3';
+ENHANCED_PHRASE = 'crmenh_v2_8';
+VERSION = '_v2_8';
 
 %%%%%%%%%%%%%%%%%% MATLAB / PYTHON %%%%%%%%%%%%%%%%%%%%%%%%%
 % Matlab testing
 % mix_wavs_data_path = '/gpfs/home/k/n/knayem/BigRed2/Eagles_Backup/Data/denoise_complex_domain_wavs/';
 
 % Python testing
-mix_wavs_data_path = '/gpfs/home/k/n/knayem/BigRed2/Eagles_Backup/Data/denoise_complex_domain_wavs_03/';
+mix_wavs_data_path = sprintf('/gpfs/home/k/n/knayem/BigRed2/Eagles_Backup/Data/denoise_complex_domain_wavs%s/',VERSION);
 %%---------------- MATLAB / PYTHON ------------------------%%
 
 
@@ -60,7 +61,7 @@ for noise_ind = 1:length(noise_types)
     % net_file = sprintf('./dnn_models/dnncirm.noise%s_02.mat',noise_types{noise_ind});
 
     % Python testing
-    net_file = sprintf('./dnn_models/DNN_CIRM_net_03.mat');
+    net_file = sprintf('./dnn_models/DNN_CIRM_net%s.mat',VERSION);
     %%---------------- MATLAB / PYTHON ------------------------%%
 
 
@@ -187,7 +188,7 @@ for noise_ind = 1:length(noise_types)
     % save(sprintf('./scores/cIRMscores_denoising.noise%s.mat',noise_types{noise_ind}), 'scores_*');
 
     % Python testing
-    save(sprintf('./scores/cIRMscores_denoising.noise%s_03.mat',noise_types{noise_ind}), 'scores_*');
+    save(sprintf('./scores/cIRMscores_denoising.noise%s%s.mat',noise_types{noise_ind},VERSION), 'scores_*');
     %%---------------- MATLAB / PYTHON ------------------------%%
 
 
@@ -202,7 +203,7 @@ end
 % save(sprintf('./scores/cIRMscores_denoising.noisesALL.mat'))
 
 % Python testing
-save(sprintf('./scores/cIRMscores_denoising.noisesALL_03.mat'))
+save(sprintf('./scores/cIRMscores_denoising.noisesALL%s.mat',VERSION))
 %%---------------- MATLAB / PYTHON ------------------------%%
 
 % save(sprintf('./scores/cIRMscores_denoising_tf.noisesALL.mat'))

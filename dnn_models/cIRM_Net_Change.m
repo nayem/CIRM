@@ -11,8 +11,10 @@ function [ output_args ] = cIRM_Net_Change( input_args )
     File_Data = 'DNN_datas.mat';
     File_Param = 'DNN_params.mat';
 
-    File_NET = 'DNN_net_03.mat';
-    File_TRAIN_NET = 'DNN_CIRM_net_03.mat';
+    VERSION = '_v2_8';
+
+    File_NET = sprintf('DNN_net%s.mat',VERSION);
+    File_TRAIN_NET = sprintf('DNN_CIRM_net%s.mat',VERSION);
 
     %% Change Net Struct
     load(File_NET);
