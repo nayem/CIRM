@@ -1,6 +1,17 @@
 # cIRM
 Complex Ideal Ratio Mask
 
+## Eagles
+`
+```shell
+ssh -Y knayem@eagles.soic.indiana.edu
+
+bash
+
+cd 
+```
+
+
 ## BigRed 2
 ```bigred2.uits.iu.edu```
 
