@@ -2,15 +2,24 @@
 Complex Ideal Ratio Mask
 
 ## Eagles
-`
 ```shell
 ssh -Y knayem@eagles.soic.indiana.edu
 
 bash
 
-cd 
+cd EaglesBigred2/cIRM
 ```
 
+***Jupyter Notebook***
+```shell
+ssh -Y -L localhost:8896:localhost:8888 knayem@eagles.soic.indiana.edu
+
+jupyter notebook
+
+```
+***Copy Server to Server***
+To copy from BigRed2 to Eagles, from BigRed2
+```scp -r <BigRed2_files>/ knayem@eagles.soic.indiana.edu:<Eagle_folder>/```
 
 ## BigRed 2
 ```bigred2.uits.iu.edu```
