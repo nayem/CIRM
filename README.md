@@ -18,8 +18,13 @@ jupyter notebook
 
 ```
 ***Copy Server to Server***
-To copy from BigRed2 to Eagles, from BigRed2
+To copy from BigRed2 to Eagles, from BigRed2,
+
 ```scp -r <BigRed2_files>/ knayem@eagles.soic.indiana.edu:<Eagle_folder>/```
+
+Example:
+
+```scp -r denoising_mix_wavs_SSN_15000noisespercs/ knayem@eagles.soic.indiana.edu:/data/knayem/```
 
 ## BigRed 2
 ```bigred2.uits.iu.edu```
