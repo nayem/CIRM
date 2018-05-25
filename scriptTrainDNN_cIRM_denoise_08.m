@@ -28,10 +28,22 @@ globalpara %#ok<NOPTS>
 
 test_noise    = globalpara.noise;
 
+SERVER = 'Eagles'; % 'BigRed2'
+VERSION = '_e10v1';
+
+if strcmpi(SERVER,'BigRed2') == 1
+    path_data_directory = '/gpfs/home/k/n/knayem/BigRed2/Eagles_Backup/Data';
+    path_code_directory = '/N/u/knayem/BigRed2/Eagles_Backup/Code/cIRM/cIRM';
+
+elseif strcmpi(SERVER,'Eagles') == 1
+    path_data_directory = '/data/knayem';
+    path_code_directory = '/home/knayem/EaglesBigred2/cIRM';
+end
+
 
 if strcmp(test_noise,'SSN') == 1
-    cs_training_data_path      = '/gpfs/home/k/n/knayem/BigRed2/Eagles_Backup/Data/denoising_clean_wavs_SSN_10noisespercs/training_16k/';
-    training_mix_wav_save_path = '/gpfs/home/k/n/knayem/BigRed2/Eagles_Backup/Data/denoising_mix_wavs_SSN_15000noisespercs/training_16k/';
+    cs_training_data_path      = strcat(path_data_directory,'/denoising_clean_wavs_SSN_10noisespercs/training_16k/');
+    training_mix_wav_save_path = strcat(path_data_directory,'/denoising_mix_wavs_SSN_15000noisespercs/training_16k/');
 
 elseif strcmp(test_noise,'Cafe') == 1
     cs_training_data_path      = './denoising_clean_wavs_Cafe_10noisespercs/training/';
@@ -40,6 +52,7 @@ elseif strcmp(test_noise,'Cafe') == 1
 elseif strcmp(test_noise,'Babble') == 1
     cs_training_data_path      = './denoising_clean_wavs_Babble_10noisespercs/training/';
     training_mix_wav_save_path = './denoising_mix_wavs_Babble_10noisespercs/training/';
+
 elseif strcmp(test_noise,'Factory') == 1
     cs_training_data_path      = './denoising_clean_wavs_Factory_10noisespercs/training/';
     training_mix_wav_save_path = './denoising_mix_wavs_Factory_10noisespercs/training/';
@@ -51,15 +64,17 @@ fprintf('Extracting Features/Labels from Training Data...\n')
 
 
 if strcmp(test_noise,'SSN') == 1
-    cs_dev_data_path      = '/gpfs/home/k/n/knayem/BigRed2/Eagles_Backup/Data/denoising_clean_wavs_SSN_10noisespercs/development_16k/';
-    noisy_dev_data_path   = '/gpfs/home/k/n/knayem/BigRed2/Eagles_Backup/Data/denoising_mix_wavs_SSN_15000noisespercs/development_16k/';
+    cs_dev_data_path      = strcat(path_data_directory,'/denoising_clean_wavs_SSN_10noisespercs/development_16k/');
+    noisy_dev_data_path   = strcat(path_data_directory,'/denoising_mix_wavs_SSN_15000noisespercs/development_16k/');
 
 elseif strcmp(test_noise,'Cafe') == 1
     cs_dev_data_path      = './denoising_clean_wavs_Cafe_10noisespercs/development/';
     noisy_dev_data_path   = './denoising_mix_wavs_Cafe_10noisespercs/development/';
+
 elseif strcmp(test_noise,'Babble') == 1
     cs_dev_data_path      = './denoising_clean_wavs_Babble_10noisespercs/development/';
     noisy_dev_data_path   = './denoising_mix_wavs_Babble_10noisespercs/development/';
+
 elseif strcmp(test_noise,'Factory') == 1
     cs_dev_data_path      = './denoising_clean_wavs_Factory_10noisespercs/development/';
     noisy_dev_data_path   = './denoising_mix_wavs_Factory_10noisespercs/development/';
@@ -96,7 +111,7 @@ opts = InitiatlizeNN_cIRM(opts,trData,trLabel_r);
 
 
 %% Matlab write model file
-ModelFN = sprintf('./dnn_models/dnncirm.noise%s_8v2.mat',globalpara.noise);
+ModelFN = sprintf('./dnn_models/dnncirm.noise%s%s.mat',globalpara.noise,VERSION);
 
 label_dims         = size(trLabel_r,2);
 opts.net_struct    = {size(trData,2)};
@@ -115,8 +130,8 @@ opts %#ok<NOPTS>
 %opts
 
 %% Python support files
-DATA_SAVE_FILE = './dnn_models/DNN_datas_8v2.mat';
-PARAM_SAVE_FILE = './dnn_models/DNN_params_8v2.mat';
+DATA_SAVE_FILE = sprintf('./dnn_models/DNN_datas%s.mat',VERSION);
+PARAM_SAVE_FILE = sprintf('./dnn_models/DNN_params%s.mat',VERSION);
 
 % train_feats = trData
 % train_label_real = trLabel_r
@@ -126,6 +141,7 @@ PARAM_SAVE_FILE = './dnn_models/DNN_params_8v2.mat';
 % dev_label_real = cvLabel_r
 % dev_label_imag = cvLabel_i
 % dev_weights = []
+
 save(DATA_SAVE_FILE, 'trData', 'trLabel_r', 'trLabel_i', 'cvData', 'cvLabel_r', 'cvLabel_i','-v7.3');
 
 % opts = opts

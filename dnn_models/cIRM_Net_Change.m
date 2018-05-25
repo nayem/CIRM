@@ -1,4 +1,4 @@
-function [ output_args ] = cIRM_Net_Change( input_args )
+function [ output_args ] = cIRM_Net_Change( VERSION )
 %CIRM_NET_CHANGE Summary of this function goes here
 %   Detailed explanation goes here
 
@@ -8,13 +8,12 @@ function [ output_args ] = cIRM_Net_Change( input_args )
     % File_NET = 'DNN_net.mat';
     % File_TRAIN_NET = 'DNN_CIRM_net.mat';
 
-    File_Data = 'DNN_datas.mat';
-    File_Param = 'DNN_params.mat';
+    File_Data = sprintf('DNN_datas%s.mat',VERSION);
+    File_Param = sprintf('DNN_params%s.mat',VERSION);
 
-    VERSION = '_v2_8';
 
     File_NET = sprintf('DNN_net%s.mat',VERSION);
-    File_TRAIN_NET = sprintf('DNN_CIRM_net%s.mat',VERSION);
+    File_TRAIN_NET = sprintf('DNN_CIRM_net.noiseSSN%s.mat',VERSION);
 
     %% Change Net Struct
     load(File_NET);

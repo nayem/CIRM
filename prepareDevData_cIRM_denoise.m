@@ -61,7 +61,7 @@ for fileNum = 1:num_files
     for i=1:length(clean_files)
         if( strncmpi(clean_files(i).name,filename, 11)==true )
             CLEAN_FILENAME = sprintf('%s%s',cs_dev_data_path,clean_files(i).name);
-            fprintf('%s -> %s\n',filename,clean_files(i).name)
+%            fprintf('%s -> %s\n',filename,clean_files(i).name)
             break;
         end
     end

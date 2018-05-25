@@ -29,13 +29,15 @@ save in Opt object
 '''
 ################################################################
 
-DNN_DATA_FILE = "./dnn_models/DNN_datas_8.mat"
+VERSION = '_e10v1'
+
+DNN_DATA_FILE = "./dnn_models/DNN_datas"+VERSION+".mat"
 # DNN_DATA_FILE = "./dnn_models/BR2_DNN_datas.mat"
 
-DNN_MODEL_FILE = "./dnn_models/DNN_params_8.mat"
+DNN_MODEL_FILE = "./dnn_models/DNN_params"+VERSION+".mat"
 # DNN_MODEL_FILE = "./dnn_models/BR2_DNN_params.mat"
 
-DNN_NET_FILE = "./dnn_models/DNN_net_8v2.mat"
+DNN_NET_FILE = "./dnn_models/DNN_net"+VERSION+".mat"
 
 # ModelFN_FILE = "./dnn_models/dnncirm.noiseSSN_05.mat"
 
@@ -264,7 +266,7 @@ class Opts:
 
 
 opts = Opts(DNN_MODEL_FILE, DNN_DATA_FILE)
-quit()
+# quit()
 
 # for e, (x,y) in enumerate(opts.next_batch(opts.trData.shape[0],opts.sgd_batch_size)):
 #     print(e, x[0:5],y[0:5])

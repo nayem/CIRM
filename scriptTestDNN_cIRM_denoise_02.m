@@ -34,16 +34,35 @@ noise           = globalpara.noise;
 
 Fs       = 16e3;
 
-ENHANCED_PHRASE = 'crmenh_v2_8';
-VERSION = '_v2_8';
+ENHANCED_PHRASE = 'crmenh_e10v1';
+VERSION = '_e10v1';
 
-%%%%%%%%%%%%%%%%%% MATLAB / PYTHON %%%%%%%%%%%%%%%%%%%%%%%%%
-% Matlab testing
-% mix_wavs_data_path = '/gpfs/home/k/n/knayem/BigRed2/Eagles_Backup/Data/denoise_complex_domain_wavs/';
+SERVER = 'Eagles'; % 'BigRed2'
+CODE = 'Python'; % 'Python'
 
-% Python testing
-mix_wavs_data_path = sprintf('/gpfs/home/k/n/knayem/BigRed2/Eagles_Backup/Data/denoise_complex_domain_wavs%s/',VERSION);
-%%---------------- MATLAB / PYTHON ------------------------%%
+if strcmpi(CODE,'Python') == 1
+    VERSION = strcat(VERSION,'_py');
+end
+
+if strcmpi(SERVER,'BigRed2') == 1
+    path_data_directory = '/gpfs/home/k/n/knayem/BigRed2/Eagles_Backup/Data';
+    path_code_directory = '/N/u/knayem/BigRed2/Eagles_Backup/Code/cIRM/cIRM';
+
+elseif strcmpi(SERVER,'Eagles') == 1
+    path_data_directory = '/data/knayem';
+    path_code_directory = '/home/knayem/EaglesBigred2/cIRM';
+end
+
+
+mix_wavs_data_path = strcat(path_data_directory,'/denoise_complex_domain_wavs',VERSION);
+
+if exist(mix_wavs_data_path, 'dir')
+    fprintf('Path-> %s exists!\n',mix_wavs_data_path );
+else
+    fprintf('Path-> %s NOT exists!\n',mix_wavs_data_path);
+    mkdir(mix_wavs_data_path)
+end
+
 
 
 if strcmp(noise,'ALL') == 1
@@ -57,16 +76,19 @@ total_file_count = 1;
 for noise_ind = 1:length(noise_types)
 
     %%%%%%%%%%%%%%%%%% MATLAB / PYTHON %%%%%%%%%%%%%%%%%%%%%%%%%
-    % Matlab testing
-    % net_file = sprintf('./dnn_models/dnncirm.noise%s_02.mat',noise_types{noise_ind});
+    if strcmpi(CODE,'Matlab') == 1
+        net_file = strcat('./dnn_models/dnncirm.noise',noise_types{noise_ind}, VERSION, '.mat');
 
-    % Python testing
-    net_file = sprintf('./dnn_models/DNN_CIRM_net%s.mat',VERSION);
+    elseif strcmpi(CODE,'Python') == 1
+        pyVERSION = strtok(VERSION, '_');
+        pyVERSION = strcat('_',pyVERSION);
+        net_file = strcat('./dnn_models/DNN_CIRM_net.noise',noise_types{noise_ind}, pyVERSION, '.mat');
+    end
     %%---------------- MATLAB / PYTHON ------------------------%%
 
 
-    testing_clean_wav_save_path       = sprintf('/gpfs/home/k/n/knayem/BigRed2/Eagles_Backup/Data/denoising_clean_wavs_SSN_10noisespercs/testing_16k/',noise_types{noise_ind});
-    testing_matched_mix_wav_save_path = sprintf('/gpfs/home/k/n/knayem/BigRed2/Eagles_Backup/Data/denoising_mix_wavs_SSN_10noisespercs/testing_matched/',noise_types{noise_ind});
+    testing_clean_wav_save_path       = strcat(path_data_directory,'/denoising_clean_wavs_',noise_types{noise_ind},'_10noisespercs/testing_16k');
+    testing_matched_mix_wav_save_path = strcat(path_data_directory,'/denoising_mix_wavs_',noise_types{noise_ind},'_10noisespercs/testing_matched');
 
 
 %     Nayem edit, Sep 10
@@ -89,12 +111,12 @@ for noise_ind = 1:length(noise_types)
     end
 
     ten_percent = ceil(0.1*length(files));
-    fprintf('Processing %d Files for %s noise...\n\t',length(files),noise_types{noise_ind})
+    fprintf('Processing %d Files for %s noise...\n\t',length(files),noise_types{noise_ind});
 
     for fileNum = 1:length(files)
 
         filename      = files(fileNum).name;
-        MIX_FILENAME = strcat(testing_matched_mix_wav_save_path,filename);
+        MIX_FILENAME = fullfile(testing_matched_mix_wav_save_path,filename);
         mix_sig      = audioread(MIX_FILENAME);   % make sure the sampling frequency is 16 kHz
         mix_stft     = spectrogram(mix_sig, hann(winlen), overlap, nfft, Fs);
 
@@ -108,8 +130,8 @@ for noise_ind = 1:length(noise_types)
 
         for i=1:length(clean_files)
             if( strncmpi(clean_files(i).name,filename, 11)==true )
-                CLEAN_FILENAME = sprintf('%s%s',testing_clean_wav_save_path,clean_files(i).name);
-                %fprintf('%s -> %s\n',filename,clean_files(i).name)
+                CLEAN_FILENAME = fullfile(testing_clean_wav_save_path,clean_files(i).name);
+                %fprintf('%s -> %s\n',filename,clean_files(i).name);
                 break;
             end
         end
@@ -168,9 +190,12 @@ for noise_ind = 1:length(noise_types)
 
         % ----------------------- Compute Scores ----------------------------%
         f = (strsplit(filename,'.'));
-        filename    = sprintf('%s%s_%s.%s',mix_wavs_data_path,char(f(1)),ENHANCED_PHRASE,char(f(2)) );
+        dir_path = fullfile(mix_wavs_data_path,char(f(1)));
+        filename    = sprintf('%s_%s.%s',dir_path,ENHANCED_PHRASE,char(f(2)) );
+
 %         Nayem edit, Sep 12
 %         filename    = sprintf('%s%d.cIRM_denoised.noise%s.snrNum%s.wav',mix_wavs_data_path,fileNum,noise_types{noise_ind},snrNum);%cs_count,rem);
+
         audiowrite(filename,denoise_sig/max(abs(denoise_sig)),Fs)
         scores_denoise_fcIRM{fileNum} = comp_dereverb_metrics(clean_sig,mix_sig,denoise_sig,Fs,MIX_FILENAME,filename);
         tot_scores_denoise_fcIRM{total_file_count} = scores_denoise_fcIRM{fileNum};
@@ -183,28 +208,11 @@ for noise_ind = 1:length(noise_types)
 
     fprintf('\n')
 
-    %%%%%%%%%%%%%%%%%% MATLAB / PYTHON %%%%%%%%%%%%%%%%%%%%%%%%%
-    % Matlab testing
-    % save(sprintf('./scores/cIRMscores_denoising.noise%s.mat',noise_types{noise_ind}), 'scores_*');
-
-    % Python testing
     save(sprintf('./scores/cIRMscores_denoising.noise%s%s.mat',noise_types{noise_ind},VERSION), 'scores_*');
-    %%---------------- MATLAB / PYTHON ------------------------%%
-
-
-%     save(sprintf('./scores/cIRMscores_denoising_tf.noise%smat',noise_types{noise_ind}), 'scores_*');
-
 
 
 end
 
-%%%%%%%%%%%%%%%%%% MATLAB / PYTHON %%%%%%%%%%%%%%%%%%%%%%%%%
-% Matlab testing
-% save(sprintf('./scores/cIRMscores_denoising.noisesALL.mat'))
 
-% Python testing
 save(sprintf('./scores/cIRMscores_denoising.noisesALL%s.mat',VERSION))
-%%---------------- MATLAB / PYTHON ------------------------%%
-
-% save(sprintf('./scores/cIRMscores_denoising_tf.noisesALL.mat'))
 

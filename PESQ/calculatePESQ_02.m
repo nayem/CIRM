@@ -1,25 +1,32 @@
-function calculatePESQ_02( )
+function calculatePESQ_02( VERSION )
 %CALCULATEPESQ Summary of this function goes here
 %
 %   Detailed explanation goes here
 %   calculate PESQ score, how [bad,good] the speech is [-0.5,4.5]
 %
 
-    VERSION = '_v2_8';
 
-    cleanPath = '/gpfs/home/k/n/knayem/BigRed2/Eagles_Backup/Data/denoising_clean_wavs_SSN_10noisespercs/testing_16k/';
+    SERVER = 'Eagles'; % 'BigRed2'
+    CODE = 'Matlab'; % 'Python'
+
+    if strcmpi(CODE,'Python') == 1
+        VERSION = strcat(VERSION,'_py');
+    end
+
+    if strcmpi(SERVER,'BigRed2') == 1
+        path_data_directory = '/gpfs/home/k/n/knayem/BigRed2/Eagles_Backup/Data';
+        path_code_directory = '/N/u/knayem/BigRed2/Eagles_Backup/Code/cIRM/cIRM';
+
+    elseif strcmpi(SERVER,'Eagles') == 1
+        path_data_directory = '/data/knayem';
+        path_code_directory = '/home/knayem/EaglesBigred2/cIRM';
+    end
+
+
+    cleanPath = strcat(path_data_directory,'/denoising_clean_wavs_SSN_10noisespercs/testing_16k/');
     cleanFiles     = dir(fullfile(cleanPath,'*.wav'));
 
-    %%%%%%%%%%%%%%%%%%%%% MATLAB / PYTHON %%%%%%%%%%%%%%%%%%%%%%%
-    % Matlab
-    % enhancedPath = '/gpfs/home/k/n/knayem/BigRed2/Eagles_Backup/Data/denoise_complex_domain_wavs/';
-    % Python
-    enhancedPath = sprintf('/gpfs/home/k/n/knayem/BigRed2/Eagles_Backup/Data/denoise_complex_domain_wavs%s/',VERSION);
-    %%------------------------------------------------------------%%
-
-%     enhancedPath = '/data/knayem/denoising_mix_wavs_SSN_10noisespercs/testing_matched/';
-%     enhancedPath = '/data/knayem/denoise_complex_domain_wavs_tf/';
-
+    enhancedPath = strcat(path_data_directory,'/denoise_complex_domain_wavs',VERSION,'/');
     enhancedFiles     = dir(fullfile(enhancedPath,'*.wav'));
 
     pesq_scores = [];
@@ -30,6 +37,8 @@ function calculatePESQ_02( )
     pesq_scores_n6dB = [];
 
 
+    ten_percent = ceil(0.1*length(cleanFiles));
+
     for i=1:length(cleanFiles)
 
         for t=1:length(enhancedFiles)
@@ -37,7 +46,7 @@ function calculatePESQ_02( )
             % enhanced file-> S_62_02_16k_-3dB_noisyspeech_crmenh.wav
 
             if( strncmpi(cleanFiles(i).name,enhancedFiles(t).name, 11)==1 )
-                fprintf('\n%s->%s,',cleanFiles(i).name,enhancedFiles(t).name);
+                %fprintf('\n%s->%s,',cleanFiles(i).name,enhancedFiles(t).name);
                 pesq_scores = [pesq_scores, pesq(strcat(cleanPath,cleanFiles(i).name), strcat(enhancedPath,enhancedFiles(t).name) )];
             end
 
@@ -67,15 +76,18 @@ function calculatePESQ_02( )
             end
 
         end
-%         pesq_scores = [pesq_scores, pesq(strcat(cleanPath,clean_file(i)), strcat(enhancedPath,enhanced_file(i)) )];
+
+        if(~mod(i,ten_percent))
+            fprintf('%d...',(i/ten_percent)*10);
+        end
     end
 
     fprintf('\nAverage PESQ:%f', mean(pesq_scores))
     fprintf('\nAverage 0dB-PESQ:%f, 3dB-PESQ:%f, -3dB-PESQ:%f, 6dB-PESQ:%f, -6dB-PESQ:%f \n', ...
         mean(pesq_scores_0dB),mean(pesq_scores_3dB),mean(pesq_scores_n3dB),mean(pesq_scores_6dB),mean(pesq_scores_n6dB))
 
-    fprintf('Total Average PESQ:%f', (mean(pesq_scores_0dB)+mean(pesq_scores_3dB)+ ...
-        mean(pesq_scores_n3dB)+mean(pesq_scores_6dB)+mean(pesq_scores_n6dB))/5.0, '\n')
+    fprintf('Total Average PESQ:%f\n', (mean(pesq_scores_0dB)+mean(pesq_scores_3dB)+ ...
+        mean(pesq_scores_n3dB)+mean(pesq_scores_6dB)+mean(pesq_scores_n6dB))/5.0)
 
 end
 
