@@ -6,9 +6,57 @@ Complex Ideal Ratio Mask
 ssh -Y knayem@eagles.soic.indiana.edu
 
 bash
-
 cd EaglesBigred2/cIRM
 ```
+
+**For Matlab**
+```shell
+matlab
+```
+
+```matlab
+scriptTrainDNN_cIRM_denoise_08('SSN')         
+# SERVER = 'Eagles'; % 'BigRed2'
+# VERSION = '_e10v1';
+
+scriptTestDNN_cIRM_denoise_02()
+# VERSION = '_e10v1';
+# SERVER = 'Eagles'; % 'BigRed2'
+# CODE = 'Matlab'; % 'Python'
+
+calculatePESQ_02( VERSION )
+SERVER = 'Eagles'; % 'BigRed2'
+CODE = 'Matlab'; % 'Python'
+```
+
+**For Python**
+```shell
+matlab
+```
+
+```matlab
+scriptTrainDNN_cIRM_denoise_08('SSN')         
+# SERVER = 'Eagles'; % 'BigRed2'
+# VERSION = '_e10v1';
+```
+```python
+python DNN_01_8_v2.py
+```
+```matlab
+cd dnn_models/
+cIRM_Net_Change(VERSION)
+
+scriptTestDNN_cIRM_denoise_02()
+# VERSION = '_e10v1';
+# SERVER = 'Eagles'; % 'BigRed2'
+# CODE = 'Python'; % 'Matlab'
+
+calculatePESQ_02( VERSION )
+SERVER = 'Eagles'; % 'BigRed2'
+CODE = 'Python'; % 'Matlab'
+```
+
+
 
 ***Jupyter Notebook***
 ```shell
