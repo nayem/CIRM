@@ -4,14 +4,13 @@ function  [cvData, cvLabel_r,cvLabel_i,numframes] = prepareDevData_cIRM_denoise2
 %
 % Input:
 %   - globalpara: global parameters
-%   - cs_training_data_path: Clean signal path for Training
-%   - training_mix_wav_save_path: Noisy signal path for Training
+%   - cs_dev_data_path: Clean signal path for Dev
+%   - noisy_dev_data_path: Noisy signal path for Dev
 %
 % Output
-%   - trData: Feature data for all files appended one after another
-%   - trLabel_r: Training label real value
-%   - trLabel_i: Training label imaginary value
-%   - para: Parameters
+%   - cvData: Feature data for all files appended one after another
+%   - cvLabel_r: Dev label real value
+%   - cvLabel_i: Dev label imaginary value
 %   - numframes: Number of frames for each file
 %
 % Author: Khandokar Md. Nayem, May 29, 2018
