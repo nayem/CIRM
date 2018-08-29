@@ -1,6 +1,7 @@
-function [trData, trLabel_r,trLabel_i, para, numframes] = prepareTrainingData_cIRM_denoise2(globalpara,cs_training_data_path,training_mix_wav_save_path)
+function [trData, trLabel_r,trLabel_i, para, numframes] = prepareTrainingData_cIRM_denoise3(globalpara,cs_training_data_path,training_mix_wav_save_path)
 
-% Description: Prepare Training features for LSTM
+% Description: Prepare Training features for LSTM. Save uncompressed
+% labels.
 %
 % Input:
 %   - globalpara: global parameters
@@ -35,8 +36,24 @@ labcompress = globalpara.labcompress;
 
 files     = dir(fullfile(training_mix_wav_save_path,'*.wav'));
 num_files = length(files);
-% num_files = 5;
 numframes = zeros(num_files,1);
+
+%%=============== Files for statestics Analysis ============%%
+SERVER = 'Eagles';
+
+if strcmpi(SERVER,'Eagles') == 1
+    path_data_directory = '/data/knayem';
+    path_code_directory = '/home/knayem/EaglesBigred2/cIRM';
+end
+
+STATS_FILE = fullfile(path_code_directory,'dnn_models/train_stats.mat');
+
+% list for 6 SNRs and Clean
+clean = []; snr_n6 = []; snr_n3 = []; 
+snr_0 = []; snr_3 = []; snr_6 = []; snr_=[];
+
+snr_exp = '(-)?(\d)+dB';
+%%===========================================================%%
 
 fprintf('\tComputing number of frames...\n\t\t')
 ten_percent = ceil(0.1*num_files);
@@ -93,6 +110,7 @@ for fileNum = 1:num_files%num_files
     % ----------------------- Compute Labels ----------------------------%
     mix_stft   = spectrogram(mix_sig,winlen,overlap,nfft,Fs);
     clean_stft = spectrogram(clean_sig,winlen,overlap,nfft,Fs);
+    
 
     [labels_r, labels_i] = cIRM(clean_stft,mix_stft, cliplevel,labcompress,globalpara.logistic_max,globalpara.logistic_steep);
 
@@ -103,7 +121,26 @@ for fileNum = 1:num_files%num_files
 
     trLabel_r(start_samp:stop_samp,:) = labels_r;
     trLabel_i(start_samp:stop_samp,:) = labels_i;
-
+    
+    % ======================== Store States ============================ %
+    clean=[clean, clean_stft];
+    [s,e]=regexp(filename,snr_exp, 'once');
+    
+    switch filename(s:e)
+        case '-6dB'
+            snr_n6=[snr_n6, mix_stft];
+        case '-3dB'
+            snr_n3=[snr_n3, mix_stft];
+        case '0dB'
+            snr_0=[snr_0, mix_stft];
+        case '3dB'
+            snr_3=[snr_3, mix_stft];
+        case '6dB'
+            snr_6=[snr_6, mix_stft];
+        otherwise
+            snr_=[snr_, mix_stft];
+    end
+    
     % ----------------------- Update counters ---------------------------%
     start_samp = stop_samp + 1;
 
@@ -111,48 +148,8 @@ for fileNum = 1:num_files%num_files
         fprintf('%d...',(fileNum/ten_percent)*10)
     end
 end
-% Nayem edit, Sep 20
-%
-% for fileNum = 1:num_files%num_files
-%
-%     filename      = files(fileNum).name;
-%     MIX_FILENAME = strcat(training_mix_wav_save_path,filename);
-%     mix_sig      = audioread(MIX_FILENAME);   % make sure the sampling frequency is 16 kHz
-%
-%     str            = strtok(filename,'_');
-%     CLEAN_FILENAME = sprintf('%s%s',cs_training_data_path,filename);
-% %     Nayem edit, Sep 5 CLEAN_FILENAME =
-% %     sprintf('%sclean%02d_%dkHz.wav',cs_training_data_path,str2double(str(4:end)),Fs/1000);
-%     clean_sig      = audioread(CLEAN_FILENAME);
-%
-%     stop_samp = start_samp + numframes(fileNum) - 1;
-%
-%     % ----------------------- Compute Features --------------------------%
-%     feats = get_compRP2d_mkcomp2(mix_sig.',globalpara).';
-%     prelimFeatData(start_samp:stop_samp,:) = feats.';
-%
-%     % ----------------------- Compute Labels ----------------------------%
-%     mix_stft   = spectrogram(mix_sig,winlen,overlap,nfft,Fs);
-%     clean_stft = spectrogram(clean_sig,winlen,overlap,nfft,Fs);
-%
-%     [labels_r, labels_i] = cIRM(clean_stft,mix_stft, cliplevel,labcompress,globalpara.logistic_max,globalpara.logistic_steep);
-%
-%     if labwin > 0
-%         labels_r = makeWindowFeat3(labels_r,labwin).';
-%         labels_i = makeWindowFeat3(labels_i,labwin).';
-%     end
-%
-%     trLabel_r(start_samp:stop_samp,:) = labels_r;
-%     trLabel_i(start_samp:stop_samp,:) = labels_i;
-%
-%     % ----------------------- Update counters ---------------------------%
-%     start_samp = stop_samp + 1;
-%
-%     if(~mod(fileNum,ten_percent))
-%         fprintf('%d...',(fileNum/ten_percent)*10)
-%     end
-% end
 
+save(STATS_FILE, 'snr_n6', 'snr_n3', 'snr_0', 'snr_3', 'snr_6','snr_', 'clean','numframes','-v7.3');
 
 clear clean_sig revb_sig filename str REVB_FILENAME CLEAN_FILENAME start_samp stop_samp fileNum
 % clear files ten_percent globalpara winlen overlap numframes revb_training_data_path

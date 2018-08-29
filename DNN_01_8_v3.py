@@ -29,8 +29,8 @@ save in Opt object
 '''
 ################################################################
 
-Data_VERSION = '_e10v1'
-Code_VERSION = '_e10v3'
+Data_VERSION = '_e10v5'
+Code_VERSION = '_e10v5'
 
 DNN_DATA_FILE = "./dnn_models/DNN_datas"+Data_VERSION+".mat"
 # DNN_DATA_FILE = "./dnn_models/BR2_DNN_datas.mat"
@@ -128,6 +128,7 @@ class Opts:
                     self.opts_dict[k] = self.net_struct
                 elif k == 'rbm_batch_size':
                     self.rbm_batch_size = int(np.array(v)[0][0])
+                    print("self.rbm_batch_size:", self.rbm_batch_size)
                     # self.opts_dict[k] = self.rbm_batch_size
                 elif k == 'rbm_learn_rate_binary':
                     self.rbm_learn_rate_binary = np.array(v)
@@ -143,6 +144,7 @@ class Opts:
                     # self.opts_dict[k] = self.save_on_fly
                 elif k == 'sgd_batch_size':
                     self.sgd_batch_size = int(np.array(v)[0][0])
+                    print("self.sgd_batch_size:", self.sgd_batch_size)
                     # self.sgd_batch_size = 1024//16
                     # self.opts_dict[k] = self.sgd_batch_size
                 elif k == 'sgd_learn_rate':

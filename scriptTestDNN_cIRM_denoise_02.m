@@ -32,10 +32,19 @@ hopsize         = globalpara.hopsize;
 arma_order      = globalpara.arma_order;
 noise           = globalpara.noise;
 
+%% Save Test parameters
+teData = []   ;
+teLabel_r = [];
+teLabel_i = [];
+teNumframes = [];
+teFilename_mix =[];
+
 Fs       = 16e3;
 
-ENHANCED_PHRASE = 'crmenh_e10v1';
-VERSION = '_e10v1';
+ENHANCED_PHRASE = 'crmenh_e10v5';
+VERSION = '_e10v5';
+
+DATA_SAVE_FILE = sprintf('./dnn_models/Test_datas%s.mat',VERSION);
 
 SERVER = 'Eagles'; % 'BigRed2'
 CODE = 'Python'; % 'Python'
@@ -169,6 +178,14 @@ for noise_ind = 1:length(noise_types)
             estimate           = complex_irmmask.*mix_stft;
         end
 
+        %% ====== Gather Parameters for Test ======= %%
+        teData = [teData; featData]   ;
+        teLabel_r = [teLabel_r; real_output];
+        teLabel_i = [teLabel_i; imag_output];
+        te_sz = size(featData);
+        teNumframes = [teNumframes; te_sz(1)];
+        teFilename_mix = [teFilename_mix; string(filename)];
+
         %figure(1);
         %subplot(2,1,1);
         %view([0,90])
@@ -215,4 +232,6 @@ end
 
 
 save(sprintf('./scores/cIRMscores_denoising.noisesALL%s.mat',VERSION))
+save(DATA_SAVE_FILE, 'teData', 'teLabel_r', 'teLabel_i', 'teNumframes', 'teFilename_mix','-v7.3');
 
+end

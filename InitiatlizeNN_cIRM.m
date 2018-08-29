@@ -8,13 +8,13 @@ opts.cv_interval = 1; % check cv perf. every this many epochs
 
 opts.isPretrain = 0; % pre-training using RBM?
 opts.rbm_max_epoch = 0; 
-opts.rbm_batch_size = 1024/2; % batch size for pretraining
+opts.rbm_batch_size = 1024; % batch size for pretraining
 opts.rbm_learn_rate_binary = 0.01;
 opts.rbm_learn_rate_real = 0.004;
 
 opts.learner = 'ada_sgd'; % 'ada_sgd' or 'sgd'
 opts.sgd_max_epoch = 80;
-opts.sgd_batch_size = 1024/4; % batch size for SGD
+opts.sgd_batch_size = 1024; % batch size for SGD
 opts.ada_sgd_scale = 0.0015; % scaling factor for ada_grad
 opts.ada_grad_eps   = eps;
 

@@ -1,6 +1,6 @@
 function scriptTrainDNN_cIRM_denoise11(noise)
 
-% Description: scriptTrainDNN_cIRM_denoise11(), Prepare feature function gives framesize too for LSTM
+% Description: Prepare feature function gives framesize too for LSTM
 %
 % Input:
 %   - noise: Noise type, e.g. 'SSN'
@@ -15,8 +15,6 @@ function scriptTrainDNN_cIRM_denoise11(noise)
 %
 % Author: Khandokar Md. Nayem, May 29, 2018
 
-
-% This file is an dereverberation example for training and test. The user only need to specify the data location.
 
 % This file is an dereverberation example for training and test. The user only need to specify the data location.
 
@@ -47,7 +45,7 @@ globalpara %#ok<NOPTS>
 test_noise    = globalpara.noise;
 
 SERVER = 'Eagles'; % 'BigRed2'
-VERSION = '_e10v5';
+VERSION = '_e11v1';
 
 if strcmpi(SERVER,'BigRed2') == 1
     path_data_directory = '/gpfs/home/k/n/knayem/BigRed2/Eagles_Backup/Data';
@@ -77,7 +75,7 @@ elseif strcmp(test_noise,'Factory') == 1
 end
 
 fprintf('Extracting Features/Labels from Training Data...\n')
-[trData, trLabel_r, trLabel_i, opts, trNumframes] = prepareTrainingData_cIRM_denoise3(globalpara,cs_training_data_path,training_mix_wav_save_path);
+[trData, trLabel_r, trLabel_i, opts, trNumframes] = prepareTrainingData_cIRM_denoise2(globalpara,cs_training_data_path,training_mix_wav_save_path);
 
 
 
@@ -99,7 +97,7 @@ elseif strcmp(test_noise,'Factory') == 1
 end
 
 fprintf('Extracting Features/Labels from Development Data...\n')
-[cvData, cvLabel_r, cvLabel_i, cvNumframes]  = prepareDevData_cIRM_denoise3(globalpara,cs_dev_data_path,noisy_dev_data_path);
+[cvData, cvLabel_r, cvLabel_i, cvNumframes]  = prepareDevData_cIRM_denoise2(globalpara,cs_dev_data_path,noisy_dev_data_path);
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Training
@@ -160,16 +158,13 @@ PARAM_SAVE_FILE = sprintf('./dnn_models/DNN_params%s.mat',VERSION);
 % dev_label_imag = cvLabel_i
 % dev_weights = []
 
-% save(DATA_SAVE_FILE, 'trData', 'trLabel_r', 'trLabel_i', 'cvData', 'cvLabel_r', 'cvLabel_i','-v7.3');
-fprintf('Saving Datas, >>%s ...\n', DATA_SAVE_FILE)
 save(DATA_SAVE_FILE, 'trData', 'trLabel_r', 'trLabel_i', 'trNumframes', 'cvData', 'cvLabel_r', 'cvLabel_i', 'cvNumframes', '-v7.3');
 
 % opts = opts
-fprintf('Saving Params, >>%s ...\n', PARAM_SAVE_FILE)
 save(PARAM_SAVE_FILE, 'opts', '-v7.3');
 
 
-fprintf('Training DNN, >>%s...\n', ModelFN)
+fprintf('Training DNN...\n')
 [net, pre_net] = funcDeepNetTrainNoRolling_crm_05(trData,trLabel_r,trLabel_r,[],cvData,cvLabel_r,cvLabel_i, [],opts);
 
 

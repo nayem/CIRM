@@ -7,7 +7,7 @@ function calculatePESQ_02( VERSION )
 
 
     SERVER = 'Eagles'; % 'BigRed2'
-    CODE = 'Matlab'; % 'Python'
+    CODE = 'Python'; % 'Python'
 
     if strcmpi(CODE,'Python') == 1
         VERSION = strcat(VERSION,'_py');

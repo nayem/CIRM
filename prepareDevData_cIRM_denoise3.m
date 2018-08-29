@@ -32,8 +32,24 @@ labcompress   = para.labcompress;
 
 files     = dir(fullfile(noisy_dev_data_path,'*.wav'));
 num_files = length(files);
-% num_files = 5;
 numframes = zeros(num_files,1);
+
+%%=============== Files for statestics Analysis ============%%
+SERVER = 'Eagles';
+
+if strcmpi(SERVER,'Eagles') == 1
+    path_data_directory = '/data/knayem';
+    path_code_directory = '/home/knayem/EaglesBigred2/cIRM';
+end
+
+STATS_FILE = fullfile(path_code_directory,'dnn_models/dev_stats.mat');
+
+% list for 6 SNRs and Clean
+clean = []; snr_n6 = []; snr_n3 = []; 
+snr_0 = []; snr_3 = []; snr_6 = []; snr_=[];
+
+snr_exp = '(-)?(\d)+dB';
+%%===========================================================%%
 
 fprintf('\tComputing number of frames...\n\t\t')
 ten_percent = ceil(0.1*num_files);
@@ -107,12 +123,34 @@ for fileNum = 1:num_files
     cvLabel_r(start_samp:stop_samp,:) = labels_r;
     cvLabel_i(start_samp:stop_samp,:) = labels_i;
 
+    % ======================== Store States ============================ %
+    clean=[clean, clean_stft];
+    [s,e]=regexp(filename,snr_exp, 'once');
+    
+    switch filename(s:e)
+        case '-6dB'
+            snr_n6=[snr_n6, mix_stft];
+        case '-3dB'
+            snr_n3=[snr_n3, mix_stft];
+        case '0dB'
+            snr_0=[snr_0, mix_stft];
+        case '3dB'
+            snr_3=[snr_3, mix_stft];
+        case '6dB'
+            snr_6=[snr_6, mix_stft];
+        otherwise
+            snr_=[snr_, mix_stft];
+    end
+    % ================================================================== %
+    
     start_samp = stop_samp + 1;
 
     if(~mod(fileNum,ten_percent))
         fprintf('%d...',(fileNum/ten_percent)*10)
     end
 end
+
+save(STATS_FILE, 'snr_n6', 'snr_n3', 'snr_0', 'snr_3', 'snr_6','snr_', 'clean','numframes','-v7.3');
 
 clear clean_sig revb_sig filename str REVB_FILENAME CLEAN_FILENAME start_samp stop_samp fileNum
 % clear files ten_percent para winlen revb_dev_data_path overlap numframes
