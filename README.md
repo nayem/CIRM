@@ -74,6 +74,43 @@ Example:
 
 ```scp -r denoising_mix_wavs_SSN_15000noisespercs/ knayem@eagles.soic.indiana.edu:/data/knayem/```
 
+
+### Generate Noisy Audio
+Go to ```/home/knayem/EaglesBigRed2/cIRM/GENERAL/``` folder. Run ```createNoisySpeech_v2_1()```.
+
+```shell
+/home/knayem/EaglesBigRed2/cIRM/
+      |---> GENERAL
+```
+
+Function ```createNoisySpeech_v2_1()``` prototype,
+```
+createNoisySpeech_v2_1(NOISE,TASK,SNR)
+
+::parameter:: 
+      NOISE : <str> case-insensitive; one of these 4 noises types 'SSN', 'CAFE', 'BABBLE', 'FACTORY'.
+      TASK  : <str> case-insensitive; one of these 3 tasks types 'TRAIN', 'DEV', 'TEST'.
+      SNR   : <int>; snr levels depends on task type. Train (-3,0,3), Dev (-3,0,3) and Test (-6,-3,0,3,-6).
+      
+::return::
+      <none>
+      Saved file name pattern 
+      <filename1>_16k_<filename2>_<SNR>dB_<NOISE>_noisyspeech.wav
+      S_72_09_16k_0_-3dB_FACTORY_noisyspeech.wav
+      <filename1>=actual file name, <filename2>=serial of file name
+```
+By default, 10 audio (different cuts by adding various parts of a noise type) generated of an audio.
+
+**Note:** Check the ```Clean_Wav_Save_Path``` and ```Noisy_Wav_Save_Path``` carefully. (Line 45-59) 
+
+
+
+
+
+
+
+
+
 ## BigRed 2
 ```bigred2.uits.iu.edu```
 
