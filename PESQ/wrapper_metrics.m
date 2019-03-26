@@ -1,5 +1,6 @@
 function wrapper_metrics(Version,noise_type,metrics)
 % Calculate scores for different metrics
+% GO to PESQ folder, then RUN
 % Use ../scores/cIRMscores_denoising.noise<noise_type><Version>.mat
 %
 % Written by: Khandokar Md. Nayem, Jun 3, 2018
@@ -16,7 +17,7 @@ function wrapper_metrics(Version,noise_type,metrics)
         metrics = {metrics};
     end
 
-    total_scores_list = load(sprintf('./scores/cIRMscores_denoising.noise%s%s.mat',noise_type,Version));
+    total_scores_list = load(sprintf('../scores/cIRMscores_denoising.noise%s%s.mat',noise_type,Version));
 
     snr_list = [-3,-6,0,3,6];
     num_target = 109;
