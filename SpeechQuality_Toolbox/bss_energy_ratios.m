@@ -22,6 +22,8 @@ function [varargout]=bss_energy_ratios(F_s_target,F_e_interf,varargin)
 % Developers:  - Cedric Fevotte (fevotte@tsi.enst.fr) - Emmanuel Vincent
 % (emmanuel.vincent@irisa.fr) - Remi Gribonval (remi.gribonval@irisa.fr)
 
+% Nayem: edited SI-SAR
+
 switch nargin
     case 3
         F_e_artif=varargin{1};
@@ -31,7 +33,7 @@ switch nargin
         % SIR
         varargout{2}=sum(F_s_target.^2,2)./sum(F_e_interf.^2,2);
         % SAR
-        varargout{3}=sum((F_s_target+F_e_interf).^2,2)./sum(F_e_artif.^2,2);        
+        varargout{3}=sum((F_s_target+F_e_interf).^2,2)./sum(F_e_artif.^2,2);  
         
     case 4        
         F_e_noise=varargin{1};
@@ -44,5 +46,5 @@ switch nargin
         % SNR
         varargout{3}=sum((F_s_target+F_e_interf).^2,2)./sum(F_e_noise.^2,2);
         % SAR
-        varargout{4}=sum((F_s_target+F_e_interf+F_e_noise).^2,2)./sum(F_e_artif.^2,2);        
+        varargout{4}=sum((F_s_target+F_e_interf+F_e_noise).^2,2)./sum(F_e_artif.^2,2);  
 end

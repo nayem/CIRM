@@ -1,0 +1,1014 @@
+StartDate,EndDate,Status,IPAddress,Progress,Duration (in seconds),Finished,RecordedDate,ResponseId,RecipientLastName,RecipientFirstName,RecipientEmail,ExternalReference,LocationLatitude,LocationLongitude,DistributionChannel,UserLanguage,Q_RecaptchaScore,Q_RelevantIDDuplicate,Q_RelevantIDDuplicateScore,Q_RelevantIDFraudScore,Q_RelevantIDLastStartDate,Q1.1,Q2.1,Q2.2,Q2.3,Q2.4,Q2.5,Q2.5_6_TEXT,Q3.1,Q3.2,Q4.1_6,Q4.4_1,Q4.7_1,Q4.10_1,Q4.13_1,Q4.16_1,Q4.19_1,Q5.1_1,Q6.1_1,Q7.1_1,Q8.1_1,Q9.1_1,Q10.1_1,Q11.1_1,Q12.1_1,Q13.1_1,Q14.1_1,Q15.1_1,Q16.1_1,Q17.1_1,Q18.1_1,Q19.1_1,Q20.1_1,Q21.1_1,Q22.1_1,Q23.1_1,Q24.1_1,Q25.1_1,Q26.1_1,Q27.1_1,Q28.1_1,Q29.1_1,Q30.1_1,Q31.1_1,Q32.1_1,Q33.1_1,Q34.1_1,Q35.1,Q35.2,Q35.2_3_TEXT,RandomCode,Q_BallotBoxStuffing,path_study,path_practice,src_audio_P1_A,src_audio_P1_B,src_audio_P2_A,src_audio_P2_B,src_audio_P3_A,src_audio_P3_B,src_audio_P4_A,src_audio_P4_B,src_audio_P5_A,src_audio_P5_B,src_audio_P6_A,src_audio_P6_B,src_audio_P0_I,src_audio_P0_II,src_audio_P0_III,src_audio_P0_IV,src_audio_P0_V,src_audio_P0_VI,que_number,total_study_que,src_audio_Q1_A,src_audio_Q1_B,src_audio_Q6_A,src_audio_Q6_B,src_audio_Q11_A,src_audio_Q11_B,src_audio_Q16_A,src_audio_Q16_B,src_audio_Q21_A,src_audio_Q21_B,randBool2,A2,B2,src_audio_Q2_A,src_audio_Q2_B,randBool7,A7,B7,src_audio_Q7_A,src_audio_Q7_B,randBool12,A12,B12,src_audio_Q12_A,src_audio_Q12_B,randBool17,A17,B17,src_audio_Q17_A,src_audio_Q17_B,randBool22,A22,B22,src_audio_Q22_A,src_audio_Q22_B,randBool3,A3,B3,src_audio_Q3_A,src_audio_Q3_B,randBool8,A8,B8,src_audio_Q8_A,src_audio_Q8_B,randBool13,A13,B13,src_audio_Q13_A,src_audio_Q13_B,randBool18,A18,B18,src_audio_Q18_A,src_audio_Q18_B,randBool23,A23,B23,src_audio_Q23_A,src_audio_Q23_B,randBool4,A4,B4,src_audio_Q4_A,src_audio_Q4_B,randBool9,A9,B9,src_audio_Q9_A,src_audio_Q9_B,randBool14,A14,B14,src_audio_Q14_A,src_audio_Q14_B,randBool19,A19,B19,src_audio_Q19_A,src_audio_Q19_B,randBool24,A24,B24,src_audio_Q24_A,src_audio_Q24_B,randBool5,A5,B5,src_audio_Q5_A,src_audio_Q5_B,randBool10,A10,B10,src_audio_Q10_A,src_audio_Q10_B,randBool15,A15,B15,src_audio_Q15_A,src_audio_Q15_B,randBool20,A20,B20,src_audio_Q20_A,src_audio_Q20_B,randBool25,A25,B25,src_audio_Q25_A,src_audio_Q25_B,randBool26,A26,B26,src_audio_Q26_A,src_audio_Q26_B,randBool27,A27,B27,src_audio_Q27_A,src_audio_Q27_B,randBool28,A28,B28,src_audio_Q28_A,src_audio_Q28_B,randBool29,A29,B29,src_audio_Q29_A,src_audio_Q29_B,randBool30,A30,B30,src_audio_Q30_A,src_audio_Q30_B,FL_84_DO
+Start Date,End Date,Response Type,IP Address,Progress,Duration (in seconds),Finished,Recorded Date,Response ID,Recipient Last Name,Recipient First Name,Recipient Email,External Data Reference,Location Latitude,Location Longitude,Distribution Channel,User Language,Q_RecaptchaScore,Q_RelevantIDDuplicate,Q_RelevantIDDuplicateScore,Q_RelevantIDFraudScore,Q_RelevantIDLastStartDate,INDIANA UNIVERSITY STUDY INFORMATION SHEET FOR Listening study to identify the speech signal with be,Please select your age: *,How will you describe you as an English speaker? *,How will you describe your hearing capability? *,Which devices will you use to listen to the audio signals of this study? *,Which describes best the type of device you will use for this study? * - Selected Choice,Which describes best the type of device you will use for this study? * - Other - Text,What is your Mechanical Turk ID? *,What gender do you identify with? *,"Instructions
+
+ 
+
+Please read the following instructions carefully.
+
+
+
+For this survey, you will hear a pair of audio files named A and B. You should press the play button ▶️ to hear the audio. For each pair, you will answer a single question, which audio file you prefer regarding sound quality.
+
+ 
+
+
+You can score your preference by any number between -3 and 3. Here, the preference score refers to,
+
+
+	-3 = Strongly prefer A (SP-A),
+	-2 = Moderately prefer A (MP-A),
+	-1 = Slightly prefer A (SLP-A),
+	0 = No preference (NP),
+	1 = Slightly prefer B (SLP-B),
+	2 = Moderately prefer B (MP-B),
+	3 = Strongly prefer B (SP-B)
+
+
+If both audio signals are of the same sound quality, you should score as 0. If you prefer A, your preference score should be nearer to -3. Similarly, if you prefer B more, your score should be more close to 3. However, you can give a score to a single decimal number, for example, 1.6 can be given as a score.
+
+
+
+How to answer a question:
+
+
+	Listen to audio signal, A.
+	Listen to audio signal, B.
+	Move the slider to give your preference score.
+	The NEXT button will appear on the right bottom side of the page.
+	Click the NEXT button to answer the next question.
+
+
+Troubleshoot:
+
+If you find any part that is not functioning correctly, then please RELOAD/REFRESH ⟳ the page. If the problem still does not resolve, then please contact us.
+
+ 
+
+Below is a sample slider which you will use to answer each question. You can move the slider to the score which you want to give. Your given score will be displayed when you move the slider. - 6","Practice-Q (1/6). Listen to the following audio signals. 
+
+ -3 = Strongly prefer A (SP-A),
+ -2 = Moderately prefer A (MP-A),
+ -1 = Slightly prefer A (SLP-A),
+ 0 = No preference (NP),
+ 1 = Slightly prefer B (SLP-B),
+ 2 = Moderately prefer B (MP-B),
+ 3 = Strongly prefer B (SP-B)
+
+
+
+A : 
+
+
+
+B : 
+
+
+
+
+Indicate the quality preference between these two audio signals. - 1","Practice-Q (2/6). Listen to the following audio signals. 
+
+ -3 = Strongly prefer A (SP-A),
+ -2 = Moderately prefer A (MP-A),
+ -1 = Slightly prefer A (SLP-A),
+ 0 = No preference (NP),
+ 1 = Slightly prefer B (SLP-B),
+ 2 = Moderately prefer B (MP-B),
+ 3 = Strongly prefer B (SP-B)
+
+
+
+A : 
+
+
+
+B : 
+
+
+
+
+Indicate the quality preference between these two audio signals. - 1","Practice-Q (3/6). Listen to the following audio signals. 
+
+ -3 = Strongly prefer A (SP-A),
+ -2 = Moderately prefer A (MP-A),
+ -1 = Slightly prefer A (SLP-A),
+ 0 = No preference (NP),
+ 1 = Slightly prefer B (SLP-B),
+ 2 = Moderately prefer B (MP-B),
+ 3 = Strongly prefer B (SP-B)
+
+
+
+A : 
+
+
+
+B : 
+
+
+
+
+ 
+
+Indicate the quality preference between these two audio signals. - 1","Practice-Q (4/6). Listen to the following audio signals. 
+
+ -3 = Strongly prefer A (SP-A),
+ -2 = Moderately prefer A (MP-A),
+ -1 = Slightly prefer A (SLP-A),
+ 0 = No preference (NP),
+ 1 = Slightly prefer B (SLP-B),
+ 2 = Moderately prefer B (MP-B),
+ 3 = Strongly prefer B (SP-B)
+
+
+
+A : 
+
+
+
+B : 
+
+
+
+
+ 
+
+Indicate the quality preference between these two audio signals. - 1","Practice-Q (5/6). Listen to the following audio signals. 
+
+ -3 = Strongly prefer A (SP-A),
+ -2 = Moderately prefer A (MP-A),
+ -1 = Slightly prefer A (SLP-A),
+ 0 = No preference (NP),
+ 1 = Slightly prefer B (SLP-B),
+ 2 = Moderately prefer B (MP-B),
+ 3 = Strongly prefer B (SP-B)
+
+
+
+A : 
+
+
+
+B : 
+
+
+
+
+ 
+
+Indicate the quality preference between these two audio signals. - 1","Practice-Q (6/6). Listen to the following audio signals. 
+
+ -3 = Strongly prefer A (SP-A),
+ -2 = Moderately prefer A (MP-A),
+ -1 = Slightly prefer A (SLP-A),
+ 0 = No preference (NP),
+ 1 = Slightly prefer B (SLP-B),
+ 2 = Moderately prefer B (MP-B),
+ 3 = Strongly prefer B (SP-B)
+
+
+
+A : 
+
+
+
+B : 
+
+
+
+
+ 
+
+Indicate the quality preference between these two audio signals. - 1","Q ([Field-que_number]/[Field-total_study_que]). Listen to the following audio signals.
+
+ -3 = Strongly prefer A (SP-A),
+ -2 = Moderately prefer A (MP-A),
+ -1 = Slightly prefer A (SLP-A),
+ 0 = No preference (NP),
+ 1 = Slightly prefer B (SLP-B),
+ 2 = Moderately prefer B (MP-B),
+ 3 = Strongly prefer B (SP-B)
+
+
+Troubleshoot:
+
+If you find any part that is not functioning correctly, then please RELOAD/REFRESH ⟳ the page. If the problem still does not resolve, then please contact us. 
+
+ 
+A : 
+
+
+
+B : 
+
+
+
+
+ 
+
+Indicate the quality preference between these two audio signals. - 1","Q ([Field-que_number]/[Field-total_study_que]). Listen to the following audio signals.
+
+ -3 = Strongly prefer A (SP-A),
+ -2 = Moderately prefer A (MP-A),
+ -1 = Slightly prefer A (SLP-A),
+ 0 = No preference (NP),
+ 1 = Slightly prefer B (SLP-B),
+ 2 = Moderately prefer B (MP-B),
+ 3 = Strongly prefer B (SP-B)
+
+
+Troubleshoot:
+
+If you find any part that is not functioning correctly, then please RELOAD/REFRESH ⟳ the page. If the problem still does not resolve, then please contact us. 
+
+ 
+A : 
+
+
+
+B : 
+
+
+
+
+ 
+
+Indicate the quality preference between these two audio signals. - 1","Q ([Field-que_number]/[Field-total_study_que]). Listen to the following audio signals.
+
+ -3 = Strongly prefer A (SP-A),
+ -2 = Moderately prefer A (MP-A),
+ -1 = Slightly prefer A (SLP-A),
+ 0 = No preference (NP),
+ 1 = Slightly prefer B (SLP-B),
+ 2 = Moderately prefer B (MP-B),
+ 3 = Strongly prefer B (SP-B)
+
+
+Troubleshoot:
+
+If you find any part that is not functioning correctly, then please RELOAD/REFRESH ⟳ the page. If the problem still does not resolve, then please contact us. 
+
+ 
+A : 
+
+
+
+B : 
+
+
+
+
+ 
+
+Indicate the quality preference between these two audio signals. - 1","Q ([Field-que_number]/[Field-total_study_que]). Listen to the following audio signals.
+
+ -3 = Strongly prefer A (SP-A),
+ -2 = Moderately prefer A (MP-A),
+ -1 = Slightly prefer A (SLP-A),
+ 0 = No preference (NP),
+ 1 = Slightly prefer B (SLP-B),
+ 2 = Moderately prefer B (MP-B),
+ 3 = Strongly prefer B (SP-B)
+
+
+Troubleshoot:
+
+If you find any part that is not functioning correctly, then please RELOAD/REFRESH ⟳ the page. If the problem still does not resolve, then please contact us. 
+
+ 
+A : 
+
+
+
+B : 
+
+
+
+
+ 
+
+Indicate the quality preference between these two audio signals. - 1","Q ([Field-que_number]/[Field-total_study_que]). Listen to the following audio signals.
+
+ -3 = Strongly prefer A (SP-A),
+ -2 = Moderately prefer A (MP-A),
+ -1 = Slightly prefer A (SLP-A),
+ 0 = No preference (NP),
+ 1 = Slightly prefer B (SLP-B),
+ 2 = Moderately prefer B (MP-B),
+ 3 = Strongly prefer B (SP-B)
+
+
+Troubleshoot:
+
+If you find any part that is not functioning correctly, then please RELOAD/REFRESH ⟳ the page. If the problem still does not resolve, then please contact us. 
+
+ 
+A : 
+
+
+
+B : 
+
+
+
+
+ 
+
+Indicate the quality preference between these two audio signals. - 1","Q ([Field-que_number]/[Field-total_study_que]). Listen to the following audio signals.
+
+ -3 = Strongly prefer A (SP-A),
+ -2 = Moderately prefer A (MP-A),
+ -1 = Slightly prefer A (SLP-A),
+ 0 = No preference (NP),
+ 1 = Slightly prefer B (SLP-B),
+ 2 = Moderately prefer B (MP-B),
+ 3 = Strongly prefer B (SP-B)
+
+Troubleshoot:
+
+If you find any part that is not functioning correctly, then please RELOAD/REFRESH ⟳ the page. If the problem still does not resolve, then please contact us. 
+ 
+A : 
+
+
+
+B : 
+
+
+
+
+ 
+
+Indicate the quality preference between these two audio signals. - 1","Q ([Field-que_number]/[Field-total_study_que]). Listen to the following audio signals.
+
+ -3 = Strongly prefer A (SP-A),
+ -2 = Moderately prefer A (MP-A),
+ -1 = Slightly prefer A (SLP-A),
+ 0 = No preference (NP),
+ 1 = Slightly prefer B (SLP-B),
+ 2 = Moderately prefer B (MP-B),
+ 3 = Strongly prefer B (SP-B)
+
+
+Troubleshoot:
+
+If you find any part that is not functioning correctly, then please RELOAD/REFRESH ⟳ the page. If the problem still does not resolve, then please contact us. 
+
+ 
+A : 
+
+
+
+B : 
+
+
+
+
+ 
+
+Indicate the quality preference between these two audio signals. - 1","Q ([Field-que_number]/[Field-total_study_que]). Listen to the following audio signals.
+
+ -3 = Strongly prefer A (SP-A),
+ -2 = Moderately prefer A (MP-A),
+ -1 = Slightly prefer A (SLP-A),
+ 0 = No preference (NP),
+ 1 = Slightly prefer B (SLP-B),
+ 2 = Moderately prefer B (MP-B),
+ 3 = Strongly prefer B (SP-B)
+
+
+Troubleshoot:
+
+If you find any part that is not functioning correctly, then please RELOAD/REFRESH ⟳ the page. If the problem still does not resolve, then please contact us. 
+
+ 
+A : 
+
+
+
+B : 
+
+
+
+
+ 
+
+Indicate the quality preference between these two audio signals. - 1","Q ([Field-que_number]/[Field-total_study_que]). Listen to the following audio signals.
+
+ -3 = Strongly prefer A (SP-A),
+ -2 = Moderately prefer A (MP-A),
+ -1 = Slightly prefer A (SLP-A),
+ 0 = No preference (NP),
+ 1 = Slightly prefer B (SLP-B),
+ 2 = Moderately prefer B (MP-B),
+ 3 = Strongly prefer B (SP-B)
+
+
+Troubleshoot:
+
+If you find any part that is not functioning correctly, then please RELOAD/REFRESH ⟳ the page. If the problem still does not resolve, then please contact us. 
+
+ 
+A : 
+
+
+
+B : 
+
+
+
+
+ 
+
+Indicate the quality preference between these two audio signals. - 1","Q ([Field-que_number]/[Field-total_study_que]). Listen to the following audio signals.
+
+ -3 = Strongly prefer A (SP-A),
+ -2 = Moderately prefer A (MP-A),
+ -1 = Slightly prefer A (SLP-A),
+ 0 = No preference (NP),
+ 1 = Slightly prefer B (SLP-B),
+ 2 = Moderately prefer B (MP-B),
+ 3 = Strongly prefer B (SP-B)
+
+
+Troubleshoot:
+
+If you find any part that is not functioning correctly, then please RELOAD/REFRESH ⟳ the page. If the problem still does not resolve, then please contact us. 
+
+ 
+A : 
+
+
+
+B : 
+
+
+
+
+ 
+
+Indicate the quality preference between these two audio signals. - 1","Q ([Field-que_number]/[Field-total_study_que]). Listen to the following audio signals.
+
+ -3 = Strongly prefer A (SP-A),
+ -2 = Moderately prefer A (MP-A),
+ -1 = Slightly prefer A (SLP-A),
+ 0 = No preference (NP),
+ 1 = Slightly prefer B (SLP-B),
+ 2 = Moderately prefer B (MP-B),
+ 3 = Strongly prefer B (SP-B)
+
+Troubleshoot:
+
+If you find any part that is not functioning correctly, then please RELOAD/REFRESH ⟳ the page. If the problem still does not resolve, then please contact us. 
+ 
+A : 
+
+
+
+B : 
+
+
+
+
+ 
+
+Indicate the quality preference between these two audio signals. - 1","Q ([Field-que_number]/[Field-total_study_que]). Listen to the following audio signals.
+
+ -3 = Strongly prefer A (SP-A),
+ -2 = Moderately prefer A (MP-A),
+ -1 = Slightly prefer A (SLP-A),
+ 0 = No preference (NP),
+ 1 = Slightly prefer B (SLP-B),
+ 2 = Moderately prefer B (MP-B),
+ 3 = Strongly prefer B (SP-B)
+
+
+Troubleshoot:
+
+If you find any part that is not functioning correctly, then please RELOAD/REFRESH ⟳ the page. If the problem still does not resolve, then please contact us. 
+
+ 
+A : 
+
+
+
+B : 
+
+
+
+
+ 
+
+Indicate the quality preference between these two audio signals. - 1","Q ([Field-que_number]/[Field-total_study_que]). Listen to the following audio signals.
+
+ -3 = Strongly prefer A (SP-A),
+ -2 = Moderately prefer A (MP-A),
+ -1 = Slightly prefer A (SLP-A),
+ 0 = No preference (NP),
+ 1 = Slightly prefer B (SLP-B),
+ 2 = Moderately prefer B (MP-B),
+ 3 = Strongly prefer B (SP-B)
+
+
+Troubleshoot:
+
+If you find any part that is not functioning correctly, then please RELOAD/REFRESH ⟳ the page. If the problem still does not resolve, then please contact us. 
+
+ 
+A : 
+
+
+
+B : 
+
+
+
+
+ 
+
+Indicate the quality preference between these two audio signals. - 1","Q ([Field-que_number]/[Field-total_study_que]). Listen to the following audio signals.
+
+ -3 = Strongly prefer A (SP-A),
+ -2 = Moderately prefer A (MP-A),
+ -1 = Slightly prefer A (SLP-A),
+ 0 = No preference (NP),
+ 1 = Slightly prefer B (SLP-B),
+ 2 = Moderately prefer B (MP-B),
+ 3 = Strongly prefer B (SP-B)
+
+
+Troubleshoot:
+
+If you find any part that is not functioning correctly, then please RELOAD/REFRESH ⟳ the page. If the problem still does not resolve, then please contact us. 
+
+ 
+A : 
+
+
+
+B : 
+
+
+
+
+ 
+
+Indicate the quality preference between these two audio signals. - 1","Q ([Field-que_number]/[Field-total_study_que]). Listen to the following audio signals.
+
+ -3 = Strongly prefer A (SP-A),
+ -2 = Moderately prefer A (MP-A),
+ -1 = Slightly prefer A (SLP-A),
+ 0 = No preference (NP),
+ 1 = Slightly prefer B (SLP-B),
+ 2 = Moderately prefer B (MP-B),
+ 3 = Strongly prefer B (SP-B)
+
+
+Troubleshoot:
+
+If you find any part that is not functioning correctly, then please RELOAD/REFRESH ⟳ the page. If the problem still does not resolve, then please contact us. 
+
+ 
+A : 
+
+
+
+B : 
+
+
+
+
+ 
+
+Indicate the quality preference between these two audio signals. - 1","Q ([Field-que_number]/[Field-total_study_que]). Listen to the following audio signals.
+
+ -3 = Strongly prefer A (SP-A),
+ -2 = Moderately prefer A (MP-A),
+ -1 = Slightly prefer A (SLP-A),
+ 0 = No preference (NP),
+ 1 = Slightly prefer B (SLP-B),
+ 2 = Moderately prefer B (MP-B),
+ 3 = Strongly prefer B (SP-B)
+
+Troubleshoot:
+
+If you find any part that is not functioning correctly, then please RELOAD/REFRESH ⟳ the page. If the problem still does not resolve, then please contact us. 
+ 
+A : 
+
+
+
+B : 
+
+
+
+
+ 
+
+Indicate the quality preference between these two audio signals. - 1","Q ([Field-que_number]/[Field-total_study_que]). Listen to the following audio signals.
+
+ -3 = Strongly prefer A (SP-A),
+ -2 = Moderately prefer A (MP-A),
+ -1 = Slightly prefer A (SLP-A),
+ 0 = No preference (NP),
+ 1 = Slightly prefer B (SLP-B),
+ 2 = Moderately prefer B (MP-B),
+ 3 = Strongly prefer B (SP-B)
+
+
+Troubleshoot:
+
+If you find any part that is not functioning correctly, then please RELOAD/REFRESH ⟳ the page. If the problem still does not resolve, then please contact us. 
+
+ 
+A : 
+
+
+
+B : 
+
+
+
+
+ 
+
+Indicate the quality preference between these two audio signals. - 1","Q ([Field-que_number]/[Field-total_study_que]). Listen to the following audio signals.
+
+ -3 = Strongly prefer A (SP-A),
+ -2 = Moderately prefer A (MP-A),
+ -1 = Slightly prefer A (SLP-A),
+ 0 = No preference (NP),
+ 1 = Slightly prefer B (SLP-B),
+ 2 = Moderately prefer B (MP-B),
+ 3 = Strongly prefer B (SP-B)
+
+
+Troubleshoot:
+
+If you find any part that is not functioning correctly, then please RELOAD/REFRESH ⟳ the page. If the problem still does not resolve, then please contact us. 
+
+ 
+A : 
+
+
+
+B : 
+
+
+
+
+ 
+
+Indicate the quality preference between these two audio signals. - 1","Q ([Field-que_number]/[Field-total_study_que]). Listen to the following audio signals.
+
+ -3 = Strongly prefer A (SP-A),
+ -2 = Moderately prefer A (MP-A),
+ -1 = Slightly prefer A (SLP-A),
+ 0 = No preference (NP),
+ 1 = Slightly prefer B (SLP-B),
+ 2 = Moderately prefer B (MP-B),
+ 3 = Strongly prefer B (SP-B)
+
+
+Troubleshoot:
+
+If you find any part that is not functioning correctly, then please RELOAD/REFRESH ⟳ the page. If the problem still does not resolve, then please contact us. 
+
+ 
+A : 
+
+
+
+B : 
+
+
+
+
+ 
+
+Indicate the quality preference between these two audio signals. - 1","Q ([Field-que_number]/[Field-total_study_que]). Listen to the following audio signals.
+
+ -3 = Strongly prefer A (SP-A),
+ -2 = Moderately prefer A (MP-A),
+ -1 = Slightly prefer A (SLP-A),
+ 0 = No preference (NP),
+ 1 = Slightly prefer B (SLP-B),
+ 2 = Moderately prefer B (MP-B),
+ 3 = Strongly prefer B (SP-B)
+
+
+Troubleshoot:
+
+If you find any part that is not functioning correctly, then please RELOAD/REFRESH ⟳ the page. If the problem still does not resolve, then please contact us. 
+
+ 
+A : 
+
+
+
+B : 
+
+
+
+
+ 
+
+Indicate the quality preference between these two audio signals. - 1","Q ([Field-que_number]/[Field-total_study_que]). Listen to the following audio signals.
+
+ -3 = Strongly prefer A (SP-A),
+ -2 = Moderately prefer A (MP-A),
+ -1 = Slightly prefer A (SLP-A),
+ 0 = No preference (NP),
+ 1 = Slightly prefer B (SLP-B),
+ 2 = Moderately prefer B (MP-B),
+ 3 = Strongly prefer B (SP-B)
+
+
+Troubleshoot:
+
+If you find any part that is not functioning correctly, then please RELOAD/REFRESH ⟳ the page. If the problem still does not resolve, then please contact us. 
+
+ 
+A : 
+
+
+
+B : 
+
+
+
+
+ 
+
+Indicate the quality preference between these two audio signals. - 1","Q ([Field-que_number]/[Field-total_study_que]). Listen to the following audio signals.
+
+ -3 = Strongly prefer A (SP-A),
+ -2 = Moderately prefer A (MP-A),
+ -1 = Slightly prefer A (SLP-A),
+ 0 = No preference (NP),
+ 1 = Slightly prefer B (SLP-B),
+ 2 = Moderately prefer B (MP-B),
+ 3 = Strongly prefer B (SP-B)
+
+
+Troubleshoot:
+
+If you find any part that is not functioning correctly, then please RELOAD/REFRESH ⟳ the page. If the problem still does not resolve, then please contact us. 
+
+ 
+A : 
+
+
+
+B : 
+
+
+
+
+ 
+
+Indicate the quality preference between these two audio signals. - 1","Q ([Field-que_number]/[Field-total_study_que]). Listen to the following audio signals.
+
+ -3 = Strongly prefer A (SP-A),
+ -2 = Moderately prefer A (MP-A),
+ -1 = Slightly prefer A (SLP-A),
+ 0 = No preference (NP),
+ 1 = Slightly prefer B (SLP-B),
+ 2 = Moderately prefer B (MP-B),
+ 3 = Strongly prefer B (SP-B)
+
+
+Troubleshoot:
+
+If you find any part that is not functioning correctly, then please RELOAD/REFRESH ⟳ the page. If the problem still does not resolve, then please contact us. 
+
+ 
+A : 
+
+
+
+B : 
+
+
+
+
+ 
+
+Indicate the quality preference between these two audio signals. - 1","Q ([Field-que_number]/[Field-total_study_que]). Listen to the following audio signals.
+
+ -3 = Strongly prefer A (SP-A),
+ -2 = Moderately prefer A (MP-A),
+ -1 = Slightly prefer A (SLP-A),
+ 0 = No preference (NP),
+ 1 = Slightly prefer B (SLP-B),
+ 2 = Moderately prefer B (MP-B),
+ 3 = Strongly prefer B (SP-B)
+
+
+Troubleshoot:
+
+If you find any part that is not functioning correctly, then please RELOAD/REFRESH ⟳ the page. If the problem still does not resolve, then please contact us. 
+
+ 
+A : 
+
+
+
+B : 
+
+
+
+
+ 
+
+Indicate the quality preference between these two audio signals. - 1","Q ([Field-que_number]/[Field-total_study_que]). Listen to the following audio signals.
+
+ -3 = Strongly prefer A (SP-A),
+ -2 = Moderately prefer A (MP-A),
+ -1 = Slightly prefer A (SLP-A),
+ 0 = No preference (NP),
+ 1 = Slightly prefer B (SLP-B),
+ 2 = Moderately prefer B (MP-B),
+ 3 = Strongly prefer B (SP-B)
+
+
+Troubleshoot:
+
+If you find any part that is not functioning correctly, then please RELOAD/REFRESH ⟳ the page. If the problem still does not resolve, then please contact us. 
+
+ 
+A : 
+
+
+
+B : 
+
+
+
+
+ 
+
+Indicate the quality preference between these two audio signals. - 1","Q ([Field-que_number]/[Field-total_study_que]). Listen to the following audio signals.
+
+ -3 = Strongly prefer A (SP-A),
+ -2 = Moderately prefer A (MP-A),
+ -1 = Slightly prefer A (SLP-A),
+ 0 = No preference (NP),
+ 1 = Slightly prefer B (SLP-B),
+ 2 = Moderately prefer B (MP-B),
+ 3 = Strongly prefer B (SP-B)
+
+
+Troubleshoot:
+
+If you find any part that is not functioning correctly, then please RELOAD/REFRESH ⟳ the page. If the problem still does not resolve, then please contact us. 
+
+ 
+A : 
+
+
+
+B : 
+
+
+
+
+ 
+
+Indicate the quality preference between these two audio signals. - 1","Q ([Field-que_number]/[Field-total_study_que]). Listen to the following audio signals.
+
+ -3 = Strongly prefer A (SP-A),
+ -2 = Moderately prefer A (MP-A),
+ -1 = Slightly prefer A (SLP-A),
+ 0 = No preference (NP),
+ 1 = Slightly prefer B (SLP-B),
+ 2 = Moderately prefer B (MP-B),
+ 3 = Strongly prefer B (SP-B)
+
+
+Troubleshoot:
+
+If you find any part that is not functioning correctly, then please RELOAD/REFRESH ⟳ the page. If the problem still does not resolve, then please contact us. 
+
+ 
+A : 
+
+
+
+B : 
+
+
+
+
+ 
+
+Indicate the quality preference between these two audio signals. - 1","Q ([Field-que_number]/[Field-total_study_que]). Listen to the following audio signals.
+
+ -3 = Strongly prefer A (SP-A),
+ -2 = Moderately prefer A (MP-A),
+ -1 = Slightly prefer A (SLP-A),
+ 0 = No preference (NP),
+ 1 = Slightly prefer B (SLP-B),
+ 2 = Moderately prefer B (MP-B),
+ 3 = Strongly prefer B (SP-B)
+
+
+Troubleshoot:
+
+If you find any part that is not functioning correctly, then please RELOAD/REFRESH ⟳ the page. If the problem still does not resolve, then please contact us. 
+
+ 
+A : 
+
+
+
+B : 
+
+
+
+
+ 
+
+Indicate the quality preference between these two audio signals. - 1","Q ([Field-que_number]/[Field-total_study_que]). Listen to the following audio signals.
+
+ -3 = Strongly prefer A (SP-A),
+ -2 = Moderately prefer A (MP-A),
+ -1 = Slightly prefer A (SLP-A),
+ 0 = No preference (NP),
+ 1 = Slightly prefer B (SLP-B),
+ 2 = Moderately prefer B (MP-B),
+ 3 = Strongly prefer B (SP-B)
+
+
+Troubleshoot:
+
+If you find any part that is not functioning correctly, then please RELOAD/REFRESH ⟳ the page. If the problem still does not resolve, then please contact us. 
+
+ 
+A : 
+
+
+
+B : 
+
+
+
+
+ 
+
+Indicate the quality preference between these two audio signals. - 1","Q ([Field-que_number]/[Field-total_study_que]). Listen to the following audio signals.
+
+ -3 = Strongly prefer A (SP-A),
+ -2 = Moderately prefer A (MP-A),
+ -1 = Slightly prefer A (SLP-A),
+ 0 = No preference (NP),
+ 1 = Slightly prefer B (SLP-B),
+ 2 = Moderately prefer B (MP-B),
+ 3 = Strongly prefer B (SP-B)
+
+
+Troubleshoot:
+
+If you find any part that is not functioning correctly, then please RELOAD/REFRESH ⟳ the page. If the problem still does not resolve, then please contact us. 
+
+ 
+A : 
+
+
+
+B : 
+
+
+
+
+ 
+
+Indicate the quality preference between these two audio signals. - 1","Before we finish the survey, do you have any other feedback about the questions, the audios, or this study?",Do you think that the payment is appropriate for the time it took to complete? - Selected Choice,Do you think that the payment is appropriate for the time it took to complete? - Other - Text,RandomCode,Q_BallotBoxStuffing,path_study,path_practice,src_audio_P1_A,src_audio_P1_B,src_audio_P2_A,src_audio_P2_B,src_audio_P3_A,src_audio_P3_B,src_audio_P4_A,src_audio_P4_B,src_audio_P5_A,src_audio_P5_B,src_audio_P6_A,src_audio_P6_B,src_audio_P0_I,src_audio_P0_II,src_audio_P0_III,src_audio_P0_IV,src_audio_P0_V,src_audio_P0_VI,que_number,total_study_que,src_audio_Q1_A,src_audio_Q1_B,src_audio_Q6_A,src_audio_Q6_B,src_audio_Q11_A,src_audio_Q11_B,src_audio_Q16_A,src_audio_Q16_B,src_audio_Q21_A,src_audio_Q21_B,randBool2,A2,B2,src_audio_Q2_A,src_audio_Q2_B,randBool7,A7,B7,src_audio_Q7_A,src_audio_Q7_B,randBool12,A12,B12,src_audio_Q12_A,src_audio_Q12_B,randBool17,A17,B17,src_audio_Q17_A,src_audio_Q17_B,randBool22,A22,B22,src_audio_Q22_A,src_audio_Q22_B,randBool3,A3,B3,src_audio_Q3_A,src_audio_Q3_B,randBool8,A8,B8,src_audio_Q8_A,src_audio_Q8_B,randBool13,A13,B13,src_audio_Q13_A,src_audio_Q13_B,randBool18,A18,B18,src_audio_Q18_A,src_audio_Q18_B,randBool23,A23,B23,src_audio_Q23_A,src_audio_Q23_B,randBool4,A4,B4,src_audio_Q4_A,src_audio_Q4_B,randBool9,A9,B9,src_audio_Q9_A,src_audio_Q9_B,randBool14,A14,B14,src_audio_Q14_A,src_audio_Q14_B,randBool19,A19,B19,src_audio_Q19_A,src_audio_Q19_B,randBool24,A24,B24,src_audio_Q24_A,src_audio_Q24_B,randBool5,A5,B5,src_audio_Q5_A,src_audio_Q5_B,randBool10,A10,B10,src_audio_Q10_A,src_audio_Q10_B,randBool15,A15,B15,src_audio_Q15_A,src_audio_Q15_B,randBool20,A20,B20,src_audio_Q20_A,src_audio_Q20_B,randBool25,A25,B25,src_audio_Q25_A,src_audio_Q25_B,randBool26,A26,B26,src_audio_Q26_A,src_audio_Q26_B,randBool27,A27,B27,src_audio_Q27_A,src_audio_Q27_B,randBool28,A28,B28,src_audio_Q28_A,src_audio_Q28_B,randBool29,A29,B29,src_audio_Q29_A,src_audio_Q29_B,randBool30,A30,B30,src_audio_Q30_A,src_audio_Q30_B,FL_84 - Block Randomizer - Display Order
+"{""ImportId"":""startDate"",""timeZone"":""America/Rio_Branco""}","{""ImportId"":""endDate"",""timeZone"":""America/Rio_Branco""}","{""ImportId"":""status""}","{""ImportId"":""ipAddress""}","{""ImportId"":""progress""}","{""ImportId"":""duration""}","{""ImportId"":""finished""}","{""ImportId"":""recordedDate"",""timeZone"":""America/Rio_Branco""}","{""ImportId"":""_recordId""}","{""ImportId"":""recipientLastName""}","{""ImportId"":""recipientFirstName""}","{""ImportId"":""recipientEmail""}","{""ImportId"":""externalDataReference""}","{""ImportId"":""locationLatitude""}","{""ImportId"":""locationLongitude""}","{""ImportId"":""distributionChannel""}","{""ImportId"":""userLanguage""}","{""ImportId"":""Q_RecaptchaScore""}","{""ImportId"":""Q_RelevantIDDuplicate""}","{""ImportId"":""Q_RelevantIDDuplicateScore""}","{""ImportId"":""Q_RelevantIDFraudScore""}","{""ImportId"":""Q_RelevantIDLastStartDate"",""timeZone"":""UTC""}","{""ImportId"":""QID14""}","{""ImportId"":""QID15""}","{""ImportId"":""QID16""}","{""ImportId"":""QID17""}","{""ImportId"":""QID45""}","{""ImportId"":""QID209""}","{""ImportId"":""QID209_6_TEXT""}","{""ImportId"":""QID18_TEXT""}","{""ImportId"":""QID19_TEXT""}","{""ImportId"":""QID150_6""}","{""ImportId"":""QID152_1""}","{""ImportId"":""QID155_1""}","{""ImportId"":""QID158_1""}","{""ImportId"":""QID161_1""}","{""ImportId"":""QID164_1""}","{""ImportId"":""QID210_1""}","{""ImportId"":""QID73_1""}","{""ImportId"":""QID74_1""}","{""ImportId"":""QID80_1""}","{""ImportId"":""QID175_1""}","{""ImportId"":""QID180_1""}","{""ImportId"":""QID54_1""}","{""ImportId"":""QID75_1""}","{""ImportId"":""QID81_1""}","{""ImportId"":""QID176_1""}","{""ImportId"":""QID181_1""}","{""ImportId"":""QID55_1""}","{""ImportId"":""QID77_1""}","{""ImportId"":""QID82_1""}","{""ImportId"":""QID177_1""}","{""ImportId"":""QID182_1""}","{""ImportId"":""QID57_1""}","{""ImportId"":""QID78_1""}","{""ImportId"":""QID83_1""}","{""ImportId"":""QID178_1""}","{""ImportId"":""QID183_1""}","{""ImportId"":""QID76_1""}","{""ImportId"":""QID84_1""}","{""ImportId"":""QID174_1""}","{""ImportId"":""QID179_1""}","{""ImportId"":""QID184_1""}","{""ImportId"":""QID213_1""}","{""ImportId"":""QID186_1""}","{""ImportId"":""QID187_1""}","{""ImportId"":""QID188_1""}","{""ImportId"":""QID189_1""}","{""ImportId"":""QID25_TEXT""}","{""ImportId"":""QID26""}","{""ImportId"":""QID26_3_TEXT""}","{""ImportId"":""RandomCode""}","{""ImportId"":""Q_BallotBoxStuffing""}","{""ImportId"":""path_study""}","{""ImportId"":""path_practice""}","{""ImportId"":""src_audio_P1_A""}","{""ImportId"":""src_audio_P1_B""}","{""ImportId"":""src_audio_P2_A""}","{""ImportId"":""src_audio_P2_B""}","{""ImportId"":""src_audio_P3_A""}","{""ImportId"":""src_audio_P3_B""}","{""ImportId"":""src_audio_P4_A""}","{""ImportId"":""src_audio_P4_B""}","{""ImportId"":""src_audio_P5_A""}","{""ImportId"":""src_audio_P5_B""}","{""ImportId"":""src_audio_P6_A""}","{""ImportId"":""src_audio_P6_B""}","{""ImportId"":""src_audio_P0_I""}","{""ImportId"":""src_audio_P0_II""}","{""ImportId"":""src_audio_P0_III""}","{""ImportId"":""src_audio_P0_IV""}","{""ImportId"":""src_audio_P0_V""}","{""ImportId"":""src_audio_P0_VI""}","{""ImportId"":""que_number""}","{""ImportId"":""total_study_que""}","{""ImportId"":""src_audio_Q1_A""}","{""ImportId"":""src_audio_Q1_B""}","{""ImportId"":""src_audio_Q6_A""}","{""ImportId"":""src_audio_Q6_B""}","{""ImportId"":""src_audio_Q11_A""}","{""ImportId"":""src_audio_Q11_B""}","{""ImportId"":""src_audio_Q16_A""}","{""ImportId"":""src_audio_Q16_B""}","{""ImportId"":""src_audio_Q21_A""}","{""ImportId"":""src_audio_Q21_B""}","{""ImportId"":""randBool2""}","{""ImportId"":""A2""}","{""ImportId"":""B2""}","{""ImportId"":""src_audio_Q2_A""}","{""ImportId"":""src_audio_Q2_B""}","{""ImportId"":""randBool7""}","{""ImportId"":""A7""}","{""ImportId"":""B7""}","{""ImportId"":""src_audio_Q7_A""}","{""ImportId"":""src_audio_Q7_B""}","{""ImportId"":""randBool12""}","{""ImportId"":""A12""}","{""ImportId"":""B12""}","{""ImportId"":""src_audio_Q12_A""}","{""ImportId"":""src_audio_Q12_B""}","{""ImportId"":""randBool17""}","{""ImportId"":""A17""}","{""ImportId"":""B17""}","{""ImportId"":""src_audio_Q17_A""}","{""ImportId"":""src_audio_Q17_B""}","{""ImportId"":""randBool22""}","{""ImportId"":""A22""}","{""ImportId"":""B22""}","{""ImportId"":""src_audio_Q22_A""}","{""ImportId"":""src_audio_Q22_B""}","{""ImportId"":""randBool3""}","{""ImportId"":""A3""}","{""ImportId"":""B3""}","{""ImportId"":""src_audio_Q3_A""}","{""ImportId"":""src_audio_Q3_B""}","{""ImportId"":""randBool8""}","{""ImportId"":""A8""}","{""ImportId"":""B8""}","{""ImportId"":""src_audio_Q8_A""}","{""ImportId"":""src_audio_Q8_B""}","{""ImportId"":""randBool13""}","{""ImportId"":""A13""}","{""ImportId"":""B13""}","{""ImportId"":""src_audio_Q13_A""}","{""ImportId"":""src_audio_Q13_B""}","{""ImportId"":""randBool18""}","{""ImportId"":""A18""}","{""ImportId"":""B18""}","{""ImportId"":""src_audio_Q18_A""}","{""ImportId"":""src_audio_Q18_B""}","{""ImportId"":""randBool23""}","{""ImportId"":""A23""}","{""ImportId"":""B23""}","{""ImportId"":""src_audio_Q23_A""}","{""ImportId"":""src_audio_Q23_B""}","{""ImportId"":""randBool4""}","{""ImportId"":""A4""}","{""ImportId"":""B4""}","{""ImportId"":""src_audio_Q4_A""}","{""ImportId"":""src_audio_Q4_B""}","{""ImportId"":""randBool9""}","{""ImportId"":""A9""}","{""ImportId"":""B9""}","{""ImportId"":""src_audio_Q9_A""}","{""ImportId"":""src_audio_Q9_B""}","{""ImportId"":""randBool14""}","{""ImportId"":""A14""}","{""ImportId"":""B14""}","{""ImportId"":""src_audio_Q14_A""}","{""ImportId"":""src_audio_Q14_B""}","{""ImportId"":""randBool19""}","{""ImportId"":""A19""}","{""ImportId"":""B19""}","{""ImportId"":""src_audio_Q19_A""}","{""ImportId"":""src_audio_Q19_B""}","{""ImportId"":""randBool24""}","{""ImportId"":""A24""}","{""ImportId"":""B24""}","{""ImportId"":""src_audio_Q24_A""}","{""ImportId"":""src_audio_Q24_B""}","{""ImportId"":""randBool5""}","{""ImportId"":""A5""}","{""ImportId"":""B5""}","{""ImportId"":""src_audio_Q5_A""}","{""ImportId"":""src_audio_Q5_B""}","{""ImportId"":""randBool10""}","{""ImportId"":""A10""}","{""ImportId"":""B10""}","{""ImportId"":""src_audio_Q10_A""}","{""ImportId"":""src_audio_Q10_B""}","{""ImportId"":""randBool15""}","{""ImportId"":""A15""}","{""ImportId"":""B15""}","{""ImportId"":""src_audio_Q15_A""}","{""ImportId"":""src_audio_Q15_B""}","{""ImportId"":""randBool20""}","{""ImportId"":""A20""}","{""ImportId"":""B20""}","{""ImportId"":""src_audio_Q20_A""}","{""ImportId"":""src_audio_Q20_B""}","{""ImportId"":""randBool25""}","{""ImportId"":""A25""}","{""ImportId"":""B25""}","{""ImportId"":""src_audio_Q25_A""}","{""ImportId"":""src_audio_Q25_B""}","{""ImportId"":""randBool26""}","{""ImportId"":""A26""}","{""ImportId"":""B26""}","{""ImportId"":""src_audio_Q26_A""}","{""ImportId"":""src_audio_Q26_B""}","{""ImportId"":""randBool27""}","{""ImportId"":""A27""}","{""ImportId"":""B27""}","{""ImportId"":""src_audio_Q27_A""}","{""ImportId"":""src_audio_Q27_B""}","{""ImportId"":""randBool28""}","{""ImportId"":""A28""}","{""ImportId"":""B28""}","{""ImportId"":""src_audio_Q28_A""}","{""ImportId"":""src_audio_Q28_B""}","{""ImportId"":""randBool29""}","{""ImportId"":""A29""}","{""ImportId"":""B29""}","{""ImportId"":""src_audio_Q29_A""}","{""ImportId"":""src_audio_Q29_B""}","{""ImportId"":""randBool30""}","{""ImportId"":""A30""}","{""ImportId"":""B30""}","{""ImportId"":""src_audio_Q30_A""}","{""ImportId"":""src_audio_Q30_B""}","{""ImportId"":""FL_84_DO""}"
+2020-05-01 13:45:36,2020-05-01 13:46:12,IP Address,76.167.230.248,100,36,True,2020-05-01 13:46:13,R_12ccEXnIoFvvbVY,,,,,32.7967071533203125,-117.1367034912109375,anonymous,EN,0.299999999999999988897769753748434595763683319091796875,,0,0,,I agree to participate in this study,30-49,Native,Normal,Speakers,Laptop,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,8206,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2020-05-01 13:59:52,2020-05-01 14:01:37,IP Address,107.139.37.177,100,104,True,2020-05-01 14:01:37,R_2e27Oz6f1p89kU3,,,,,38.0662994384765625,-122.165496826171875,anonymous,EN,0.1000000000000000055511151231257827021181583404541015625,,0,0,,I agree to participate in this study,30-49,Native,Normal,Headphones,Computer/Desktop/PC,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,8142,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2020-05-01 14:03:33,2020-05-01 14:04:21,IP Address,98.235.69.98,100,47,True,2020-05-01 14:04:21,R_6zKKZPc0YdJ3igN,,,,,41.2722930908203125,-75.888702392578125,anonymous,EN,0.299999999999999988897769753748434595763683319091796875,,0,0,,I agree to participate in this study,18-29,Native,Normal,Headphones,Laptop,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,9775,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2020-05-01 14:05:47,2020-05-01 14:06:43,IP Address,99.100.238.66,100,55,True,2020-05-01 14:06:43,R_2zYM0ZFhe7pbtTG,,,,,42.613006591796875,-83.03459930419921875,anonymous,EN,0.1000000000000000055511151231257827021181583404541015625,,0,0,,I agree to participate in this study,50-64,Native,Normal,Headphones,Laptop,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,4888,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2020-05-01 14:08:33,2020-05-01 14:09:20,IP Address,24.175.68.0,100,47,True,2020-05-01 14:09:20,R_1du8W9moeQuZcZf,,,,,25.9243927001953125,-97.4626007080078125,anonymous,EN,0.1000000000000000055511151231257827021181583404541015625,,0,0,,I agree to participate in this study,18-29,Native,Normal,Headphones,Computer/Desktop/PC,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,3752,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2020-05-01 14:13:29,2020-05-01 14:14:16,IP Address,72.198.74.135,100,47,True,2020-05-01 14:14:16,R_1LvPy0QnXoqJ8Bt,,,,,35.514404296875,-97.5865020751953125,anonymous,EN,0.299999999999999988897769753748434595763683319091796875,,0,0,,I agree to participate in this study,50-64,Native,Normal,Speakers,Laptop,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,7611,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2020-05-01 14:15:43,2020-05-01 14:18:09,IP Address,76.217.129.76,100,145,True,2020-05-01 14:18:09,R_2wuBUtys3e9X2vT,,,,,33.0561981201171875,-117.268798828125,anonymous,EN,0.299999999999999988897769753748434595763683319091796875,,0,0,,I agree to participate in this study,50-64,Native,Normal,Earphones/ earbuds,Laptop,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,5870,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2020-05-01 14:18:27,2020-05-01 14:19:07,Spam,76.217.129.76,100,39,True,2020-05-01 14:19:07,R_p6ieDdlDp2cyPPr,,,,,33.0561981201171875,-117.268798828125,anonymous,EN,0.299999999999999988897769753748434595763683319091796875,true,98,0,2020-05-01 19:17:45,I agree to participate in this study,50-64,Native,Normal,Earphones/ earbuds,Laptop,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,5919,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2020-05-01 14:33:08,2020-05-01 14:34:04,IP Address,73.66.178.233,100,56,True,2020-05-01 14:34:05,R_3qjTcXrnRioYVYL,,,,,39.50799560546875,-121.45709991455078125,anonymous,EN,0.299999999999999988897769753748434595763683319091796875,,0,0,,I agree to participate in this study,30-49,Native,Normal,Headphones,Computer/Desktop/PC,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,6030,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2020-05-01 14:47:06,2020-05-01 14:47:34,IP Address,73.162.181.29,100,27,True,2020-05-01 14:47:34,R_2YS4KCsRhGgnDcJ,,,,,37.3303985595703125,-121.7913055419921875,anonymous,EN,0.299999999999999988897769753748434595763683319091796875,,0,0,,I agree to participate in this study,30-49,Fluent but not native,Normal,Speakers,Laptop,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,2450,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2020-05-01 14:54:11,2020-05-01 14:54:44,IP Address,99.83.0.31,100,32,True,2020-05-01 14:54:44,R_1MLqbjtw9xKiXAi,,,,,34.6038055419921875,-118.22949981689453125,anonymous,EN,0.299999999999999988897769753748434595763683319091796875,,0,5,,I agree to participate in this study,30-49,Native,Normal,Speakers,Laptop,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,4566,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2020-05-01 15:05:56,2020-05-01 15:06:12,IP Address,66.148.33.209,100,15,True,2020-05-01 15:06:12,R_1cTywO26xlVx4vX,,,,,35.456298828125,-94.329803466796875,anonymous,EN,0.299999999999999988897769753748434595763683319091796875,,0,0,,I agree to participate in this study,50-64,Native,Normal,Headphones,Computer/Desktop/PC,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,2896,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2020-05-01 14:54:56,2020-05-01 15:24:12,IP Address,108.34.161.80,100,1756,True,2020-05-01 15:24:12,R_4VBh8wF7M0CkXhD,,,,,41.59210205078125,-71.46410369873046875,anonymous,EN,0.299999999999999988897769753748434595763683319091796875,,0,0,,I agree to participate in this study,18-29,Native,Normal,Headphones,Computer/Desktop/PC,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,4852,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2020-05-01 15:25:11,2020-05-01 15:26:55,IP Address,91.207.175.215,100,104,True,2020-05-01 15:26:56,R_39JWTCiXjO0SJa1,,,,,34.054901123046875,-118.2577972412109375,anonymous,EN,0.299999999999999988897769753748434595763683319091796875,,0,50,,I agree to participate in this study,18-29,Native,Normal,Earphones/ earbuds,Laptop,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1957,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2020-05-01 15:28:21,2020-05-01 15:29:47,Spam,91.207.175.215,100,85,True,2020-05-01 15:29:47,R_2yr3HDitxOzy7af,,,,,34.054901123046875,-118.2577972412109375,anonymous,EN,0.299999999999999988897769753748434595763683319091796875,,0,50,,I agree to participate in this study,18-29,Native,Normal,Earphones/ earbuds,Laptop,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,6667,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2020-05-01 18:00:39,2020-05-01 18:01:17,IP Address,184.90.1.43,100,38,True,2020-05-01 18:01:17,R_2968mJUc5PuM8Zh,,,,,29.2866058349609375,-81.0868988037109375,anonymous,EN,0.299999999999999988897769753748434595763683319091796875,,0,0,,I agree to participate in this study,18-29,Native,Normal,Headphones,Computer/Desktop/PC,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,2403,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2020-05-02 13:29:41,2020-05-02 13:37:31,IP Address,100.4.220.8,100,470,True,2020-05-02 13:37:32,R_bOO76Lxyqmxo6yd,,,,,42.7198028564453125,-73.82070159912109375,anonymous,EN,0.90000000000000002220446049250313080847263336181640625,,0,0,,I agree to participate in this study,18-29,Native,Normal,Headphones,Computer/Desktop/PC,,A20SL254675EOK,m,,2.3,0,-2.7,1.4,1.1,1.7,1.5,-0.6,0,0.2,0.2,0,-1,-1.6,1.5,2,-0.2,0,0.3,0.4,0.1,0.5,0.2,0.2,0,1,1.2,-2.7,2,-1.9,-3,3,-3,-3,3,2.5,not really,Yes,,6666,,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/0_S_01_01_16kz_FS_2.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/0_S_01_01_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/55_l06s06_16kz_FS_0.015625.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/55_l06s06_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/1_S_01_02_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/1_S_01_02_16kz_FS_1.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/54_l06s05_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/54_l06s05_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/2_S_01_03_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/2_S_01_03_16kz_FS_0.0625.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/53_l06s04_16kz_FS_0.25.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/53_l06s04_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/3_S_01_04_16kz_FS_2.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/3_S_01_04_16kz_FS_1.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/3_S_01_04_16kz_FS_0.25.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/3_S_01_04_16kz_FS_0.0625.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/3_S_01_04_16kz_FS_0.015625.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/3_S_01_04_16kz.wav,31,30,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/5_S_01_06_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/5_S_01_06_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/12_S_02_03_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/12_S_02_03_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/18_S_02_09_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/18_S_02_09_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/11_S_02_02_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/11_S_02_02_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/37_l04s08_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/37_l04s08_16kz.wav,1,,_FS_0.25,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/35_l04s06_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/35_l04s06_16kz_FS_0.25.wav,1,,_FS_0.25,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/8_S_01_09_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/8_S_01_09_16kz_FS_0.25.wav,1,,_FS_0.25,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/30_l04s01_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/30_l04s01_16kz_FS_0.25.wav,0,_FS_0.25,,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/41_l05s02_16kz_FS_0.25.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/41_l05s02_16kz.wav,0,_FS_0.25,,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/4_S_01_05_16kz_FS_0.25.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/4_S_01_05_16kz.wav,1,,_FS_0.0625,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/36_l04s07_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/36_l04s07_16kz_FS_0.0625.wav,1,,_FS_0.0625,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/40_l05s01_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/40_l05s01_16kz_FS_0.0625.wav,0,_FS_0.0625,,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/10_S_02_01_16kz_FS_0.0625.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/10_S_02_01_16kz.wav,1,,_FS_0.0625,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/16_S_02_07_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/16_S_02_07_16kz_FS_0.0625.wav,0,_FS_0.0625,,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/15_S_02_06_16kz_FS_0.0625.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/15_S_02_06_16kz.wav,1,,_FS_0.015625,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/29_l03s10_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/29_l03s10_16kz_FS_0.015625.wav,1,,_FS_0.015625,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/42_l05s03_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/42_l05s03_16kz_FS_0.015625.wav,1,,_FS_0.015625,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/39_l04s10_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/39_l04s10_16kz_FS_0.015625.wav,1,,_FS_0.015625,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/14_S_02_05_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/14_S_02_05_16kz_FS_0.015625.wav,0,_FS_0.015625,,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/28_l03s09_16kz_FS_0.015625.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/28_l03s09_16kz.wav,0,_FS_1,,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/33_l04s04_16kz_FS_1.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/33_l04s04_16kz.wav,1,,_FS_1,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/32_l04s03_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/32_l04s03_16kz_FS_1.wav,0,_FS_1,,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/6_S_01_07_16kz_FS_1.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/6_S_01_07_16kz.wav,1,,_FS_1,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/17_S_02_08_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/17_S_02_08_16kz_FS_1.wav,1,,_FS_1,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/13_S_02_04_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/13_S_02_04_16kz_FS_1.wav,0,_FS_2,,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/34_l04s05_16kz_FS_2.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/34_l04s05_16kz.wav,1,,_FS_2,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/9_S_01_10_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/9_S_01_10_16kz_FS_2.wav,1,,_FS_2,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/31_l04s02_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/31_l04s02_16kz_FS_2.wav,0,_FS_2,,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/7_S_01_08_16kz_FS_2.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/7_S_01_08_16kz.wav,0,_FS_2,,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/38_l04s09_16kz_FS_2.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/38_l04s09_16kz.wav,FL_1435|FL_1489|FL_1506|FL_1453|FL_121|FL_1462|FL_1356|FL_136|FL_1352|FL_1368|FL_1390|FL_1372|FL_1399|FL_1360|FL_1417|FL_1497|FL_1480|FL_1515|FL_1524|FL_103|FL_1542|FL_1444|FL_1471|FL_1381|FL_243|FL_258|FL_1426|FL_1408|FL_1364|FL_1533
+2020-05-02 22:19:45,2020-05-02 22:29:23,IP Address,75.181.224.196,100,577,True,2020-05-02 22:29:23,R_1ja2bkbpUFrnrAC,,,,,36.2960052490234375,-76.243499755859375,anonymous,EN,0.90000000000000002220446049250313080847263336181640625,,0,5,,I agree to participate in this study,18-29,Native,Normal,Earphones/ earbuds,Laptop,,AL2JY5T878Z2H,Male,1,3,-1.6,-3,-2.5,-2.5,2.3,0,0,0,0,-1.1,3,-2,-3,-1.6,-3,0,3,-2.1,0,-2.1,-2.6,0,-1,-2.5,-3,-3,-3,2,3,3,3,-3,3,-3,-3,tysm,Yes,,6034,,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/0_S_01_01_16kz_FS_2.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/0_S_01_01_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/55_l06s06_16kz_FS_0.015625.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/55_l06s06_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/1_S_01_02_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/1_S_01_02_16kz_FS_1.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/54_l06s05_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/54_l06s05_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/2_S_01_03_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/2_S_01_03_16kz_FS_0.0625.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/53_l06s04_16kz_FS_0.25.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/53_l06s04_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/3_S_01_04_16kz_FS_2.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/3_S_01_04_16kz_FS_1.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/3_S_01_04_16kz_FS_0.25.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/3_S_01_04_16kz_FS_0.0625.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/3_S_01_04_16kz_FS_0.015625.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/3_S_01_04_16kz.wav,31,30,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/15_S_02_06_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/15_S_02_06_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/6_S_01_07_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/6_S_01_07_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/36_l04s07_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/36_l04s07_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/40_l05s01_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/40_l05s01_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/12_S_02_03_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/12_S_02_03_16kz.wav,0,_FS_0.25,,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/28_l03s09_16kz_FS_0.25.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/28_l03s09_16kz.wav,0,_FS_0.25,,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/7_S_01_08_16kz_FS_0.25.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/7_S_01_08_16kz.wav,1,,_FS_0.25,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/39_l04s10_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/39_l04s10_16kz_FS_0.25.wav,1,,_FS_0.25,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/41_l05s02_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/41_l05s02_16kz_FS_0.25.wav,1,,_FS_0.25,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/29_l03s10_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/29_l03s10_16kz_FS_0.25.wav,0,_FS_0.0625,,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/42_l05s03_16kz_FS_0.0625.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/42_l05s03_16kz.wav,0,_FS_0.0625,,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/33_l04s04_16kz_FS_0.0625.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/33_l04s04_16kz.wav,1,,_FS_0.0625,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/37_l04s08_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/37_l04s08_16kz_FS_0.0625.wav,0,_FS_0.0625,,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/38_l04s09_16kz_FS_0.0625.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/38_l04s09_16kz.wav,1,,_FS_0.0625,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/11_S_02_02_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/11_S_02_02_16kz_FS_0.0625.wav,1,,_FS_0.015625,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/34_l04s05_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/34_l04s05_16kz_FS_0.015625.wav,1,,_FS_0.015625,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/9_S_01_10_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/9_S_01_10_16kz_FS_0.015625.wav,1,,_FS_0.015625,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/17_S_02_08_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/17_S_02_08_16kz_FS_0.015625.wav,0,_FS_0.015625,,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/5_S_01_06_16kz_FS_0.015625.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/5_S_01_06_16kz.wav,0,_FS_0.015625,,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/10_S_02_01_16kz_FS_0.015625.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/10_S_02_01_16kz.wav,1,,_FS_1,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/31_l04s02_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/31_l04s02_16kz_FS_1.wav,1,,_FS_1,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/32_l04s03_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/32_l04s03_16kz_FS_1.wav,0,_FS_1,,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/8_S_01_09_16kz_FS_1.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/8_S_01_09_16kz.wav,0,_FS_1,,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/13_S_02_04_16kz_FS_1.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/13_S_02_04_16kz.wav,0,_FS_1,,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/4_S_01_05_16kz_FS_1.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/4_S_01_05_16kz.wav,0,_FS_2,,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/30_l04s01_16kz_FS_2.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/30_l04s01_16kz.wav,1,,_FS_2,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/14_S_02_05_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/14_S_02_05_16kz_FS_2.wav,0,_FS_2,,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/35_l04s06_16kz_FS_2.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/35_l04s06_16kz.wav,1,,_FS_2,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/18_S_02_09_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/18_S_02_09_16kz_FS_2.wav,1,,_FS_2,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/16_S_02_07_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/16_S_02_07_16kz_FS_2.wav,FL_1489|FL_1480|FL_1372|FL_1506|FL_1408|FL_136|FL_1368|FL_1381|FL_258|FL_1426|FL_1542|FL_1360|FL_1453|FL_243|FL_121|FL_1390|FL_103|FL_1417|FL_1352|FL_1471|FL_1444|FL_1356|FL_1515|FL_1533|FL_1524|FL_1399|FL_1462|FL_1497|FL_1435|FL_1364
+2020-05-04 07:40:39,2020-05-04 07:58:36,IP Address,76.16.127.27,100,1077,True,2020-05-04 07:58:37,R_4Z2K1vEUaNJiBdn,,,,,41.8040008544921875,-87.707000732421875,anonymous,EN,0.90000000000000002220446049250313080847263336181640625,,0,0,,I agree to participate in this study,30-49,Native,Normal,Earphones/ earbuds,Laptop,,A2P53AN2M8IWFP,male,0,3,0.1,-2.1,-0.1,0,0.3,0,-0.5,0.1,-0.2,0.5,-0.6,0.5,1.4,-0.6,0.4,0.1,0,-0.5,0.7,0,-0.9,-0.3,0.3,-0.5,0.8,3,-1.9,-2.2,-1.3,-2,3,-2.9,-3,2.7,-2,Good luck!,Yes,,3360,,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/0_S_01_01_16kz_FS_2.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/0_S_01_01_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/55_l06s06_16kz_FS_0.015625.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/55_l06s06_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/1_S_01_02_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/1_S_01_02_16kz_FS_1.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/54_l06s05_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/54_l06s05_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/2_S_01_03_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/2_S_01_03_16kz_FS_0.0625.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/53_l06s04_16kz_FS_0.25.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/53_l06s04_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/3_S_01_04_16kz_FS_2.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/3_S_01_04_16kz_FS_1.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/3_S_01_04_16kz_FS_0.25.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/3_S_01_04_16kz_FS_0.0625.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/3_S_01_04_16kz_FS_0.015625.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/3_S_01_04_16kz.wav,31,30,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/33_l04s04_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/33_l04s04_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/31_l04s02_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/31_l04s02_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/30_l04s01_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/30_l04s01_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/42_l05s03_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/42_l05s03_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/32_l04s03_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/32_l04s03_16kz.wav,1,,_FS_0.25,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/37_l04s08_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/37_l04s08_16kz_FS_0.25.wav,0,_FS_0.25,,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/28_l03s09_16kz_FS_0.25.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/28_l03s09_16kz.wav,0,_FS_0.25,,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/5_S_01_06_16kz_FS_0.25.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/5_S_01_06_16kz.wav,1,,_FS_0.25,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/18_S_02_09_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/18_S_02_09_16kz_FS_0.25.wav,0,_FS_0.25,,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/12_S_02_03_16kz_FS_0.25.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/12_S_02_03_16kz.wav,1,,_FS_0.0625,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/6_S_01_07_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/6_S_01_07_16kz_FS_0.0625.wav,0,_FS_0.0625,,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/8_S_01_09_16kz_FS_0.0625.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/8_S_01_09_16kz.wav,0,_FS_0.0625,,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/11_S_02_02_16kz_FS_0.0625.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/11_S_02_02_16kz.wav,1,,_FS_0.0625,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/13_S_02_04_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/13_S_02_04_16kz_FS_0.0625.wav,1,,_FS_0.0625,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/29_l03s10_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/29_l03s10_16kz_FS_0.0625.wav,0,_FS_0.015625,,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/7_S_01_08_16kz_FS_0.015625.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/7_S_01_08_16kz.wav,0,_FS_0.015625,,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/4_S_01_05_16kz_FS_0.015625.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/4_S_01_05_16kz.wav,1,,_FS_0.015625,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/34_l04s05_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/34_l04s05_16kz_FS_0.015625.wav,1,,_FS_0.015625,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/39_l04s10_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/39_l04s10_16kz_FS_0.015625.wav,0,_FS_0.015625,,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/41_l05s02_16kz_FS_0.015625.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/41_l05s02_16kz.wav,0,_FS_1,,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/38_l04s09_16kz_FS_1.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/38_l04s09_16kz.wav,1,,_FS_1,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/16_S_02_07_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/16_S_02_07_16kz_FS_1.wav,1,,_FS_1,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/40_l05s01_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/40_l05s01_16kz_FS_1.wav,1,,_FS_1,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/10_S_02_01_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/10_S_02_01_16kz_FS_1.wav,1,,_FS_1,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/9_S_01_10_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/9_S_01_10_16kz_FS_1.wav,0,_FS_2,,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/15_S_02_06_16kz_FS_2.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/15_S_02_06_16kz.wav,1,,_FS_2,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/35_l04s06_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/35_l04s06_16kz_FS_2.wav,1,,_FS_2,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/36_l04s07_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/36_l04s07_16kz_FS_2.wav,0,_FS_2,,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/14_S_02_05_16kz_FS_2.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/14_S_02_05_16kz.wav,1,,_FS_2,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/17_S_02_08_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/17_S_02_08_16kz_FS_2.wav,FL_1524|FL_1497|FL_1515|FL_1417|FL_1356|FL_1506|FL_1542|FL_1360|FL_1399|FL_1533|FL_1390|FL_1364|FL_1426|FL_1435|FL_1444|FL_1381|FL_1480|FL_1471|FL_1408|FL_103|FL_1489|FL_243|FL_1352|FL_1453|FL_1372|FL_258|FL_121|FL_1368|FL_136|FL_1462
+2020-05-04 19:02:11,2020-05-04 19:03:07,IP Address,72.217.117.112,100,56,True,2020-05-04 19:03:08,R_1FnAfIUhJ7fW0Tn,,,,,32.246002197265625,-110.91770172119140625,anonymous,EN,0.90000000000000002220446049250313080847263336181640625,,0,0,,I agree to participate in this study,64+,Native,Normal,Speakers,Laptop,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,4225,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2020-05-06 06:51:39,2020-05-06 06:59:55,IP Address,173.89.48.81,100,495,True,2020-05-06 06:59:55,R_3fDWjAqhpLtosQK,,,,,42.9777984619140625,-87.89099884033203125,anonymous,EN,0.90000000000000002220446049250313080847263336181640625,,0,5,,I agree to participate in this study,30-49,Native,Normal,Headphones,Computer/Desktop/PC,,A1SIUJEL2LS8UO,Male,1.6,3,0,-2,0,0.4,2.1,-0.1,0.1,-0.5,0,0,-2.4,2.9,-2.8,-2.8,3,0.1,0,-1,0,-1,0,0.1,-0.4,0,0,2.9,-2.9,-2.9,-2.8,-2.9,-2.5,3,2.9,2.8,-3,,Yes,,5607,,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/0_S_01_01_16kz_FS_2.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/0_S_01_01_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/55_l06s06_16kz_FS_0.015625.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/55_l06s06_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/1_S_01_02_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/1_S_01_02_16kz_FS_1.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/54_l06s05_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/54_l06s05_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/2_S_01_03_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/2_S_01_03_16kz_FS_0.0625.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/53_l06s04_16kz_FS_0.25.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/53_l06s04_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/3_S_01_04_16kz_FS_2.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/3_S_01_04_16kz_FS_1.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/3_S_01_04_16kz_FS_0.25.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/3_S_01_04_16kz_FS_0.0625.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/3_S_01_04_16kz_FS_0.015625.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/3_S_01_04_16kz.wav,31,30,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/13_S_02_04_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/13_S_02_04_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/15_S_02_06_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/15_S_02_06_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/34_l04s05_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/34_l04s05_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/9_S_01_10_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/9_S_01_10_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/6_S_01_07_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/6_S_01_07_16kz.wav,1,,_FS_0.25,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/14_S_02_05_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/14_S_02_05_16kz_FS_0.25.wav,0,_FS_0.25,,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/35_l04s06_16kz_FS_0.25.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/35_l04s06_16kz.wav,1,,_FS_0.25,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/42_l05s03_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/42_l05s03_16kz_FS_0.25.wav,1,,_FS_0.25,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/17_S_02_08_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/17_S_02_08_16kz_FS_0.25.wav,0,_FS_0.25,,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/10_S_02_01_16kz_FS_0.25.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/10_S_02_01_16kz.wav,0,_FS_0.0625,,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/16_S_02_07_16kz_FS_0.0625.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/16_S_02_07_16kz.wav,0,_FS_0.0625,,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/30_l04s01_16kz_FS_0.0625.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/30_l04s01_16kz.wav,1,,_FS_0.0625,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/18_S_02_09_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/18_S_02_09_16kz_FS_0.0625.wav,0,_FS_0.0625,,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/4_S_01_05_16kz_FS_0.0625.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/4_S_01_05_16kz.wav,1,,_FS_0.0625,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/38_l04s09_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/38_l04s09_16kz_FS_0.0625.wav,0,_FS_0.015625,,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/41_l05s02_16kz_FS_0.015625.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/41_l05s02_16kz.wav,0,_FS_0.015625,,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/39_l04s10_16kz_FS_0.015625.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/39_l04s10_16kz.wav,1,,_FS_0.015625,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/11_S_02_02_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/11_S_02_02_16kz_FS_0.015625.wav,0,_FS_0.015625,,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/29_l03s10_16kz_FS_0.015625.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/29_l03s10_16kz.wav,0,_FS_0.015625,,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/36_l04s07_16kz_FS_0.015625.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/36_l04s07_16kz.wav,0,_FS_1,,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/31_l04s02_16kz_FS_1.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/31_l04s02_16kz.wav,1,,_FS_1,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/8_S_01_09_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/8_S_01_09_16kz_FS_1.wav,1,,_FS_1,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/7_S_01_08_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/7_S_01_08_16kz_FS_1.wav,1,,_FS_1,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/33_l04s04_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/33_l04s04_16kz_FS_1.wav,1,,_FS_1,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/37_l04s08_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/37_l04s08_16kz_FS_1.wav,1,,_FS_2,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/5_S_01_06_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/5_S_01_06_16kz_FS_2.wav,0,_FS_2,,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/32_l04s03_16kz_FS_2.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/32_l04s03_16kz.wav,0,_FS_2,,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/28_l03s09_16kz_FS_2.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/28_l03s09_16kz.wav,0,_FS_2,,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/12_S_02_03_16kz_FS_2.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/12_S_02_03_16kz.wav,1,,_FS_2,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/40_l05s01_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/40_l05s01_16kz_FS_2.wav,FL_1435|FL_1471|FL_103|FL_1364|FL_1480|FL_1381|FL_1390|FL_136|FL_1524|FL_1533|FL_1497|FL_1417|FL_1489|FL_1462|FL_1515|FL_1360|FL_1506|FL_1399|FL_1372|FL_1352|FL_1368|FL_1426|FL_1408|FL_121|FL_258|FL_1453|FL_243|FL_1356|FL_1542|FL_1444
+2020-05-07 23:47:54,2020-05-07 23:54:35,IP Address,68.111.170.82,100,401,True,2020-05-07 23:54:36,R_2aWQPq6LWtjNrpw,,,,,33.166107177734375,-117.09320068359375,anonymous,EN,0.90000000000000002220446049250313080847263336181640625,,0,0,,I agree to participate in this study,18-29,Native,Normal,Headphones,Computer/Desktop/PC,,A24M9OW53CLT94,male,0.2,3,0,-3,0.1,0.3,2.9,0,0.1,0,0,0,3,-1.1,-2.4,2,2.4,0,-0.2,-0.5,2.1,2.3,0,0.1,-0.9,0,0.2,3,1.7,3,3,-2.9,3,3,-3,3,3,,Yes,,6619,,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/0_S_01_01_16kz_FS_2.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/0_S_01_01_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/55_l06s06_16kz_FS_0.015625.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/55_l06s06_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/1_S_01_02_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/1_S_01_02_16kz_FS_1.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/54_l06s05_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/54_l06s05_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/2_S_01_03_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/2_S_01_03_16kz_FS_0.0625.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/53_l06s04_16kz_FS_0.25.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/53_l06s04_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/3_S_01_04_16kz_FS_2.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/3_S_01_04_16kz_FS_1.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/3_S_01_04_16kz_FS_0.25.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/3_S_01_04_16kz_FS_0.0625.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/3_S_01_04_16kz_FS_0.015625.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/3_S_01_04_16kz.wav,31,30,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/9_S_01_10_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/9_S_01_10_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/38_l04s09_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/38_l04s09_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/36_l04s07_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/36_l04s07_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/29_l03s10_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/29_l03s10_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/37_l04s08_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/37_l04s08_16kz.wav,0,_FS_0.25,,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/5_S_01_06_16kz_FS_0.25.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/5_S_01_06_16kz.wav,1,,_FS_0.25,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/11_S_02_02_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/11_S_02_02_16kz_FS_0.25.wav,1,,_FS_0.25,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/14_S_02_05_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/14_S_02_05_16kz_FS_0.25.wav,0,_FS_0.25,,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/39_l04s10_16kz_FS_0.25.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/39_l04s10_16kz.wav,0,_FS_0.25,,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/17_S_02_08_16kz_FS_0.25.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/17_S_02_08_16kz.wav,0,_FS_0.0625,,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/12_S_02_03_16kz_FS_0.0625.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/12_S_02_03_16kz.wav,1,,_FS_0.0625,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/10_S_02_01_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/10_S_02_01_16kz_FS_0.0625.wav,1,,_FS_0.0625,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/31_l04s02_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/31_l04s02_16kz_FS_0.0625.wav,0,_FS_0.0625,,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/4_S_01_05_16kz_FS_0.0625.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/4_S_01_05_16kz.wav,0,_FS_0.0625,,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/16_S_02_07_16kz_FS_0.0625.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/16_S_02_07_16kz.wav,0,_FS_0.015625,,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/35_l04s06_16kz_FS_0.015625.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/35_l04s06_16kz.wav,0,_FS_0.015625,,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/28_l03s09_16kz_FS_0.015625.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/28_l03s09_16kz.wav,1,,_FS_0.015625,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/18_S_02_09_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/18_S_02_09_16kz_FS_0.015625.wav,0,_FS_0.015625,,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/30_l04s01_16kz_FS_0.015625.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/30_l04s01_16kz.wav,0,_FS_0.015625,,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/32_l04s03_16kz_FS_0.015625.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/32_l04s03_16kz.wav,0,_FS_1,,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/13_S_02_04_16kz_FS_1.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/13_S_02_04_16kz.wav,0,_FS_1,,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/8_S_01_09_16kz_FS_1.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/8_S_01_09_16kz.wav,0,_FS_1,,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/41_l05s02_16kz_FS_1.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/41_l05s02_16kz.wav,0,_FS_1,,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/34_l04s05_16kz_FS_1.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/34_l04s05_16kz.wav,1,,_FS_1,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/15_S_02_06_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/15_S_02_06_16kz_FS_1.wav,0,_FS_2,,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/6_S_01_07_16kz_FS_2.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/6_S_01_07_16kz.wav,0,_FS_2,,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/7_S_01_08_16kz_FS_2.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/7_S_01_08_16kz.wav,1,,_FS_2,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/40_l05s01_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/40_l05s01_16kz_FS_2.wav,0,_FS_2,,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/33_l04s04_16kz_FS_2.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/33_l04s04_16kz.wav,0,_FS_2,,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/42_l05s03_16kz_FS_2.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/42_l05s03_16kz.wav,FL_121|FL_1506|FL_1381|FL_1453|FL_1364|FL_1542|FL_1372|FL_1480|FL_1515|FL_1352|FL_136|FL_1399|FL_1426|FL_1417|FL_1524|FL_243|FL_1462|FL_1435|FL_258|FL_1489|FL_1360|FL_1444|FL_1356|FL_1408|FL_1390|FL_1497|FL_1533|FL_1471|FL_103|FL_1368
+2020-05-08 12:41:17,2020-05-08 12:54:58,IP Address,70.171.9.199,100,820,True,2020-05-08 12:54:59,R_OeXh76usJfdFSrD,,,,,29.613800048828125,-82.3860015869140625,anonymous,EN,0.90000000000000002220446049250313080847263336181640625,,0,20,,I agree to participate in this study,18-29,Native,Normal,Headphones,Laptop,,AZ69TBTDH7AZS,male,0.5,3,0,-3,-1,0,3,0,-0.5,0,0.5,0,3,-3,3,3,-3,-3,0.5,-3,0.5,0,1,0,0,-0.5,0,3,-3,-3,3,3,3,3,-3,-3,3,n/a,Yes,,2531,,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/0_S_01_01_16kz_FS_2.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/0_S_01_01_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/55_l06s06_16kz_FS_0.015625.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/55_l06s06_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/1_S_01_02_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/1_S_01_02_16kz_FS_1.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/54_l06s05_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/54_l06s05_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/2_S_01_03_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/2_S_01_03_16kz_FS_0.0625.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/53_l06s04_16kz_FS_0.25.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/53_l06s04_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/3_S_01_04_16kz_FS_2.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/3_S_01_04_16kz_FS_1.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/3_S_01_04_16kz_FS_0.25.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/3_S_01_04_16kz_FS_0.0625.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/3_S_01_04_16kz_FS_0.015625.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/3_S_01_04_16kz.wav,31,30,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/4_S_01_05_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/4_S_01_05_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/7_S_01_08_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/7_S_01_08_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/37_l04s08_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/37_l04s08_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/31_l04s02_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/31_l04s02_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/15_S_02_06_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/15_S_02_06_16kz.wav,0,_FS_0.25,,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/35_l04s06_16kz_FS_0.25.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/35_l04s06_16kz.wav,1,,_FS_0.25,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/32_l04s03_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/32_l04s03_16kz_FS_0.25.wav,0,_FS_0.25,,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/33_l04s04_16kz_FS_0.25.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/33_l04s04_16kz.wav,0,_FS_0.25,,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/18_S_02_09_16kz_FS_0.25.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/18_S_02_09_16kz.wav,1,,_FS_0.25,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/39_l04s10_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/39_l04s10_16kz_FS_0.25.wav,1,,_FS_0.0625,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/5_S_01_06_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/5_S_01_06_16kz_FS_0.0625.wav,1,,_FS_0.0625,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/17_S_02_08_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/17_S_02_08_16kz_FS_0.0625.wav,0,_FS_0.0625,,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/16_S_02_07_16kz_FS_0.0625.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/16_S_02_07_16kz.wav,0,_FS_0.0625,,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/8_S_01_09_16kz_FS_0.0625.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/8_S_01_09_16kz.wav,0,_FS_0.0625,,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/14_S_02_05_16kz_FS_0.0625.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/14_S_02_05_16kz.wav,1,,_FS_0.015625,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/29_l03s10_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/29_l03s10_16kz_FS_0.015625.wav,0,_FS_0.015625,,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/28_l03s09_16kz_FS_0.015625.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/28_l03s09_16kz.wav,1,,_FS_0.015625,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/12_S_02_03_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/12_S_02_03_16kz_FS_0.015625.wav,1,,_FS_0.015625,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/41_l05s02_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/41_l05s02_16kz_FS_0.015625.wav,1,,_FS_0.015625,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/40_l05s01_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/40_l05s01_16kz_FS_0.015625.wav,0,_FS_1,,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/36_l04s07_16kz_FS_1.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/36_l04s07_16kz.wav,1,,_FS_1,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/30_l04s01_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/30_l04s01_16kz_FS_1.wav,1,,_FS_1,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/10_S_02_01_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/10_S_02_01_16kz_FS_1.wav,0,_FS_1,,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/13_S_02_04_16kz_FS_1.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/13_S_02_04_16kz.wav,0,_FS_1,,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/38_l04s09_16kz_FS_1.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/38_l04s09_16kz.wav,0,_FS_2,,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/9_S_01_10_16kz_FS_2.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/9_S_01_10_16kz.wav,0,_FS_2,,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/6_S_01_07_16kz_FS_2.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/6_S_01_07_16kz.wav,1,,_FS_2,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/11_S_02_02_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/11_S_02_02_16kz_FS_2.wav,1,,_FS_2,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/42_l05s03_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/42_l05s03_16kz_FS_2.wav,0,_FS_2,,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/34_l04s05_16kz_FS_2.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/34_l04s05_16kz.wav,FL_1364|FL_1542|FL_1390|FL_243|FL_121|FL_1426|FL_1453|FL_1515|FL_1524|FL_1381|FL_1480|FL_1497|FL_1399|FL_1356|FL_1533|FL_1435|FL_136|FL_1360|FL_1506|FL_1352|FL_1444|FL_1462|FL_258|FL_1489|FL_1368|FL_1372|FL_1471|FL_1417|FL_1408|FL_103
+2020-05-08 12:53:14,2020-05-08 12:59:47,IP Address,72.65.252.103,100,393,True,2020-05-08 12:59:49,R_4YscHy6MZxxCEAp,,,,,40.42950439453125,-80.01519775390625,anonymous,EN,0.90000000000000002220446049250313080847263336181640625,,0,0,,I agree to participate in this study,30-49,Fluent but not native,Normal,Headphones,Laptop,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,9173,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2020-05-08 17:43:27,2020-05-08 18:22:01,IP Address,71.76.243.180,100,2314,True,2020-05-08 18:22:01,R_1DZFL2YCzAkCmai,,,,,35.8726043701171875,-80.09290313720703125,anonymous,EN,0.90000000000000002220446049250313080847263336181640625,,0,0,,I agree to participate in this study,18-29,Native,Normal,Headphones,Computer/Desktop/PC,,A2WPKP73S4MBLK,Male,,3,0,-3,0,0,1,0,0.2,0,0,0,0,1,0.6,0,1.3,0.1,0,0.1,0,0,0.1,0.4,0,0,0,-2.2,-2.1,-3,-2.7,-3,3,-2.9,3,-3,-2.1,This was a fascinating and well-designed study.,Yes,,8344,,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/0_S_01_01_16kz_FS_2.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/0_S_01_01_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/55_l06s06_16kz_FS_0.015625.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/55_l06s06_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/1_S_01_02_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/1_S_01_02_16kz_FS_1.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/54_l06s05_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/54_l06s05_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/2_S_01_03_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/2_S_01_03_16kz_FS_0.0625.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/53_l06s04_16kz_FS_0.25.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/53_l06s04_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/3_S_01_04_16kz_FS_2.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/3_S_01_04_16kz_FS_1.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/3_S_01_04_16kz_FS_0.25.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/3_S_01_04_16kz_FS_0.0625.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/3_S_01_04_16kz_FS_0.015625.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/3_S_01_04_16kz.wav,31,30,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/33_l04s04_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/33_l04s04_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/31_l04s02_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/31_l04s02_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/36_l04s07_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/36_l04s07_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/37_l04s08_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/37_l04s08_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/14_S_02_05_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/14_S_02_05_16kz.wav,0,_FS_0.25,,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/17_S_02_08_16kz_FS_0.25.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/17_S_02_08_16kz.wav,0,_FS_0.25,,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/30_l04s01_16kz_FS_0.25.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/30_l04s01_16kz.wav,1,,_FS_0.25,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/7_S_01_08_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/7_S_01_08_16kz_FS_0.25.wav,0,_FS_0.25,,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/4_S_01_05_16kz_FS_0.25.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/4_S_01_05_16kz.wav,0,_FS_0.25,,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/16_S_02_07_16kz_FS_0.25.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/16_S_02_07_16kz.wav,1,,_FS_0.0625,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/42_l05s03_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/42_l05s03_16kz_FS_0.0625.wav,0,_FS_0.0625,,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/38_l04s09_16kz_FS_0.0625.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/38_l04s09_16kz.wav,0,_FS_0.0625,,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/8_S_01_09_16kz_FS_0.0625.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/8_S_01_09_16kz.wav,1,,_FS_0.0625,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/39_l04s10_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/39_l04s10_16kz_FS_0.0625.wav,0,_FS_0.0625,,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/28_l03s09_16kz_FS_0.0625.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/28_l03s09_16kz.wav,0,_FS_0.015625,,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/12_S_02_03_16kz_FS_0.015625.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/12_S_02_03_16kz.wav,0,_FS_0.015625,,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/9_S_01_10_16kz_FS_0.015625.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/9_S_01_10_16kz.wav,1,,_FS_0.015625,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/11_S_02_02_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/11_S_02_02_16kz_FS_0.015625.wav,0,_FS_0.015625,,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/18_S_02_09_16kz_FS_0.015625.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/18_S_02_09_16kz.wav,1,,_FS_0.015625,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/6_S_01_07_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/6_S_01_07_16kz_FS_0.015625.wav,1,,_FS_1,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/13_S_02_04_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/13_S_02_04_16kz_FS_1.wav,1,,_FS_1,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/35_l04s06_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/35_l04s06_16kz_FS_1.wav,1,,_FS_1,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/40_l05s01_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/40_l05s01_16kz_FS_1.wav,1,,_FS_1,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/15_S_02_06_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/15_S_02_06_16kz_FS_1.wav,1,,_FS_1,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/32_l04s03_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/32_l04s03_16kz_FS_1.wav,0,_FS_2,,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/29_l03s10_16kz_FS_2.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/29_l03s10_16kz.wav,1,,_FS_2,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/5_S_01_06_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/5_S_01_06_16kz_FS_2.wav,0,_FS_2,,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/10_S_02_01_16kz_FS_2.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/10_S_02_01_16kz.wav,1,,_FS_2,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/34_l04s05_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/34_l04s05_16kz_FS_2.wav,1,,_FS_2,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/41_l05s02_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/41_l05s02_16kz_FS_2.wav,FL_1533|FL_1356|FL_258|FL_1542|FL_103|FL_1480|FL_1489|FL_1372|FL_1352|FL_1506|FL_1444|FL_1360|FL_1471|FL_1453|FL_1435|FL_121|FL_136|FL_1417|FL_1390|FL_1381|FL_243|FL_1524|FL_1408|FL_1515|FL_1462|FL_1399|FL_1368|FL_1364|FL_1426|FL_1497
+2020-05-11 18:05:04,2020-05-11 18:28:45,IP Address,65.34.251.61,100,1421,True,2020-05-11 18:28:46,R_3nJCEIyxFXuhzLh,,,,,27.2913055419921875,-80.297698974609375,anonymous,EN,0.90000000000000002220446049250313080847263336181640625,,0,0,,I agree to participate in this study,30-49,Native,Normal,Headphones,Laptop,,A2OVWCQ4B9AHFY,male,,3,2.1,-3,1,2.1,2.9,-1.5,-0.4,0.4,-2.3,0,2,-2.3,2,-3,3,-1.1,-0.6,0.1,0,0,0,1.9,-1.6,-0.3,0,0,3,3,3,3,3,3,3,-3,-3,,Yes,,6104,,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/0_S_01_01_16kz_FS_2.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/0_S_01_01_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/55_l06s06_16kz_FS_0.015625.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/55_l06s06_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/1_S_01_02_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/1_S_01_02_16kz_FS_1.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/54_l06s05_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/54_l06s05_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/2_S_01_03_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/2_S_01_03_16kz_FS_0.0625.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/53_l06s04_16kz_FS_0.25.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/53_l06s04_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/3_S_01_04_16kz_FS_2.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/3_S_01_04_16kz_FS_1.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/3_S_01_04_16kz_FS_0.25.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/3_S_01_04_16kz_FS_0.0625.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/3_S_01_04_16kz_FS_0.015625.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/3_S_01_04_16kz.wav,31,30,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/42_l05s03_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/42_l05s03_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/30_l04s01_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/30_l04s01_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/28_l03s09_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/28_l03s09_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/34_l04s05_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/34_l04s05_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/14_S_02_05_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/14_S_02_05_16kz.wav,0,_FS_0.25,,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/16_S_02_07_16kz_FS_0.25.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/16_S_02_07_16kz.wav,1,,_FS_0.25,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/35_l04s06_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/35_l04s06_16kz_FS_0.25.wav,0,_FS_0.25,,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/8_S_01_09_16kz_FS_0.25.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/8_S_01_09_16kz.wav,1,,_FS_0.25,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/37_l04s08_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/37_l04s08_16kz_FS_0.25.wav,0,_FS_0.25,,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/15_S_02_06_16kz_FS_0.25.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/15_S_02_06_16kz.wav,1,,_FS_0.0625,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/17_S_02_08_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/17_S_02_08_16kz_FS_0.0625.wav,1,,_FS_0.0625,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/18_S_02_09_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/18_S_02_09_16kz_FS_0.0625.wav,0,_FS_0.0625,,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/36_l04s07_16kz_FS_0.0625.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/36_l04s07_16kz.wav,0,_FS_0.0625,,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/6_S_01_07_16kz_FS_0.0625.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/6_S_01_07_16kz.wav,1,,_FS_0.0625,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/33_l04s04_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/33_l04s04_16kz_FS_0.0625.wav,1,,_FS_0.015625,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/13_S_02_04_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/13_S_02_04_16kz_FS_0.015625.wav,1,,_FS_0.015625,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/5_S_01_06_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/5_S_01_06_16kz_FS_0.015625.wav,1,,_FS_0.015625,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/29_l03s10_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/29_l03s10_16kz_FS_0.015625.wav,1,,_FS_0.015625,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/38_l04s09_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/38_l04s09_16kz_FS_0.015625.wav,0,_FS_0.015625,,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/41_l05s02_16kz_FS_0.015625.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/41_l05s02_16kz.wav,1,,_FS_1,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/9_S_01_10_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/9_S_01_10_16kz_FS_1.wav,0,_FS_1,,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/10_S_02_01_16kz_FS_1.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/10_S_02_01_16kz.wav,0,_FS_1,,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/32_l04s03_16kz_FS_1.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/32_l04s03_16kz.wav,0,_FS_1,,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/11_S_02_02_16kz_FS_1.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/11_S_02_02_16kz.wav,0,_FS_1,,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/40_l05s01_16kz_FS_1.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/40_l05s01_16kz.wav,0,_FS_2,,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/4_S_01_05_16kz_FS_2.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/4_S_01_05_16kz.wav,0,_FS_2,,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/7_S_01_08_16kz_FS_2.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/7_S_01_08_16kz.wav,0,_FS_2,,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/31_l04s02_16kz_FS_2.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/31_l04s02_16kz.wav,1,,_FS_2,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/39_l04s10_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/39_l04s10_16kz_FS_2.wav,1,,_FS_2,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/12_S_02_03_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/12_S_02_03_16kz_FS_2.wav,FL_1542|FL_1426|FL_1390|FL_1360|FL_1352|FL_1471|FL_121|FL_1489|FL_243|FL_258|FL_1408|FL_1453|FL_1497|FL_1417|FL_1444|FL_1524|FL_1364|FL_1506|FL_1515|FL_1462|FL_1435|FL_1372|FL_1399|FL_136|FL_1480|FL_1533|FL_103|FL_1368|FL_1381|FL_1356
+2020-05-14 09:15:25,2020-05-14 09:28:54,IP Address,70.185.103.7,100,809,True,2020-05-14 09:28:55,R_2Vwq3CBHqdjfgxD,,,,,29.613800048828125,-82.3860015869140625,anonymous,EN,0.90000000000000002220446049250313080847263336181640625,,0,0,,I agree to participate in this study,30-49,Native,Normal,Headphones,Computer/Desktop/PC,,A2EI9E6EBZEZO1,Female,,2.8,-0.1,-2.2,-1.3,-0.3,2.3,0,0,0,-0.5,0,-1.3,-2.1,1.9,2.2,2,0.6,-0.7,-1.1,-0.7,0.5,0.1,-0.7,1.1,0,0,1.9,-2.3,2.2,-0.9,-2.4,-3,2.1,2.4,-2.1,2.3,None,Yes,,5403,,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/0_S_01_01_16kz_FS_2.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/0_S_01_01_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/55_l06s06_16kz_FS_0.015625.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/55_l06s06_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/1_S_01_02_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/1_S_01_02_16kz_FS_1.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/54_l06s05_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/54_l06s05_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/2_S_01_03_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/2_S_01_03_16kz_FS_0.0625.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/53_l06s04_16kz_FS_0.25.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/53_l06s04_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/3_S_01_04_16kz_FS_2.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/3_S_01_04_16kz_FS_1.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/3_S_01_04_16kz_FS_0.25.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/3_S_01_04_16kz_FS_0.0625.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/3_S_01_04_16kz_FS_0.015625.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/3_S_01_04_16kz.wav,31,30,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/39_l04s10_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/39_l04s10_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/36_l04s07_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/36_l04s07_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/9_S_01_10_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/9_S_01_10_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/10_S_02_01_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/10_S_02_01_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/18_S_02_09_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/18_S_02_09_16kz.wav,1,,_FS_0.25,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/32_l04s03_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/32_l04s03_16kz_FS_0.25.wav,1,,_FS_0.25,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/12_S_02_03_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/12_S_02_03_16kz_FS_0.25.wav,0,_FS_0.25,,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/33_l04s04_16kz_FS_0.25.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/33_l04s04_16kz.wav,0,_FS_0.25,,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/7_S_01_08_16kz_FS_0.25.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/7_S_01_08_16kz.wav,0,_FS_0.25,,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/6_S_01_07_16kz_FS_0.25.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/6_S_01_07_16kz.wav,1,,_FS_0.0625,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/13_S_02_04_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/13_S_02_04_16kz_FS_0.0625.wav,1,,_FS_0.0625,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/11_S_02_02_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/11_S_02_02_16kz_FS_0.0625.wav,1,,_FS_0.0625,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/40_l05s01_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/40_l05s01_16kz_FS_0.0625.wav,0,_FS_0.0625,,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/41_l05s02_16kz_FS_0.0625.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/41_l05s02_16kz.wav,1,,_FS_0.0625,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/34_l04s05_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/34_l04s05_16kz_FS_0.0625.wav,0,_FS_0.015625,,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/17_S_02_08_16kz_FS_0.015625.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/17_S_02_08_16kz.wav,0,_FS_0.015625,,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/35_l04s06_16kz_FS_0.015625.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/35_l04s06_16kz.wav,0,_FS_0.015625,,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/16_S_02_07_16kz_FS_0.015625.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/16_S_02_07_16kz.wav,0,_FS_0.015625,,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/37_l04s08_16kz_FS_0.015625.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/37_l04s08_16kz.wav,0,_FS_0.015625,,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/29_l03s10_16kz_FS_0.015625.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/29_l03s10_16kz.wav,0,_FS_1,,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/42_l05s03_16kz_FS_1.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/42_l05s03_16kz.wav,1,,_FS_1,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/5_S_01_06_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/5_S_01_06_16kz_FS_1.wav,0,_FS_1,,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/14_S_02_05_16kz_FS_1.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/14_S_02_05_16kz.wav,1,,_FS_1,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/31_l04s02_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/31_l04s02_16kz_FS_1.wav,1,,_FS_1,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/15_S_02_06_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/15_S_02_06_16kz_FS_1.wav,1,,_FS_2,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/30_l04s01_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/30_l04s01_16kz_FS_2.wav,0,_FS_2,,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/4_S_01_05_16kz_FS_2.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/4_S_01_05_16kz.wav,0,_FS_2,,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/28_l03s09_16kz_FS_2.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/28_l03s09_16kz.wav,1,,_FS_2,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/38_l04s09_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/38_l04s09_16kz_FS_2.wav,0,_FS_2,,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/8_S_01_09_16kz_FS_2.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/8_S_01_09_16kz.wav,FL_1390|FL_1480|FL_1435|FL_243|FL_1368|FL_136|FL_1489|FL_1453|FL_1515|FL_1364|FL_1399|FL_1471|FL_1462|FL_103|FL_1408|FL_1444|FL_1524|FL_1497|FL_1381|FL_1506|FL_1417|FL_1372|FL_258|FL_1356|FL_1542|FL_1352|FL_1360|FL_1426|FL_121|FL_1533
+2020-05-14 10:59:03,2020-05-14 11:13:38,IP Address,199.200.107.139,100,875,True,2020-05-14 11:13:39,R_8BsYadUcVTDeT4Z,,,,,40.38330078125,-111.989501953125,anonymous,EN,0.90000000000000002220446049250313080847263336181640625,,0,0,,I agree to participate in this study,30-49,Native,Normal,Earphones/ earbuds,Computer/Desktop/PC,,A1LB8HVSXK66U0,male,0.2,3,0,-3,0,-2,2.5,0.2,-0.9,1.1,0.1,0,-2.5,2.4,-2.4,-2.9,2.5,2.2,-2.2,-1,-0.7,2.3,2.3,-2.9,0.3,-1.5,2,-3,3,2.5,3,3,-2.9,-3,-3,-3,3,"Interesting survey, I used some cheap chinese in ear monitors and I could easily tell the quality differences",Yes,,2945,,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/0_S_01_01_16kz_FS_2.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/0_S_01_01_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/55_l06s06_16kz_FS_0.015625.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/55_l06s06_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/1_S_01_02_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/1_S_01_02_16kz_FS_1.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/54_l06s05_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/54_l06s05_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/2_S_01_03_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/2_S_01_03_16kz_FS_0.0625.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/53_l06s04_16kz_FS_0.25.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/53_l06s04_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/3_S_01_04_16kz_FS_2.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/3_S_01_04_16kz_FS_1.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/3_S_01_04_16kz_FS_0.25.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/3_S_01_04_16kz_FS_0.0625.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/3_S_01_04_16kz_FS_0.015625.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/practice/3_S_01_04_16kz.wav,31,30,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/17_S_02_08_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/17_S_02_08_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/32_l04s03_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/32_l04s03_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/40_l05s01_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/40_l05s01_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/6_S_01_07_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/6_S_01_07_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/10_S_02_01_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/10_S_02_01_16kz.wav,1,,_FS_0.25,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/30_l04s01_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/30_l04s01_16kz_FS_0.25.wav,1,,_FS_0.25,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/42_l05s03_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/42_l05s03_16kz_FS_0.25.wav,1,,_FS_0.25,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/8_S_01_09_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/8_S_01_09_16kz_FS_0.25.wav,1,,_FS_0.25,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/5_S_01_06_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/5_S_01_06_16kz_FS_0.25.wav,0,_FS_0.25,,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/39_l04s10_16kz_FS_0.25.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/39_l04s10_16kz.wav,1,,_FS_0.0625,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/31_l04s02_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/31_l04s02_16kz_FS_0.0625.wav,0,_FS_0.0625,,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/18_S_02_09_16kz_FS_0.0625.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/18_S_02_09_16kz.wav,1,,_FS_0.0625,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/36_l04s07_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/36_l04s07_16kz_FS_0.0625.wav,1,,_FS_0.0625,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/33_l04s04_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/33_l04s04_16kz_FS_0.0625.wav,1,,_FS_0.0625,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/29_l03s10_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/29_l03s10_16kz_FS_0.0625.wav,1,,_FS_0.015625,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/4_S_01_05_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/4_S_01_05_16kz_FS_0.015625.wav,0,_FS_0.015625,,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/14_S_02_05_16kz_FS_0.015625.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/14_S_02_05_16kz.wav,1,,_FS_0.015625,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/37_l04s08_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/37_l04s08_16kz_FS_0.015625.wav,0,_FS_0.015625,,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/12_S_02_03_16kz_FS_0.015625.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/12_S_02_03_16kz.wav,1,,_FS_0.015625,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/35_l04s06_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/35_l04s06_16kz_FS_0.015625.wav,1,,_FS_1,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/16_S_02_07_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/16_S_02_07_16kz_FS_1.wav,0,_FS_1,,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/34_l04s05_16kz_FS_1.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/34_l04s05_16kz.wav,0,_FS_1,,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/7_S_01_08_16kz_FS_1.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/7_S_01_08_16kz.wav,0,_FS_1,,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/28_l03s09_16kz_FS_1.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/28_l03s09_16kz.wav,0,_FS_1,,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/15_S_02_06_16kz_FS_1.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/15_S_02_06_16kz.wav,1,,_FS_2,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/11_S_02_02_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/11_S_02_02_16kz_FS_2.wav,1,,_FS_2,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/38_l04s09_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/38_l04s09_16kz_FS_2.wav,1,,_FS_2,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/13_S_02_04_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/13_S_02_04_16kz_FS_2.wav,1,,_FS_2,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/9_S_01_10_16kz.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/9_S_01_10_16kz_FS_2.wav,0,_FS_2,,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/41_l05s02_16kz_FS_2.wav,https://eagles.soic.indiana.edu/PROJQuantizedJND/study/41_l05s02_16kz.wav,FL_1480|FL_1506|FL_1408|FL_1462|FL_1372|FL_1524|FL_1399|FL_1471|FL_1352|FL_1435|FL_1426|FL_1368|FL_1360|FL_1390|FL_121|FL_1417|FL_1542|FL_1489|FL_243|FL_1356|FL_1533|FL_1444|FL_1381|FL_258|FL_1497|FL_136|FL_1453|FL_1515|FL_1364|FL_103

@@ -109,11 +109,18 @@ derev_angle = angle(derev_stft);
 % scores.diffphase_derev = mean(mean(abs(anh_angle-derev_angle)));
 
 %% -------------- BSS Toolkit ------------------------------ %
-[xTarget, xeInterf, xeArtif]                     = bss_decomp_gain(revb_sig.', 1, [anech_sig (revb_sig-anech_sig)].');
-[scores.SDR_rev, scores.SIR_rev, scores.SAR_rev] = bss_crit(xTarget, xeInterf, xeArtif);
+%[xTarget, xeInterf, xeArtif]                     = bss_decomp_gain(revb_sig.', 1, [anech_sig (revb_sig-anech_sig)].');
+%[scores.SDR_rev, scores.SIR_rev, scores.SAR_rev] = bss_crit(xTarget, xeInterf, xeArtif);
 
-[yTarget, yeInterf, yeArtif]                           = bss_decomp_gain(derevb_sig.', 1, [anech_sig (revb_sig-anech_sig)].');
-[scores.SDR_derev, scores.SIR_derev, scores.SAR_derev] = bss_crit(yTarget, yeInterf, yeArtif);
+%[yTarget, yeInterf, yeArtif]                           = bss_decomp_gain(derevb_sig.', 1, [anech_sig (revb_sig-anech_sig)].');
+%[scores.SDR_derev, scores.SIR_derev, scores.SAR_derev] = bss_crit(yTarget, yeInterf, yeArtif);
+
+
+%[xeTarget, xeInterf, xeArtif]                     = bss_decomp_gain_SI(anech_sig, revb_sig.', 1, [anech_sig (revb_sig-anech_sig)].');
+%[scores.SI_SDR_rev, scores.SI_SIR_rev, scores.SI_SAR_rev] = bss_crit_SI(xeTarget, xeInterf, xeArtif);
+
+%[yeTarget, yeInterf, yeArtif]                           = bss_decomp_gain_SI(anech_sig, derevb_sig.', 1, [anech_sig (revb_sig-anech_sig)].');
+%[scores.SI_SDR_derev, scores.SI_SIR_derev, scores.SI_SAR_derev] = bss_crit_SI(yeTarget, yeInterf, yeArtif);
 
 
 %% ---------------- Phase-based Metrics ---------------------- %

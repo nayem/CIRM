@@ -34,6 +34,7 @@ function wrapper_metrics(Version,noise_type,metrics)
 
         if strcmpi(metric,'PESQ')   % PESQ
             var = 'pesq_derev';
+%             var = 'pesq_rev';
         elseif strcmpi(metric,'OVRL')   % OVRL
             var = 'Covl_derev';
         elseif strcmpi(metric,'CCD')    % CCD (Compute Ceptral Distortion)
@@ -46,8 +47,10 @@ function wrapper_metrics(Version,noise_type,metrics)
             var = 'segsnr_derev';
         elseif strcmpi(metric,'STOI')   % STOI
             var = 'stoi_derev';
+%             var = 'stoi_rev';
         elseif strcmpi(metric,'BSS_SDR')   % BSS_SDR
             var = 'SDR_derev';
+            var = 'SDR_rev';
         elseif strcmpi(metric,'BSS_SIR')  % BSS_SIR
             var = 'SIR_derev';
         elseif strcmpi(metric,'BSS_SAR')  % BSS_SAR

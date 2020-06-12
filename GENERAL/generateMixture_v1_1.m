@@ -43,14 +43,20 @@ if strcmpi(TASK,'TEST')
     head = floor(lm/2)+1;
     tail = lm;
     len = tail-head+1;
+    
+    % When length of half-mask is less than target
+    if len < NUMS_OF_CUTS*lt
+        head = lm-NUMS_OF_CUTS*lt+1
+        len = tail-head+1;
+    end
 
     possible_cut_numbers = floor(len/lt);
     selected_cut_number = randperm(possible_cut_numbers,NUMS_OF_CUTS);
 
-    for (sc = selected_cut_number)
+    for sc = selected_cut_number
 
-        s = head + (sc-1)*lt + 1;
-        t = head + sc*lt;
+        s = head + (sc-1)*lt;
+        t = head + sc*lt -1;
         % fprintf('%s target-Len:%d, mask-Len:%d, s:%d, t:%d, len:%d\n', TASK, lt,lm,s,t,t-s+1);
 
         cut_list = [cut_list; [s,t] ];
@@ -62,12 +68,19 @@ elseif strcmpi(TASK,'TRAIN') || strcmpi(TASK, 'DEV')
     head = 1;
     tail = floor(lm/2);
     len = tail-head+1;
-
+    
+    % When length of half-mask is less than target
+    if len < NUMS_OF_CUTS*lt
+        tail = NUMS_OF_CUTS*lt
+        len = tail-head+1;
+    end
+    
     possible_cut_numbers = floor(len/lt);
-    selected_cut_number = randperm(possible_cut_numbers,NUMS_OF_CUTS);
+    % fprintf('lt:%d, lm:%d, head:%d, tail:%d, len:%d, possible_cut_numbers:%d\n', lt,lm,head,tail,len,possible_cut_numbers);
+    selected_cut_number = randperm(possible_cut_numbers,NUMS_OF_CUTS)
+    
 
-
-    for (sc = selected_cut_number)
+    for sc = selected_cut_number
 
         s = head + (sc-1)*lt;
         t = head + sc*lt - 1;
@@ -83,12 +96,12 @@ end
 %%
 
 
-for c = [1:length(selected_cut_number)]
+for c = 1:length(selected_cut_number)
     s_t = cut_list(c,:);
     s = s_t(1);
     t = s_t(2);
 
-    % fprintf('s: %d, t:%d\n', s,t);
+    % fprintf('lm:%d, lt:%d, s: %d, t:%d\n', lm,lt,s,t);
 
     if (lt >= lm)       % equalize the lengths of the two files
         target_temp = target(1:lm);
@@ -110,7 +123,7 @@ for c = [1:length(selected_cut_number)]
 
 end
 
-fprintf('mixture_target_masker: ' );
+fprintf('\nmixture_target_masker: ' );
 disp(size(mixture_target_masker) );
 
 end
