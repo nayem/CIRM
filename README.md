@@ -1,5 +1,30 @@
-# cIRM
-Complex Ideal Ratio Mask
+# Code Base (cIRM, Quantized)
+cIRM = Complex Ideal Ratio Mask
+Quantized = Quantization Spec
+
+## Data
+All the necessary data are in `\data\knayem`
+
+### Backup
+Backup are in `carbonate.uits.iu.edu`. 
+Full path is `knayem@carbonate.uits.iu.edu:/N/u/knayem/Carbonate/Eagles_Backup/Data`
+
+**File transfer**
+
+To transfer a file (`file.txt`) to another server. You should be logged in to the console of sending server (from-server).
+```shell
+scp file.txt remote_username@10.10.0.2:/remote/directory/newfilename.txt
+```
+
+To transfer folder (`IEEE_DataFiles`) from a server (e.g. `eagles`) to another server (e.g. `carbonate`)
+```shell
+scp IEEE_DataFiles knayem@carbonate.uits.iu.edu:/N/u/knayem/Carbonate/Eagles_Backup/Data
+```
+
+### GPU check
+```shell
+nvidia-smi
+```
 
 ## Eagles
 ```shell
